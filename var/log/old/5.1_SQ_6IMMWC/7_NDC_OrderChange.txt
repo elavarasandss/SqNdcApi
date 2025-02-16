@@ -1,0 +1,544 @@
+ Time : 24-05-2024 07:31:57
+
+https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ 
+
+Request :- 
+---------- 
+
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3" xmlns:ns="http://www.iata.org/IATA/2015/00/2018.1/OrderChangeRQ">
+  <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <add:MessageID xmlns:add="http://www.w3.org/2005/08/addressing">46d8c0f7-8f70-48df-813f-6bb7dd26fe59</add:MessageID>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderChange_18.1</wsa:Action>
+    <add:To xmlns:add="http://www.w3.org/2005/08/addressing">https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</add:To>
+    <sec:AMA_SecurityHostedUser>
+      <sec:UserID POS_Type="1" RequestorType="U" PseudoCityCode="SINSQ08NP" AgentDutyCode="SU">
+        <typ:RequestorID xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1">
+          <iat:CompanyName>SQ</iat:CompanyName>
+        </typ:RequestorID>
+      </sec:UserID>
+    </sec:AMA_SecurityHostedUser>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>WSSQNDC</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">3REsu1PB+gu4sypYfxKvFwY/sQQ=</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">bElOdDRNOGM=</wsse:Nonce>
+        <wsu:Created>2024-05-24T07:31:42:969Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <OrderChangeRQ xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderChangeRQ">
+      <PayloadAttributes>
+        <Version>18.1</Version>
+      </PayloadAttributes>
+      <Party>
+        <Sender>
+          <TravelAgency>
+            <AgencyID>12345678</AgencyID>
+            <IATA_Number>12345678</IATA_Number>
+          </TravelAgency>
+        </Sender>
+      </Party>
+      <Request>
+        <ChangeOrder>
+          <UpdateOrderItem>
+            <AcceptOffer>
+              <SelectedOffer>
+                <OfferID>SP2F-1731435972994226111-1</OfferID>
+                <OwnerCode/>
+                <ShoppingResponseRefID>0</ShoppingResponseRefID>
+                <SelectedOfferItem>
+                  <OfferItemRefID>SP2F-1731435972994226111-1-1</OfferItemRefID>
+                </SelectedOfferItem>
+              </SelectedOffer>
+            </AcceptOffer>
+          </UpdateOrderItem>
+        </ChangeOrder>
+        <Order>
+          <OrderID>SQ_6IMMWC</OrderID>
+          <OwnerCode/>
+        </Order>
+        <PaymentInfo>
+          <Amount CurCode="SGD">400.00</Amount>
+          <TypeCode>CA</TypeCode>
+          <PaymentMethod>
+            <Cash>
+              <CashInd>true</CashInd>
+            </Cash>
+          </PaymentMethod>
+        </PaymentInfo>
+      </Request>
+    </OrderChangeRQ>
+  </soapenv:Body>
+</soapenv:Envelope>
+ Time : 24-05-2024 07:32:00
+
+
+Response :- 
+----------- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:From>
+      <wsa:Address>https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</wsa:Address>
+    </wsa:From>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderChange_18.1</wsa:Action>
+    <wsa:MessageID>urn:uuid:3528d2ba-7877-0704-415e-6606127913ac</wsa:MessageID>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">46d8c0f7-8f70-48df-813f-6bb7dd26fe59</wsa:RelatesTo>
+    <awsse:Session TransactionStatusCode="End">
+      <awsse:SessionId>00A0PP953I</awsse:SessionId>
+      <awsse:SequenceNumber>1</awsse:SequenceNumber>
+      <awsse:SecurityToken>3S1RJV07NMRTE34M0H0FKUXJGI</awsse:SecurityToken>
+    </awsse:Session>
+  </soap:Header>
+  <soap:Body>
+    <ns3:OrderViewRS xmlns="http://www.iata.org/IATA/2015/00/BP/2018.1/SecurePayment_v1.0" xmlns:ns2="http://www.iata.org/IATA/2015/00/2018.1/OrderChangeRQ" xmlns:ns3="http://www.iata.org/IATA/2015/00/2018.1/OrderViewRS">
+      <ns3:PayloadAttributes>
+        <ns3:Version>18.1</ns3:Version>
+      </ns3:PayloadAttributes>
+      <ns3:Response>
+        <ns3:DataLists>
+          <ns3:BaggageAllowanceList>
+            <ns3:BaggageAllowance>
+              <ns3:BaggageAllowanceID>FBA1</ns3:BaggageAllowanceID>
+              <ns3:TypeCode>Checked</ns3:TypeCode>
+              <ns3:WeightAllowance>
+                <ns3:MaximumWeightMeasure UnitCode="Kilogram">25</ns3:MaximumWeightMeasure>
+                <ns3:ApplicablePartyText>Traveler</ns3:ApplicablePartyText>
+              </ns3:WeightAllowance>
+            </ns3:BaggageAllowance>
+          </ns3:BaggageAllowanceList>
+          <ns3:ContactInfoList>
+            <ns3:ContactInfo>
+              <ns3:ContactInfoID>CTCPAX2_1</ns3:ContactInfoID>
+              <ns3:ContactTypeText>STANDARD</ns3:ContactTypeText>
+              <ns3:IndividualRef>PAX2</ns3:IndividualRef>
+              <ns3:Phone>
+                <ns3:LabelText>MOBILE</ns3:LabelText>
+                <ns3:CountryDialingCode>+91</ns3:CountryDialingCode>
+                <ns3:PhoneNumber>8344057968</ns3:PhoneNumber>
+              </ns3:Phone>
+              <ns3:EmailAddress>
+                <ns3:EmailAddressText>RUBESH@GMAIL.COM</ns3:EmailAddressText>
+              </ns3:EmailAddress>
+            </ns3:ContactInfo>
+            <ns3:ContactInfo>
+              <ns3:ContactInfoID>CTCPAX3_1</ns3:ContactInfoID>
+              <ns3:ContactTypeText>STANDARD</ns3:ContactTypeText>
+              <ns3:IndividualRef>PAX3</ns3:IndividualRef>
+              <ns3:Phone>
+                <ns3:LabelText>MOBILE</ns3:LabelText>
+                <ns3:CountryDialingCode>+91</ns3:CountryDialingCode>
+                <ns3:PhoneNumber>6374707609</ns3:PhoneNumber>
+              </ns3:Phone>
+              <ns3:EmailAddress>
+                <ns3:EmailAddressText>SEENI@GMAIL.COM</ns3:EmailAddressText>
+              </ns3:EmailAddress>
+            </ns3:ContactInfo>
+          </ns3:ContactInfoList>
+          <ns3:PaxJourneyList>
+            <ns3:PaxJourney>
+              <ns3:PaxJourneyID>FLT2</ns3:PaxJourneyID>
+              <ns3:Duration>PT13H25M</ns3:Duration>
+              <ns3:PaxSegmentRefID>SEG2</ns3:PaxSegmentRefID>
+            </ns3:PaxJourney>
+          </ns3:PaxJourneyList>
+          <ns3:PaxList>
+            <ns3:Pax>
+              <ns3:PaxID>PAX2</ns3:PaxID>
+              <ns3:PTC>ADT</ns3:PTC>
+              <ns3:Individual>
+                <ns3:IndividualID>PAX2</ns3:IndividualID>
+                <ns3:Birthdate>1996-02-21</ns3:Birthdate>
+                <ns3:TitleName>MR</ns3:TitleName>
+                <ns3:GivenName>RUBESH</ns3:GivenName>
+                <ns3:Surname>BERRY</ns3:Surname>
+              </ns3:Individual>
+            </ns3:Pax>
+            <ns3:Pax>
+              <ns3:PaxID>PAX3</ns3:PaxID>
+              <ns3:PTC>ADT</ns3:PTC>
+              <ns3:Individual>
+                <ns3:IndividualID>PAX3</ns3:IndividualID>
+                <ns3:Birthdate>1996-02-21</ns3:Birthdate>
+                <ns3:TitleName>MR</ns3:TitleName>
+                <ns3:GivenName>SEENI</ns3:GivenName>
+                <ns3:Surname>VASA</ns3:Surname>
+              </ns3:Individual>
+            </ns3:Pax>
+          </ns3:PaxList>
+          <ns3:PaxSegmentList>
+            <ns3:PaxSegment>
+              <ns3:PaxSegmentID>SEG2</ns3:PaxSegmentID>
+              <ns3:Dep>
+                <ns3:IATA_LocationCode>SIN</ns3:IATA_LocationCode>
+                <ns3:TerminalName>3</ns3:TerminalName>
+                <ns3:AircraftScheduledDateTime>2024-06-26T23:30:00</ns3:AircraftScheduledDateTime>
+              </ns3:Dep>
+              <ns3:Arrival>
+                <ns3:IATA_LocationCode>LHR</ns3:IATA_LocationCode>
+                <ns3:TerminalName>2</ns3:TerminalName>
+                <ns3:AircraftScheduledDateTime>2024-06-27T05:55:00</ns3:AircraftScheduledDateTime>
+              </ns3:Arrival>
+              <ns3:MarketingCarrierInfo>
+                <ns3:CarrierDesigCode>SQ</ns3:CarrierDesigCode>
+                <ns3:CarrierName>SINGAPORE AIRLINES</ns3:CarrierName>
+                <ns3:MarketingCarrierFlightNumberText>322</ns3:MarketingCarrierFlightNumberText>
+                <ns3:RBD_Code>N</ns3:RBD_Code>
+              </ns3:MarketingCarrierInfo>
+              <ns3:OperatingCarrierInfo>
+                <ns3:CarrierDesigCode>SQ</ns3:CarrierDesigCode>
+                <ns3:CarrierName>SINGAPORE AIRLINES</ns3:CarrierName>
+                <ns3:Disclosure>
+                  <ns3:DisclosureID>DIS1</ns3:DisclosureID>
+                  <ns3:Desc>
+                    <ns3:DescID>DES1</ns3:DescID>
+                    <ns3:DescText>SINGAPORE AIRLINES</ns3:DescText>
+                  </ns3:Desc>
+                </ns3:Disclosure>
+              </ns3:OperatingCarrierInfo>
+            </ns3:PaxSegment>
+          </ns3:PaxSegmentList>
+          <ns3:PriceClassList>
+            <ns3:PriceClass>
+              <ns3:PriceClassID>FF41</ns3:PriceClassID>
+              <ns3:Name>SIN - ECON VALUE FF4</ns3:Name>
+            </ns3:PriceClass>
+          </ns3:PriceClassList>
+          <ns3:ServiceDefinitionList>
+            <ns3:ServiceDefinition>
+              <ns3:ServiceDefinitionID>PENF_1</ns3:ServiceDefinitionID>
+              <ns3:OwnerCode>SQ</ns3:OwnerCode>
+              <ns3:Name>PENALTY FEE</ns3:Name>
+              <ns3:ServiceCode>PENF</ns3:ServiceCode>
+              <ns3:ValidatingCarrierCode>SQ</ns3:ValidatingCarrierCode>
+              <ns3:Description>
+                <ns3:DescID>PENF</ns3:DescID>
+              </ns3:Description>
+              <ns3:Detail>
+                <ns3:ServiceFulfillment/>
+              </ns3:Detail>
+            </ns3:ServiceDefinition>
+            <ns3:ServiceDefinition>
+              <ns3:ServiceDefinitionID>BAGALLOW_1</ns3:ServiceDefinitionID>
+              <ns3:Name>Bag allowances</ns3:Name>
+              <ns3:Description>
+                <ns3:DescID>Bag allowances</ns3:DescID>
+              </ns3:Description>
+              <ns3:ServiceDefinitionAssociation>
+                <ns3:BaggageAllowanceRefID>FBA1</ns3:BaggageAllowanceRefID>
+              </ns3:ServiceDefinitionAssociation>
+            </ns3:ServiceDefinition>
+          </ns3:ServiceDefinitionList>
+        </ns3:DataLists>
+        <ns3:Order>
+          <ns3:OrderID>SQ_6IMMWC</ns3:OrderID>
+          <ns3:OwnerCode>SQ</ns3:OwnerCode>
+          <ns3:BookingRef>
+            <ns3:BookingID>6IMMWC</ns3:BookingID>
+            <ns3:BookingEntity>
+              <ns3:Carrier>
+                <ns3:AirlineDesigCode>SQ</ns3:AirlineDesigCode>
+              </ns3:Carrier>
+            </ns3:BookingEntity>
+          </ns3:BookingRef>
+          <ns3:OrderItem>
+            <ns3:OrderItemID>SQ_6IMMWC_AIR-2</ns3:OrderItemID>
+            <ns3:OwnerCode>SQ</ns3:OwnerCode>
+            <ns3:FareDetail>
+              <ns3:PassengerRefs>PAX2</ns3:PassengerRefs>
+              <ns3:Price>
+                <ns3:TotalAmount>
+                  <ns3:DetailCurrencyPrice>
+                    <ns3:Total Code="SGD">905.20</ns3:Total>
+                  </ns3:DetailCurrencyPrice>
+                </ns3:TotalAmount>
+                <ns3:BaseAmount Code="SGD">840.00</ns3:BaseAmount>
+                <ns3:Taxes>
+                  <ns3:Total Code="SGD">65.20</ns3:Total>
+                  <ns3:Breakdown>
+                    <ns3:Tax>
+                      <ns3:Amount Code="SGD">10.80</ns3:Amount>
+                      <ns3:TaxCode>L7</ns3:TaxCode>
+                    </ns3:Tax>
+                    <ns3:Tax>
+                      <ns3:Amount Code="SGD">8.00</ns3:Amount>
+                      <ns3:TaxCode>OP</ns3:TaxCode>
+                    </ns3:Tax>
+                    <ns3:Tax>
+                      <ns3:Amount Code="SGD">46.40</ns3:Amount>
+                      <ns3:TaxCode>SG</ns3:TaxCode>
+                    </ns3:Tax>
+                  </ns3:Breakdown>
+                </ns3:Taxes>
+              </ns3:Price>
+              <ns3:FareComponent>
+                <ns3:FareBasis>
+                  <ns3:FareBasisCode>
+                    <ns3:Code>N16SGO</ns3:Code>
+                  </ns3:FareBasisCode>
+                  <ns3:CabinType>
+                    <ns3:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">5</ns3:CabinTypeCode>
+                    <ns3:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">ECONOMY</ns3:CabinTypeName>
+                  </ns3:CabinType>
+                </ns3:FareBasis>
+                <ns3:PriceClassRef>FF41</ns3:PriceClassRef>
+                <ns3:SegmentRefs>SEG2</ns3:SegmentRefs>
+              </ns3:FareComponent>
+              <ns3:Remarks>
+                <ns3:Remark>FC-SIN SQ LON622.95NUC622.95END ROE1.348408</ns3:Remark>
+                <ns3:Remark>FE-CHNG FEE APPLY /REFUND FEE APPLY /NO SHOW FEE APPLY 12345678</ns3:Remark>
+              </ns3:Remarks>
+            </ns3:FareDetail>
+            <ns3:FareDetail>
+              <ns3:PassengerRefs>PAX3</ns3:PassengerRefs>
+              <ns3:Price>
+                <ns3:TotalAmount>
+                  <ns3:DetailCurrencyPrice>
+                    <ns3:Total Code="SGD">905.20</ns3:Total>
+                  </ns3:DetailCurrencyPrice>
+                </ns3:TotalAmount>
+                <ns3:BaseAmount Code="SGD">840.00</ns3:BaseAmount>
+                <ns3:Taxes>
+                  <ns3:Total Code="SGD">65.20</ns3:Total>
+                  <ns3:Breakdown>
+                    <ns3:Tax>
+                      <ns3:Amount Code="SGD">10.80</ns3:Amount>
+                      <ns3:TaxCode>L7</ns3:TaxCode>
+                    </ns3:Tax>
+                    <ns3:Tax>
+                      <ns3:Amount Code="SGD">8.00</ns3:Amount>
+                      <ns3:TaxCode>OP</ns3:TaxCode>
+                    </ns3:Tax>
+                    <ns3:Tax>
+                      <ns3:Amount Code="SGD">46.40</ns3:Amount>
+                      <ns3:TaxCode>SG</ns3:TaxCode>
+                    </ns3:Tax>
+                  </ns3:Breakdown>
+                </ns3:Taxes>
+              </ns3:Price>
+              <ns3:FareComponent>
+                <ns3:FareBasis>
+                  <ns3:FareBasisCode>
+                    <ns3:Code>N16SGO</ns3:Code>
+                  </ns3:FareBasisCode>
+                  <ns3:CabinType>
+                    <ns3:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">5</ns3:CabinTypeCode>
+                    <ns3:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">ECONOMY</ns3:CabinTypeName>
+                  </ns3:CabinType>
+                </ns3:FareBasis>
+                <ns3:PriceClassRef>FF41</ns3:PriceClassRef>
+                <ns3:SegmentRefs>SEG2</ns3:SegmentRefs>
+              </ns3:FareComponent>
+              <ns3:Remarks>
+                <ns3:Remark>FC-SIN SQ LON622.95NUC622.95END ROE1.348408</ns3:Remark>
+                <ns3:Remark>FE-CHNG FEE APPLY /REFUND FEE APPLY /NO SHOW FEE APPLY 12345678</ns3:Remark>
+              </ns3:Remarks>
+            </ns3:FareDetail>
+            <ns3:Price>
+              <ns3:TotalAmount>0</ns3:TotalAmount>
+              <ns3:BaseAmount CurCode="SGD">1680.00</ns3:BaseAmount>
+              <ns3:TaxSummary>
+                <ns3:TotalTaxAmount CurCode="SGD">130.40</ns3:TotalTaxAmount>
+              </ns3:TaxSummary>
+            </ns3:Price>
+            <ns3:Service>
+              <ns3:ServiceID>SEG2_PAX2</ns3:ServiceID>
+              <ns3:StatusCode>HK</ns3:StatusCode>
+              <ns3:PaxRefID>PAX2</ns3:PaxRefID>
+              <ns3:ServiceAssociations>
+                <ns3:ServiceDefinitionRef>
+                  <ns3:ServiceDefinitionRefID>BAGALLOW_1</ns3:ServiceDefinitionRefID>
+                  <ns3:PaxSegmentRefID>SEG2</ns3:PaxSegmentRefID>
+                </ns3:ServiceDefinitionRef>
+              </ns3:ServiceAssociations>
+            </ns3:Service>
+            <ns3:Service>
+              <ns3:ServiceID>SEG2_PAX3</ns3:ServiceID>
+              <ns3:StatusCode>HK</ns3:StatusCode>
+              <ns3:PaxRefID>PAX3</ns3:PaxRefID>
+              <ns3:ServiceAssociations>
+                <ns3:ServiceDefinitionRef>
+                  <ns3:ServiceDefinitionRefID>BAGALLOW_1</ns3:ServiceDefinitionRefID>
+                  <ns3:PaxSegmentRefID>SEG2</ns3:PaxSegmentRefID>
+                </ns3:ServiceDefinitionRef>
+              </ns3:ServiceAssociations>
+            </ns3:Service>
+          </ns3:OrderItem>
+          <ns3:OrderItem>
+            <ns3:OrderItemID>SQ_6IMMWC_SRV47</ns3:OrderItemID>
+            <ns3:OwnerCode>SQ</ns3:OwnerCode>
+            <ns3:Price>
+              <ns3:TotalAmount CurCode="SGD">200.00</ns3:TotalAmount>
+            </ns3:Price>
+            <ns3:Service>
+              <ns3:ServiceID>SVC3</ns3:ServiceID>
+              <ns3:PaxRefID>PAX2</ns3:PaxRefID>
+              <ns3:ServiceAssociations>
+                <ns3:ServiceDefinitionRef>
+                  <ns3:ServiceDefinitionRefID>PENF_1</ns3:ServiceDefinitionRefID>
+                </ns3:ServiceDefinitionRef>
+              </ns3:ServiceAssociations>
+            </ns3:Service>
+          </ns3:OrderItem>
+          <ns3:OrderItem>
+            <ns3:OrderItemID>SQ_6IMMWC_SRV50</ns3:OrderItemID>
+            <ns3:OwnerCode>SQ</ns3:OwnerCode>
+            <ns3:Price>
+              <ns3:TotalAmount CurCode="SGD">200.00</ns3:TotalAmount>
+            </ns3:Price>
+            <ns3:Service>
+              <ns3:ServiceID>SVC4</ns3:ServiceID>
+              <ns3:PaxRefID>PAX3</ns3:PaxRefID>
+              <ns3:ServiceAssociations>
+                <ns3:ServiceDefinitionRef>
+                  <ns3:ServiceDefinitionRefID>PENF_1</ns3:ServiceDefinitionRefID>
+                </ns3:ServiceDefinitionRef>
+              </ns3:ServiceAssociations>
+            </ns3:Service>
+          </ns3:OrderItem>
+          <ns3:PaymentInfo>
+            <ns3:Amount CurCode="SGD">200.00</ns3:Amount>
+            <ns3:TypeCode>CASH</ns3:TypeCode>
+            <ns3:OrderItemRefID>SQ_6IMMWC_SRV47</ns3:OrderItemRefID>
+            <ns3:PaymentMethod>
+              <ns3:Cash/>
+            </ns3:PaymentMethod>
+          </ns3:PaymentInfo>
+          <ns3:PaymentInfo>
+            <ns3:Amount CurCode="SGD">200.00</ns3:Amount>
+            <ns3:TypeCode>CASH</ns3:TypeCode>
+            <ns3:OrderItemRefID>SQ_6IMMWC_SRV50</ns3:OrderItemRefID>
+            <ns3:PaymentMethod>
+              <ns3:Cash/>
+            </ns3:PaymentMethod>
+          </ns3:PaymentInfo>
+          <ns3:TotalPrice>
+            <ns3:TotalAmount CurCode="SGD">400.00</ns3:TotalAmount>
+            <ns3:BaseAmount CurCode="SGD">1680.00</ns3:BaseAmount>
+            <ns3:TaxSummary>
+              <ns3:TotalTaxAmount CurCode="SGD">130.40</ns3:TotalTaxAmount>
+            </ns3:TaxSummary>
+          </ns3:TotalPrice>
+        </ns3:Order>
+        <ns3:TicketDocInfos>
+          <ns3:TicketDocInfo>
+            <ns3:AgentIDs>
+              <ns3:AgentID>
+                <ns3:Type>B</ns3:Type>
+                <ns3:ID>9999WS/SU</ns3:ID>
+              </ns3:AgentID>
+            </ns3:AgentIDs>
+            <ns3:TicketDocument>
+              <ns3:TicketDocNbr>6182452487765</ns3:TicketDocNbr>
+              <ns3:Type>T</ns3:Type>
+              <ns3:NumberofBooklets>1</ns3:NumberofBooklets>
+              <ns3:DateOfIssue>2024-05-24</ns3:DateOfIssue>
+              <ns3:CouponInfo>
+                <ns3:CouponNumber>1</ns3:CouponNumber>
+                <ns3:CouponReference>SEG2</ns3:CouponReference>
+                <ns3:FareBasisCode>
+                  <ns3:Code>N16SGO</ns3:Code>
+                </ns3:FareBasisCode>
+                <ns3:Status>I</ns3:Status>
+                <ns3:AddlBaggageInfo>
+                  <ns3:CheckedFree MaxBagWght="25K"/>
+                </ns3:AddlBaggageInfo>
+              </ns3:CouponInfo>
+              <ns3:ReportingType>Airline</ns3:ReportingType>
+            </ns3:TicketDocument>
+            <ns3:PassengerReference>PAX2</ns3:PassengerReference>
+          </ns3:TicketDocInfo>
+          <ns3:TicketDocInfo>
+            <ns3:AgentIDs>
+              <ns3:AgentID>
+                <ns3:Type>B</ns3:Type>
+                <ns3:ID>9999WS/SU</ns3:ID>
+              </ns3:AgentID>
+            </ns3:AgentIDs>
+            <ns3:TicketDocument>
+              <ns3:TicketDocNbr>6182452487766</ns3:TicketDocNbr>
+              <ns3:Type>T</ns3:Type>
+              <ns3:NumberofBooklets>1</ns3:NumberofBooklets>
+              <ns3:DateOfIssue>2024-05-24</ns3:DateOfIssue>
+              <ns3:CouponInfo>
+                <ns3:CouponNumber>1</ns3:CouponNumber>
+                <ns3:CouponReference>SEG2</ns3:CouponReference>
+                <ns3:FareBasisCode>
+                  <ns3:Code>N16SGO</ns3:Code>
+                </ns3:FareBasisCode>
+                <ns3:Status>I</ns3:Status>
+                <ns3:AddlBaggageInfo>
+                  <ns3:CheckedFree MaxBagWght="25K"/>
+                </ns3:AddlBaggageInfo>
+              </ns3:CouponInfo>
+              <ns3:ReportingType>Airline</ns3:ReportingType>
+            </ns3:TicketDocument>
+            <ns3:PassengerReference>PAX3</ns3:PassengerReference>
+          </ns3:TicketDocInfo>
+          <ns3:TicketDocInfo>
+            <ns3:AgentIDs>
+              <ns3:AgentID>
+                <ns3:Type>B</ns3:Type>
+                <ns3:ID>9999WS/SU</ns3:ID>
+              </ns3:AgentID>
+            </ns3:AgentIDs>
+            <ns3:TicketDocument>
+              <ns3:TicketDocNbr>6184571375733</ns3:TicketDocNbr>
+              <ns3:Type>Y</ns3:Type>
+              <ns3:NumberofBooklets>1</ns3:NumberofBooklets>
+              <ns3:DateOfIssue>2024-05-24</ns3:DateOfIssue>
+              <ns3:CouponInfo>
+                <ns3:CouponNumber>1</ns3:CouponNumber>
+                <ns3:Status>B</ns3:Status>
+                <ns3:ServiceReferences>SVC3</ns3:ServiceReferences>
+                <ns3:InConnectionWithInfo>
+                  <ns3:InConnectionDocNbr>6182452487765</ns3:InConnectionDocNbr>
+                  <ns3:InConnectonCpnNbr>1</ns3:InConnectonCpnNbr>
+                </ns3:InConnectionWithInfo>
+                <ns3:ReasonForIssuance>
+                  <ns3:RFIC>D</ns3:RFIC>
+                  <ns3:Code>993</ns3:Code>
+                </ns3:ReasonForIssuance>
+              </ns3:CouponInfo>
+              <ns3:ReportingType>Airline</ns3:ReportingType>
+            </ns3:TicketDocument>
+            <ns3:PassengerReference>PAX2</ns3:PassengerReference>
+          </ns3:TicketDocInfo>
+          <ns3:TicketDocInfo>
+            <ns3:AgentIDs>
+              <ns3:AgentID>
+                <ns3:Type>B</ns3:Type>
+                <ns3:ID>9999WS/SU</ns3:ID>
+              </ns3:AgentID>
+            </ns3:AgentIDs>
+            <ns3:TicketDocument>
+              <ns3:TicketDocNbr>6184571375734</ns3:TicketDocNbr>
+              <ns3:Type>Y</ns3:Type>
+              <ns3:NumberofBooklets>1</ns3:NumberofBooklets>
+              <ns3:DateOfIssue>2024-05-24</ns3:DateOfIssue>
+              <ns3:CouponInfo>
+                <ns3:CouponNumber>1</ns3:CouponNumber>
+                <ns3:Status>B</ns3:Status>
+                <ns3:ServiceReferences>SVC4</ns3:ServiceReferences>
+                <ns3:InConnectionWithInfo>
+                  <ns3:InConnectionDocNbr>6182452487766</ns3:InConnectionDocNbr>
+                  <ns3:InConnectonCpnNbr>1</ns3:InConnectonCpnNbr>
+                </ns3:InConnectionWithInfo>
+                <ns3:ReasonForIssuance>
+                  <ns3:RFIC>D</ns3:RFIC>
+                  <ns3:Code>993</ns3:Code>
+                </ns3:ReasonForIssuance>
+              </ns3:CouponInfo>
+              <ns3:ReportingType>Airline</ns3:ReportingType>
+            </ns3:TicketDocument>
+            <ns3:PassengerReference>PAX3</ns3:PassengerReference>
+          </ns3:TicketDocInfo>
+        </ns3:TicketDocInfos>
+      </ns3:Response>
+    </ns3:OrderViewRS>
+  </soap:Body>
+</soap:Envelope>

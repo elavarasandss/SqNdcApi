@@ -1,0 +1,2006 @@
+ Time : 24-07-2024 18:48:49
+
+https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ 
+
+Request :- 
+---------- 
+
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3" xmlns:ns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ">
+  <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <add:MessageID xmlns:add="http://www.w3.org/2005/08/addressing">197c4f6d-175c-4933-bb49-221916082f61</add:MessageID>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderReshop_18.1</wsa:Action>
+    <add:To xmlns:add="http://www.w3.org/2005/08/addressing">https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</add:To>
+    <sec:AMA_SecurityHostedUser>
+      <sec:UserID POS_Type="1" RequestorType="U" PseudoCityCode="NDCSQ08SQ" AgentDutyCode="SU">
+        <typ:RequestorID xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1">
+          <iat:CompanyName>SQ</iat:CompanyName>
+        </typ:RequestorID>
+      </sec:UserID>
+    </sec:AMA_SecurityHostedUser>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>WSSQNDC</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">aIcmUxbfxzaHBsxhSE3/XXvDdgQ=</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">TmdhblJzSWs=</wsse:Nonce>
+        <wsu:Created>2024-07-24T18:48:39:392Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <OrderReshopRQ xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ">
+      <PayloadAttributes>
+        <Version>18.1</Version>
+      </PayloadAttributes>
+      <PointOfSale>
+        <Country>
+          <CountryCode>SG</CountryCode>
+        </Country>
+      </PointOfSale>
+      <Party>
+        <Recipient>
+          <ORA>
+            <AirlineDesigCode>SQ</AirlineDesigCode>
+          </ORA>
+        </Recipient>
+        <Participant>
+          <Aggregator>
+            <AggregatorID>GEN</AggregatorID>
+          </Aggregator>
+        </Participant>
+        <Sender>
+          <TravelAgency>
+            <AgencyID>12345678</AgencyID>
+            <IATA_Number>12345678</IATA_Number>
+          </TravelAgency>
+        </Sender>
+      </Party>
+      <Request>
+        <OrderItemRefID>SQ_6LJTE9</OrderItemRefID>
+        <UpdateOrder>
+          <ReshopOrder>
+            <ServiceOrder>
+              <AddOfferItems>
+                <ShoppingCriteria>
+                  <CabinTypeCriteria>
+                    <CabinTypeName>BUS</CabinTypeName>
+                  </CabinTypeCriteria>
+                </ShoppingCriteria>
+                <FlightRequest>
+                  <OriginDestRequest>
+                    <DestArrivalRequest>
+                      <IATA_LocationCode>SIN</IATA_LocationCode>
+                    </DestArrivalRequest>
+                    <OriginDepRequest>
+                      <IATA_LocationCode>BOM</IATA_LocationCode>
+                      <Date>2024-08-20</Date>
+                    </OriginDepRequest>
+                  </OriginDestRequest>
+                  <OriginDestRequest>
+                    <DestArrivalRequest>
+                      <IATA_LocationCode>BOM</IATA_LocationCode>
+                    </DestArrivalRequest>
+                    <OriginDepRequest>
+                      <IATA_LocationCode>SIN</IATA_LocationCode>
+                      <Date>2024-08-25</Date>
+                    </OriginDepRequest>
+                  </OriginDestRequest>
+                </FlightRequest>
+              </AddOfferItems>
+              <DeleteOrderItem>
+                <OrderItemRefID>SQ_6LJTE9_AIR-1-2</OrderItemRefID>
+              </DeleteOrderItem>
+            </ServiceOrder>
+          </ReshopOrder>
+        </UpdateOrder>
+      </Request>
+    </OrderReshopRQ>
+  </soapenv:Body>
+</soapenv:Envelope>
+ Time : 24-07-2024 18:48:49
+
+
+Response :- 
+----------- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:From>
+      <wsa:Address>https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</wsa:Address>
+    </wsa:From>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderReshop_18.1</wsa:Action>
+    <wsa:MessageID>urn:uuid:22f47e90-3281-2204-cda2-58c260cead62</wsa:MessageID>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">197c4f6d-175c-4933-bb49-221916082f61</wsa:RelatesTo>
+    <awsse:Session TransactionStatusCode="End">
+      <awsse:SessionId>00H5Y9PQA7</awsse:SessionId>
+      <awsse:SequenceNumber>1</awsse:SequenceNumber>
+      <awsse:SecurityToken>2WXRQFXXFBWRP3IIUSVTNKWEMU</awsse:SecurityToken>
+    </awsse:Session>
+  </soap:Header>
+  <soap:Body>
+    <ns2:OrderReshopRS xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ" xmlns:ns2="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRS">
+      <ns2:PayloadAttributes>
+        <ns2:Version>18.1</ns2:Version>
+      </ns2:PayloadAttributes>
+      <ns2:Response>
+        <ns2:DataLists>
+          <ns2:OriginDestList>
+            <ns2:OriginDest>
+              <ns2:OriginDestID>BOMSIN</ns2:OriginDestID>
+              <ns2:ArrivalStationCode>SIN</ns2:ArrivalStationCode>
+              <ns2:DepStationCode>BOM</ns2:DepStationCode>
+              <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+              <ns2:PaxJourneyRefID>FLT1-2</ns2:PaxJourneyRefID>
+            </ns2:OriginDest>
+            <ns2:OriginDest>
+              <ns2:OriginDestID>SINBOM</ns2:OriginDestID>
+              <ns2:ArrivalStationCode>BOM</ns2:ArrivalStationCode>
+              <ns2:DepStationCode>SIN</ns2:DepStationCode>
+              <ns2:PaxJourneyRefID>FLT2-1</ns2:PaxJourneyRefID>
+              <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+            </ns2:OriginDest>
+          </ns2:OriginDestList>
+          <ns2:PaxJourneyList>
+            <ns2:PaxJourney>
+              <ns2:PaxJourneyID>FLT1-1</ns2:PaxJourneyID>
+              <ns2:Duration>PT5H30M</ns2:Duration>
+              <ns2:PaxSegmentRefID>SEG4</ns2:PaxSegmentRefID>
+            </ns2:PaxJourney>
+            <ns2:PaxJourney>
+              <ns2:PaxJourneyID>FLT1-2</ns2:PaxJourneyID>
+              <ns2:Duration>PT5H35M</ns2:Duration>
+              <ns2:PaxSegmentRefID>SEG3</ns2:PaxSegmentRefID>
+            </ns2:PaxJourney>
+            <ns2:PaxJourney>
+              <ns2:PaxJourneyID>FLT2-1</ns2:PaxJourneyID>
+              <ns2:Duration>PT5H20M</ns2:Duration>
+              <ns2:PaxSegmentRefID>SEG20</ns2:PaxSegmentRefID>
+            </ns2:PaxJourney>
+            <ns2:PaxJourney>
+              <ns2:PaxJourneyID>FLT2-2</ns2:PaxJourneyID>
+              <ns2:Duration>PT5H40M</ns2:Duration>
+              <ns2:PaxSegmentRefID>SEG21</ns2:PaxSegmentRefID>
+            </ns2:PaxJourney>
+          </ns2:PaxJourneyList>
+          <ns2:PaxList>
+            <ns2:Pax>
+              <ns2:PaxID>PAX2</ns2:PaxID>
+              <ns2:PTC>ADT</ns2:PTC>
+              <ns2:Individual>
+                <ns2:IndividualID>PAX2</ns2:IndividualID>
+                <ns2:Birthdate>1996-02-21</ns2:Birthdate>
+                <ns2:TitleName>MR</ns2:TitleName>
+                <ns2:GivenName>RUBESH</ns2:GivenName>
+                <ns2:Surname>BERRY</ns2:Surname>
+              </ns2:Individual>
+            </ns2:Pax>
+            <ns2:Pax>
+              <ns2:PaxID>PAX3</ns2:PaxID>
+              <ns2:PTC>ADT</ns2:PTC>
+              <ns2:Individual>
+                <ns2:IndividualID>PAX3</ns2:IndividualID>
+                <ns2:Birthdate>1996-02-21</ns2:Birthdate>
+                <ns2:TitleName>MR</ns2:TitleName>
+                <ns2:GivenName>SEENI</ns2:GivenName>
+                <ns2:Surname>VASA</ns2:Surname>
+              </ns2:Individual>
+            </ns2:Pax>
+          </ns2:PaxList>
+          <ns2:PaxSegmentList>
+            <ns2:PaxSegment>
+              <ns2:PaxSegmentID>SEG4</ns2:PaxSegmentID>
+              <ns2:Dep>
+                <ns2:IATA_LocationCode>BOM</ns2:IATA_LocationCode>
+                <ns2:TerminalName>2</ns2:TerminalName>
+                <ns2:AircraftScheduledDateTime>2024-08-20T23:40:00</ns2:AircraftScheduledDateTime>
+              </ns2:Dep>
+              <ns2:Arrival>
+                <ns2:IATA_LocationCode>SIN</ns2:IATA_LocationCode>
+                <ns2:TerminalName>0</ns2:TerminalName>
+                <ns2:AircraftScheduledDateTime>2024-08-21T07:40:00</ns2:AircraftScheduledDateTime>
+              </ns2:Arrival>
+              <ns2:MarketingCarrierInfo>
+                <ns2:CarrierDesigCode>SQ</ns2:CarrierDesigCode>
+                <ns2:CarrierName>SINGAPORE AIRLINES</ns2:CarrierName>
+                <ns2:MarketingCarrierFlightNumberText>423</ns2:MarketingCarrierFlightNumberText>
+              </ns2:MarketingCarrierInfo>
+              <ns2:OperatingCarrierInfo>
+                <ns2:CarrierDesigCode>SQ</ns2:CarrierDesigCode>
+                <ns2:CarrierName>SINGAPORE AIRLINES</ns2:CarrierName>
+                <ns2:Disclosure>
+                  <ns2:DisclosureID>DIS1</ns2:DisclosureID>
+                  <ns2:Desc>
+                    <ns2:DescID>DES1</ns2:DescID>
+                    <ns2:DescText>SINGAPORE AIRLINES</ns2:DescText>
+                  </ns2:Desc>
+                </ns2:Disclosure>
+              </ns2:OperatingCarrierInfo>
+              <ns2:DatedOperatingLeg>
+                <ns2:DatedOperatingLegID>LEG1</ns2:DatedOperatingLegID>
+                <ns2:Dep>
+                  <ns2:IATA_LocationCode>BOM</ns2:IATA_LocationCode>
+                  <ns2:AircraftScheduledDateTime>2024-08-20T23:40:00</ns2:AircraftScheduledDateTime>
+                </ns2:Dep>
+                <ns2:Arrival>
+                  <ns2:IATA_LocationCode>SIN</ns2:IATA_LocationCode>
+                  <ns2:AircraftScheduledDateTime>2024-08-21T07:40:00</ns2:AircraftScheduledDateTime>
+                </ns2:Arrival>
+                <ns2:IATA_AircraftType>
+                  <ns2:IATA_AircraftTypeCode>388</ns2:IATA_AircraftTypeCode>
+                </ns2:IATA_AircraftType>
+              </ns2:DatedOperatingLeg>
+            </ns2:PaxSegment>
+            <ns2:PaxSegment>
+              <ns2:PaxSegmentID>SEG3</ns2:PaxSegmentID>
+              <ns2:Dep>
+                <ns2:IATA_LocationCode>BOM</ns2:IATA_LocationCode>
+                <ns2:TerminalName>2</ns2:TerminalName>
+                <ns2:AircraftScheduledDateTime>2024-08-20T11:45:00</ns2:AircraftScheduledDateTime>
+              </ns2:Dep>
+              <ns2:Arrival>
+                <ns2:IATA_LocationCode>SIN</ns2:IATA_LocationCode>
+                <ns2:TerminalName>0</ns2:TerminalName>
+                <ns2:AircraftScheduledDateTime>2024-08-20T19:50:00</ns2:AircraftScheduledDateTime>
+              </ns2:Arrival>
+              <ns2:MarketingCarrierInfo>
+                <ns2:CarrierDesigCode>SQ</ns2:CarrierDesigCode>
+                <ns2:CarrierName>SINGAPORE AIRLINES</ns2:CarrierName>
+                <ns2:MarketingCarrierFlightNumberText>421</ns2:MarketingCarrierFlightNumberText>
+              </ns2:MarketingCarrierInfo>
+              <ns2:OperatingCarrierInfo>
+                <ns2:CarrierDesigCode>SQ</ns2:CarrierDesigCode>
+                <ns2:CarrierName>SINGAPORE AIRLINES</ns2:CarrierName>
+                <ns2:Disclosure>
+                  <ns2:DisclosureID>DIS2</ns2:DisclosureID>
+                  <ns2:Desc>
+                    <ns2:DescID>DES2</ns2:DescID>
+                    <ns2:DescText>SINGAPORE AIRLINES</ns2:DescText>
+                  </ns2:Desc>
+                </ns2:Disclosure>
+              </ns2:OperatingCarrierInfo>
+              <ns2:DatedOperatingLeg>
+                <ns2:DatedOperatingLegID>LEG2</ns2:DatedOperatingLegID>
+                <ns2:Dep>
+                  <ns2:IATA_LocationCode>BOM</ns2:IATA_LocationCode>
+                  <ns2:AircraftScheduledDateTime>2024-08-20T11:45:00</ns2:AircraftScheduledDateTime>
+                </ns2:Dep>
+                <ns2:Arrival>
+                  <ns2:IATA_LocationCode>SIN</ns2:IATA_LocationCode>
+                  <ns2:AircraftScheduledDateTime>2024-08-20T19:50:00</ns2:AircraftScheduledDateTime>
+                </ns2:Arrival>
+                <ns2:IATA_AircraftType>
+                  <ns2:IATA_AircraftTypeCode>359</ns2:IATA_AircraftTypeCode>
+                </ns2:IATA_AircraftType>
+              </ns2:DatedOperatingLeg>
+            </ns2:PaxSegment>
+            <ns2:PaxSegment>
+              <ns2:PaxSegmentID>SEG20</ns2:PaxSegmentID>
+              <ns2:Dep>
+                <ns2:IATA_LocationCode>SIN</ns2:IATA_LocationCode>
+                <ns2:TerminalName>3</ns2:TerminalName>
+                <ns2:AircraftScheduledDateTime>2024-08-25T07:40:00</ns2:AircraftScheduledDateTime>
+              </ns2:Dep>
+              <ns2:Arrival>
+                <ns2:IATA_LocationCode>BOM</ns2:IATA_LocationCode>
+                <ns2:TerminalName>2</ns2:TerminalName>
+                <ns2:AircraftScheduledDateTime>2024-08-25T10:30:00</ns2:AircraftScheduledDateTime>
+              </ns2:Arrival>
+              <ns2:MarketingCarrierInfo>
+                <ns2:CarrierDesigCode>SQ</ns2:CarrierDesigCode>
+                <ns2:CarrierName>SINGAPORE AIRLINES</ns2:CarrierName>
+                <ns2:MarketingCarrierFlightNumberText>422</ns2:MarketingCarrierFlightNumberText>
+              </ns2:MarketingCarrierInfo>
+              <ns2:OperatingCarrierInfo>
+                <ns2:CarrierDesigCode>SQ</ns2:CarrierDesigCode>
+                <ns2:CarrierName>SINGAPORE AIRLINES</ns2:CarrierName>
+                <ns2:Disclosure>
+                  <ns2:DisclosureID>DIS3</ns2:DisclosureID>
+                  <ns2:Desc>
+                    <ns2:DescID>DES3</ns2:DescID>
+                    <ns2:DescText>SINGAPORE AIRLINES</ns2:DescText>
+                  </ns2:Desc>
+                </ns2:Disclosure>
+              </ns2:OperatingCarrierInfo>
+              <ns2:DatedOperatingLeg>
+                <ns2:DatedOperatingLegID>LEG3</ns2:DatedOperatingLegID>
+                <ns2:Dep>
+                  <ns2:IATA_LocationCode>SIN</ns2:IATA_LocationCode>
+                  <ns2:AircraftScheduledDateTime>2024-08-25T07:40:00</ns2:AircraftScheduledDateTime>
+                </ns2:Dep>
+                <ns2:Arrival>
+                  <ns2:IATA_LocationCode>BOM</ns2:IATA_LocationCode>
+                  <ns2:AircraftScheduledDateTime>2024-08-25T10:30:00</ns2:AircraftScheduledDateTime>
+                </ns2:Arrival>
+                <ns2:IATA_AircraftType>
+                  <ns2:IATA_AircraftTypeCode>359</ns2:IATA_AircraftTypeCode>
+                </ns2:IATA_AircraftType>
+              </ns2:DatedOperatingLeg>
+            </ns2:PaxSegment>
+            <ns2:PaxSegment>
+              <ns2:PaxSegmentID>SEG21</ns2:PaxSegmentID>
+              <ns2:Dep>
+                <ns2:IATA_LocationCode>SIN</ns2:IATA_LocationCode>
+                <ns2:TerminalName>3</ns2:TerminalName>
+                <ns2:AircraftScheduledDateTime>2024-08-25T19:00:00</ns2:AircraftScheduledDateTime>
+              </ns2:Dep>
+              <ns2:Arrival>
+                <ns2:IATA_LocationCode>BOM</ns2:IATA_LocationCode>
+                <ns2:TerminalName>2</ns2:TerminalName>
+                <ns2:AircraftScheduledDateTime>2024-08-25T22:10:00</ns2:AircraftScheduledDateTime>
+              </ns2:Arrival>
+              <ns2:MarketingCarrierInfo>
+                <ns2:CarrierDesigCode>SQ</ns2:CarrierDesigCode>
+                <ns2:CarrierName>SINGAPORE AIRLINES</ns2:CarrierName>
+                <ns2:MarketingCarrierFlightNumberText>424</ns2:MarketingCarrierFlightNumberText>
+              </ns2:MarketingCarrierInfo>
+              <ns2:OperatingCarrierInfo>
+                <ns2:CarrierDesigCode>SQ</ns2:CarrierDesigCode>
+                <ns2:CarrierName>SINGAPORE AIRLINES</ns2:CarrierName>
+                <ns2:Disclosure>
+                  <ns2:DisclosureID>DIS4</ns2:DisclosureID>
+                  <ns2:Desc>
+                    <ns2:DescID>DES4</ns2:DescID>
+                    <ns2:DescText>SINGAPORE AIRLINES</ns2:DescText>
+                  </ns2:Desc>
+                </ns2:Disclosure>
+              </ns2:OperatingCarrierInfo>
+              <ns2:DatedOperatingLeg>
+                <ns2:DatedOperatingLegID>LEG4</ns2:DatedOperatingLegID>
+                <ns2:Dep>
+                  <ns2:IATA_LocationCode>SIN</ns2:IATA_LocationCode>
+                  <ns2:AircraftScheduledDateTime>2024-08-25T19:00:00</ns2:AircraftScheduledDateTime>
+                </ns2:Dep>
+                <ns2:Arrival>
+                  <ns2:IATA_LocationCode>BOM</ns2:IATA_LocationCode>
+                  <ns2:AircraftScheduledDateTime>2024-08-25T22:10:00</ns2:AircraftScheduledDateTime>
+                </ns2:Arrival>
+                <ns2:IATA_AircraftType>
+                  <ns2:IATA_AircraftTypeCode>388</ns2:IATA_AircraftTypeCode>
+                </ns2:IATA_AircraftType>
+              </ns2:DatedOperatingLeg>
+            </ns2:PaxSegment>
+          </ns2:PaxSegmentList>
+          <ns2:PriceClassList>
+            <ns2:PriceClass>
+              <ns2:PriceClassID>FF81</ns2:PriceClassID>
+              <ns2:Name>Business Lite</ns2:Name>
+              <ns2:Desc>
+                <ns2:DescID>AWARD_ACCRUAL</ns2:DescID>
+                <ns2:DescText>125%</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>AWARD_UPGRADE</ns2:DescID>
+                <ns2:DescText>Not Allowed</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>BAGGAGEALLOWANCE_CARRYON</ns2:DescID>
+                <ns2:DescText>2 pieces Up to 7kg each. Sum of length, width and height of each piece should not exceed 115cm.</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CANCEL_BEFOREDEPARTURE</ns2:DescID>
+                <ns2:DescText>Not Allowed</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CANCEL_NOSHOWFIRST</ns2:DescID>
+                <ns2:DescText>USD 300</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CHANGE_BEFOREDEPARTURE</ns2:DescID>
+                <ns2:DescText>USD 200-250</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>SEATSELECTION</ns2:DescID>
+                <ns2:DescText>Complimentary</ns2:DescText>
+              </ns2:Desc>
+            </ns2:PriceClass>
+            <ns2:PriceClass>
+              <ns2:PriceClassID>FF71</ns2:PriceClassID>
+              <ns2:Name>Business Standard</ns2:Name>
+              <ns2:Desc>
+                <ns2:DescID>AWARD_ACCRUAL</ns2:DescID>
+                <ns2:DescText>125%</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>AWARD_UPGRADE</ns2:DescID>
+                <ns2:DescText>Allowed</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>BAGGAGEALLOWANCE_CARRYON</ns2:DescID>
+                <ns2:DescText>2 pieces Up to 7kg each. Sum of length, width and height of each piece should not exceed 115cm.</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CANCEL_BEFOREDEPARTURE</ns2:DescID>
+                <ns2:DescText>USD 150-250</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CANCEL_NOSHOWFIRST</ns2:DescID>
+                <ns2:DescText>USD 300</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CHANGE_BEFOREDEPARTURE</ns2:DescID>
+                <ns2:DescText>USD 100-150</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>SEATSELECTION</ns2:DescID>
+                <ns2:DescText>Complimentary</ns2:DescText>
+              </ns2:Desc>
+            </ns2:PriceClass>
+            <ns2:PriceClass>
+              <ns2:PriceClassID>FF61</ns2:PriceClassID>
+              <ns2:Name>Business Flexi</ns2:Name>
+              <ns2:Desc>
+                <ns2:DescID>AWARD_ACCRUAL</ns2:DescID>
+                <ns2:DescText>150%</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>AWARD_UPGRADE</ns2:DescID>
+                <ns2:DescText>Allowed</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>BAGGAGEALLOWANCE_CARRYON</ns2:DescID>
+                <ns2:DescText>2 pieces Up to 7kg each. Sum of length, width and height of each piece should not exceed 115cm.</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CANCEL_BEFOREDEPARTURE</ns2:DescID>
+                <ns2:DescText>USD 100-200</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CANCEL_NOSHOWFIRST</ns2:DescID>
+                <ns2:DescText>USD 300</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CHANGE_BEFOREDEPARTURE</ns2:DescID>
+                <ns2:DescText>Complimentary</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>SEATSELECTION</ns2:DescID>
+                <ns2:DescText>Complimentary</ns2:DescText>
+              </ns2:Desc>
+            </ns2:PriceClass>
+            <ns2:PriceClass>
+              <ns2:PriceClassID>FF91NDC</ns2:PriceClassID>
+              <ns2:Name>First/Suites</ns2:Name>
+              <ns2:Desc>
+                <ns2:DescID>AWARD_ACCRUAL</ns2:DescID>
+                <ns2:DescText>200%</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>AWARD_UPGRADE</ns2:DescID>
+                <ns2:DescText>Not Applicable</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>BAGGAGEALLOWANCE_CARRYON</ns2:DescID>
+                <ns2:DescText>2 pieces Up to 7kg each. Sum of length, width and height of each piece should not exceed 115cm.</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CANCEL_BEFOREDEPARTURE</ns2:DescID>
+                <ns2:DescText>USD 100</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CANCEL_NOSHOWFIRST</ns2:DescID>
+                <ns2:DescText>USD 300</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CHANGE_BEFOREDEPARTURE</ns2:DescID>
+                <ns2:DescText>Complimentary</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>SEATSELECTION</ns2:DescID>
+                <ns2:DescText>Complimentary</ns2:DescText>
+              </ns2:Desc>
+            </ns2:PriceClass>
+            <ns2:PriceClass>
+              <ns2:PriceClassID>FF91</ns2:PriceClassID>
+              <ns2:Name>First/Suites</ns2:Name>
+              <ns2:Desc>
+                <ns2:DescID>AWARD_ACCRUAL</ns2:DescID>
+                <ns2:DescText>200%</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>AWARD_UPGRADE</ns2:DescID>
+                <ns2:DescText>Not Applicable</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>BAGGAGEALLOWANCE_CARRYON</ns2:DescID>
+                <ns2:DescText>2 pieces Up to 7kg each. Sum of length, width and height of each piece should not exceed 115cm.</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CANCEL_BEFOREDEPARTURE</ns2:DescID>
+                <ns2:DescText>USD 100</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CANCEL_NOSHOWFIRST</ns2:DescID>
+                <ns2:DescText>USD 300</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CHANGE_BEFOREDEPARTURE</ns2:DescID>
+                <ns2:DescText>Complimentary</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>SEATSELECTION</ns2:DescID>
+                <ns2:DescText>Complimentary</ns2:DescText>
+              </ns2:Desc>
+            </ns2:PriceClass>
+          </ns2:PriceClassList>
+        </ns2:DataLists>
+        <ns2:Metadata>
+          <ns2:Other>
+            <ns2:OtherMetadata>
+              <ns2:DescriptionMetadatas>
+                <ns2:DescriptionMetadata MetadataKey="DISCLAIMER">
+                  <ns2:Topic>More details on fare conditions will be provided upon selecting your desired flight(s). Fees are subjected to currency conversion and your bank's exchange rate.</ns2:Topic>
+                </ns2:DescriptionMetadata>
+              </ns2:DescriptionMetadatas>
+            </ns2:OtherMetadata>
+          </ns2:Other>
+        </ns2:Metadata>
+        <ns2:ReshopResults>
+          <ns2:ReshopOffers>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>SP2F-6968704354980085244-1</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:JourneyOverview>
+                <ns2:PriceClassRefID>FF81</ns2:PriceClassRefID>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT2-1</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+              </ns2:JourneyOverview>
+              <ns2:AddOfferItem>
+                <ns2:OfferItemID>SP2F-6968704354980085244-1-1</ns2:OfferItemID>
+                <ns2:MandatoryInd>true</ns2:MandatoryInd>
+                <ns2:OrderItemRefID>SQ_6LJTE9_AIR-1-2</ns2:OrderItemRefID>
+                <ns2:FareDetail>
+                  <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                  <ns2:PassengerRefs>PAX3</ns2:PassengerRefs>
+                  <ns2:Price>
+                    <ns2:TotalAmount>
+                      <ns2:SimpleCurrencyPrice Code="SGD">1514.30</ns2:SimpleCurrencyPrice>
+                    </ns2:TotalAmount>
+                    <ns2:BaseAmount Code="SGD">1326.00</ns2:BaseAmount>
+                    <ns2:Taxes>
+                      <ns2:Total Code="SGD">188.30</ns2:Total>
+                    </ns2:Taxes>
+                  </ns2:Price>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>D16IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>D</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF81</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG4</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>D16IIRB3</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>D</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF81</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG20</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                </ns2:FareDetail>
+                <ns2:Service>
+                  <ns2:ServiceID>SRV1</ns2:ServiceID>
+                  <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                  <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                  <ns2:ServiceAssociations>
+                    <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                    <ns2:PaxJourneyRefID>FLT2-1</ns2:PaxJourneyRefID>
+                  </ns2:ServiceAssociations>
+                </ns2:Service>
+                <ns2:Price>
+                  <ns2:TotalAmount CurCode="SGD">3028.60</ns2:TotalAmount>
+                </ns2:Price>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1079.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">241.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:NewOfferItemDifferential>
+                  <ns2:Amount CurCode="SGD">4106.40</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">618.40</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:NewOfferItemDifferential>
+                <ns2:PenaltyDifferential>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:PenaltyDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">3028.60</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">376.60</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:DifferentialAmountDue>
+              </ns2:AddOfferItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>SP2F-6968704354980085244-2</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:JourneyOverview>
+                <ns2:PriceClassRefID>FF81</ns2:PriceClassRefID>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT1-2</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT2-1</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+              </ns2:JourneyOverview>
+              <ns2:AddOfferItem>
+                <ns2:OfferItemID>SP2F-6968704354980085244-2-1</ns2:OfferItemID>
+                <ns2:MandatoryInd>true</ns2:MandatoryInd>
+                <ns2:OrderItemRefID>SQ_6LJTE9_AIR-1-2</ns2:OrderItemRefID>
+                <ns2:FareDetail>
+                  <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                  <ns2:PassengerRefs>PAX3</ns2:PassengerRefs>
+                  <ns2:Price>
+                    <ns2:TotalAmount>
+                      <ns2:SimpleCurrencyPrice Code="SGD">1514.30</ns2:SimpleCurrencyPrice>
+                    </ns2:TotalAmount>
+                    <ns2:BaseAmount Code="SGD">1326.00</ns2:BaseAmount>
+                    <ns2:Taxes>
+                      <ns2:Total Code="SGD">188.30</ns2:Total>
+                    </ns2:Taxes>
+                  </ns2:Price>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>D16IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>D</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF81</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG3</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>D16IIRB3</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>D</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF81</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG20</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                </ns2:FareDetail>
+                <ns2:Service>
+                  <ns2:ServiceID>SRV2</ns2:ServiceID>
+                  <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                  <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                  <ns2:ServiceAssociations>
+                    <ns2:PaxJourneyRefID>FLT1-2</ns2:PaxJourneyRefID>
+                    <ns2:PaxJourneyRefID>FLT2-1</ns2:PaxJourneyRefID>
+                  </ns2:ServiceAssociations>
+                </ns2:Service>
+                <ns2:Price>
+                  <ns2:TotalAmount CurCode="SGD">3028.60</ns2:TotalAmount>
+                </ns2:Price>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1079.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">241.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:NewOfferItemDifferential>
+                  <ns2:Amount CurCode="SGD">4106.40</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">618.40</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:NewOfferItemDifferential>
+                <ns2:PenaltyDifferential>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:PenaltyDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">3028.60</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">376.60</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:DifferentialAmountDue>
+              </ns2:AddOfferItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>SP2F-6968704354980085244-3</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:JourneyOverview>
+                <ns2:PriceClassRefID>FF81</ns2:PriceClassRefID>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+              </ns2:JourneyOverview>
+              <ns2:AddOfferItem>
+                <ns2:OfferItemID>SP2F-6968704354980085244-3-1</ns2:OfferItemID>
+                <ns2:MandatoryInd>true</ns2:MandatoryInd>
+                <ns2:OrderItemRefID>SQ_6LJTE9_AIR-1-2</ns2:OrderItemRefID>
+                <ns2:FareDetail>
+                  <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                  <ns2:PassengerRefs>PAX3</ns2:PassengerRefs>
+                  <ns2:Price>
+                    <ns2:TotalAmount>
+                      <ns2:SimpleCurrencyPrice Code="SGD">1514.30</ns2:SimpleCurrencyPrice>
+                    </ns2:TotalAmount>
+                    <ns2:BaseAmount Code="SGD">1326.00</ns2:BaseAmount>
+                    <ns2:Taxes>
+                      <ns2:Total Code="SGD">188.30</ns2:Total>
+                    </ns2:Taxes>
+                  </ns2:Price>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>D16IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>D</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF81</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG4</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>D16IIRB3</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>D</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF81</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG21</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                </ns2:FareDetail>
+                <ns2:Service>
+                  <ns2:ServiceID>SRV3</ns2:ServiceID>
+                  <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                  <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                  <ns2:ServiceAssociations>
+                    <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                    <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                  </ns2:ServiceAssociations>
+                </ns2:Service>
+                <ns2:Price>
+                  <ns2:TotalAmount CurCode="SGD">3028.60</ns2:TotalAmount>
+                </ns2:Price>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1079.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">241.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:NewOfferItemDifferential>
+                  <ns2:Amount CurCode="SGD">4106.40</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">618.40</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:NewOfferItemDifferential>
+                <ns2:PenaltyDifferential>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:PenaltyDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">3028.60</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">376.60</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:DifferentialAmountDue>
+              </ns2:AddOfferItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>SP2F-6968704354980085244-4</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:JourneyOverview>
+                <ns2:PriceClassRefID>FF81</ns2:PriceClassRefID>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT1-2</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+              </ns2:JourneyOverview>
+              <ns2:AddOfferItem>
+                <ns2:OfferItemID>SP2F-6968704354980085244-4-1</ns2:OfferItemID>
+                <ns2:MandatoryInd>true</ns2:MandatoryInd>
+                <ns2:OrderItemRefID>SQ_6LJTE9_AIR-1-2</ns2:OrderItemRefID>
+                <ns2:FareDetail>
+                  <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                  <ns2:PassengerRefs>PAX3</ns2:PassengerRefs>
+                  <ns2:Price>
+                    <ns2:TotalAmount>
+                      <ns2:SimpleCurrencyPrice Code="SGD">1514.30</ns2:SimpleCurrencyPrice>
+                    </ns2:TotalAmount>
+                    <ns2:BaseAmount Code="SGD">1326.00</ns2:BaseAmount>
+                    <ns2:Taxes>
+                      <ns2:Total Code="SGD">188.30</ns2:Total>
+                    </ns2:Taxes>
+                  </ns2:Price>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>D16IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>D</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF81</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG3</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>D16IIRB3</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>D</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF81</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG21</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                </ns2:FareDetail>
+                <ns2:Service>
+                  <ns2:ServiceID>SRV4</ns2:ServiceID>
+                  <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                  <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                  <ns2:ServiceAssociations>
+                    <ns2:PaxJourneyRefID>FLT1-2</ns2:PaxJourneyRefID>
+                    <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                  </ns2:ServiceAssociations>
+                </ns2:Service>
+                <ns2:Price>
+                  <ns2:TotalAmount CurCode="SGD">3028.60</ns2:TotalAmount>
+                </ns2:Price>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1079.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">241.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:NewOfferItemDifferential>
+                  <ns2:Amount CurCode="SGD">4106.40</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">618.40</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:NewOfferItemDifferential>
+                <ns2:PenaltyDifferential>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:PenaltyDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">3028.60</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">376.60</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:DifferentialAmountDue>
+              </ns2:AddOfferItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>SP2F-6968704354980085244-5</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:JourneyOverview>
+                <ns2:PriceClassRefID>FF71</ns2:PriceClassRefID>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT2-1</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+              </ns2:JourneyOverview>
+              <ns2:AddOfferItem>
+                <ns2:OfferItemID>SP2F-6968704354980085244-5-1</ns2:OfferItemID>
+                <ns2:MandatoryInd>true</ns2:MandatoryInd>
+                <ns2:OrderItemRefID>SQ_6LJTE9_AIR-1-2</ns2:OrderItemRefID>
+                <ns2:FareDetail>
+                  <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                  <ns2:PassengerRefs>PAX3</ns2:PassengerRefs>
+                  <ns2:Price>
+                    <ns2:TotalAmount>
+                      <ns2:SimpleCurrencyPrice Code="SGD">2329.70</ns2:SimpleCurrencyPrice>
+                    </ns2:TotalAmount>
+                    <ns2:BaseAmount Code="SGD">2054.00</ns2:BaseAmount>
+                    <ns2:Taxes>
+                      <ns2:Total Code="SGD">275.70</ns2:Total>
+                    </ns2:Taxes>
+                  </ns2:Price>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>U14IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>U</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF71</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG4</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>U14IIRB3</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>U</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF71</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG20</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                </ns2:FareDetail>
+                <ns2:Service>
+                  <ns2:ServiceID>SRV5</ns2:ServiceID>
+                  <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                  <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                  <ns2:ServiceAssociations>
+                    <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                    <ns2:PaxJourneyRefID>FLT2-1</ns2:PaxJourneyRefID>
+                  </ns2:ServiceAssociations>
+                </ns2:Service>
+                <ns2:Price>
+                  <ns2:TotalAmount CurCode="SGD">4659.40</ns2:TotalAmount>
+                </ns2:Price>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1079.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">241.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:NewOfferItemDifferential>
+                  <ns2:Amount CurCode="SGD">5737.20</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">793.20</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:NewOfferItemDifferential>
+                <ns2:PenaltyDifferential>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:PenaltyDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">4659.40</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">551.40</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:DifferentialAmountDue>
+              </ns2:AddOfferItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>SP2F-6968704354980085244-6</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:JourneyOverview>
+                <ns2:PriceClassRefID>FF71</ns2:PriceClassRefID>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT1-2</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT2-1</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+              </ns2:JourneyOverview>
+              <ns2:AddOfferItem>
+                <ns2:OfferItemID>SP2F-6968704354980085244-6-1</ns2:OfferItemID>
+                <ns2:MandatoryInd>true</ns2:MandatoryInd>
+                <ns2:OrderItemRefID>SQ_6LJTE9_AIR-1-2</ns2:OrderItemRefID>
+                <ns2:FareDetail>
+                  <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                  <ns2:PassengerRefs>PAX3</ns2:PassengerRefs>
+                  <ns2:Price>
+                    <ns2:TotalAmount>
+                      <ns2:SimpleCurrencyPrice Code="SGD">2329.70</ns2:SimpleCurrencyPrice>
+                    </ns2:TotalAmount>
+                    <ns2:BaseAmount Code="SGD">2054.00</ns2:BaseAmount>
+                    <ns2:Taxes>
+                      <ns2:Total Code="SGD">275.70</ns2:Total>
+                    </ns2:Taxes>
+                  </ns2:Price>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>U14IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>U</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF71</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG3</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>U14IIRB3</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>U</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF71</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG20</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                </ns2:FareDetail>
+                <ns2:Service>
+                  <ns2:ServiceID>SRV6</ns2:ServiceID>
+                  <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                  <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                  <ns2:ServiceAssociations>
+                    <ns2:PaxJourneyRefID>FLT1-2</ns2:PaxJourneyRefID>
+                    <ns2:PaxJourneyRefID>FLT2-1</ns2:PaxJourneyRefID>
+                  </ns2:ServiceAssociations>
+                </ns2:Service>
+                <ns2:Price>
+                  <ns2:TotalAmount CurCode="SGD">4659.40</ns2:TotalAmount>
+                </ns2:Price>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1079.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">241.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:NewOfferItemDifferential>
+                  <ns2:Amount CurCode="SGD">5737.20</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">793.20</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:NewOfferItemDifferential>
+                <ns2:PenaltyDifferential>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:PenaltyDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">4659.40</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">551.40</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:DifferentialAmountDue>
+              </ns2:AddOfferItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>SP2F-6968704354980085244-7</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:JourneyOverview>
+                <ns2:PriceClassRefID>FF71</ns2:PriceClassRefID>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+              </ns2:JourneyOverview>
+              <ns2:AddOfferItem>
+                <ns2:OfferItemID>SP2F-6968704354980085244-7-1</ns2:OfferItemID>
+                <ns2:MandatoryInd>true</ns2:MandatoryInd>
+                <ns2:OrderItemRefID>SQ_6LJTE9_AIR-1-2</ns2:OrderItemRefID>
+                <ns2:FareDetail>
+                  <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                  <ns2:PassengerRefs>PAX3</ns2:PassengerRefs>
+                  <ns2:Price>
+                    <ns2:TotalAmount>
+                      <ns2:SimpleCurrencyPrice Code="SGD">2329.70</ns2:SimpleCurrencyPrice>
+                    </ns2:TotalAmount>
+                    <ns2:BaseAmount Code="SGD">2054.00</ns2:BaseAmount>
+                    <ns2:Taxes>
+                      <ns2:Total Code="SGD">275.70</ns2:Total>
+                    </ns2:Taxes>
+                  </ns2:Price>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>U14IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>U</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF71</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG4</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>U14IIRB3</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>U</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF71</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG21</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                </ns2:FareDetail>
+                <ns2:Service>
+                  <ns2:ServiceID>SRV7</ns2:ServiceID>
+                  <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                  <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                  <ns2:ServiceAssociations>
+                    <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                    <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                  </ns2:ServiceAssociations>
+                </ns2:Service>
+                <ns2:Price>
+                  <ns2:TotalAmount CurCode="SGD">4659.40</ns2:TotalAmount>
+                </ns2:Price>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1079.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">241.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:NewOfferItemDifferential>
+                  <ns2:Amount CurCode="SGD">5737.20</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">793.20</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:NewOfferItemDifferential>
+                <ns2:PenaltyDifferential>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:PenaltyDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">4659.40</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">551.40</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:DifferentialAmountDue>
+              </ns2:AddOfferItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>SP2F-6968704354980085244-8</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:JourneyOverview>
+                <ns2:PriceClassRefID>FF71</ns2:PriceClassRefID>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT1-2</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+              </ns2:JourneyOverview>
+              <ns2:AddOfferItem>
+                <ns2:OfferItemID>SP2F-6968704354980085244-8-1</ns2:OfferItemID>
+                <ns2:MandatoryInd>true</ns2:MandatoryInd>
+                <ns2:OrderItemRefID>SQ_6LJTE9_AIR-1-2</ns2:OrderItemRefID>
+                <ns2:FareDetail>
+                  <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                  <ns2:PassengerRefs>PAX3</ns2:PassengerRefs>
+                  <ns2:Price>
+                    <ns2:TotalAmount>
+                      <ns2:SimpleCurrencyPrice Code="SGD">2329.70</ns2:SimpleCurrencyPrice>
+                    </ns2:TotalAmount>
+                    <ns2:BaseAmount Code="SGD">2054.00</ns2:BaseAmount>
+                    <ns2:Taxes>
+                      <ns2:Total Code="SGD">275.70</ns2:Total>
+                    </ns2:Taxes>
+                  </ns2:Price>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>U14IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>U</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF71</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG3</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>U14IIRB3</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>U</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF71</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG21</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                </ns2:FareDetail>
+                <ns2:Service>
+                  <ns2:ServiceID>SRV8</ns2:ServiceID>
+                  <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                  <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                  <ns2:ServiceAssociations>
+                    <ns2:PaxJourneyRefID>FLT1-2</ns2:PaxJourneyRefID>
+                    <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                  </ns2:ServiceAssociations>
+                </ns2:Service>
+                <ns2:Price>
+                  <ns2:TotalAmount CurCode="SGD">4659.40</ns2:TotalAmount>
+                </ns2:Price>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1079.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">241.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:NewOfferItemDifferential>
+                  <ns2:Amount CurCode="SGD">5737.20</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">793.20</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:NewOfferItemDifferential>
+                <ns2:PenaltyDifferential>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:PenaltyDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">4659.40</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">551.40</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:DifferentialAmountDue>
+              </ns2:AddOfferItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>SP2F-6968704354980085244-9</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:JourneyOverview>
+                <ns2:PriceClassRefID>FF61</ns2:PriceClassRefID>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT2-1</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+              </ns2:JourneyOverview>
+              <ns2:AddOfferItem>
+                <ns2:OfferItemID>SP2F-6968704354980085244-9-1</ns2:OfferItemID>
+                <ns2:MandatoryInd>true</ns2:MandatoryInd>
+                <ns2:OrderItemRefID>SQ_6LJTE9_AIR-1-2</ns2:OrderItemRefID>
+                <ns2:FareDetail>
+                  <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                  <ns2:PassengerRefs>PAX3</ns2:PassengerRefs>
+                  <ns2:Price>
+                    <ns2:TotalAmount>
+                      <ns2:SimpleCurrencyPrice Code="SGD">3062.20</ns2:SimpleCurrencyPrice>
+                    </ns2:TotalAmount>
+                    <ns2:BaseAmount Code="SGD">2708.00</ns2:BaseAmount>
+                    <ns2:Taxes>
+                      <ns2:Total Code="SGD">354.20</ns2:Total>
+                    </ns2:Taxes>
+                  </ns2:Price>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>J12IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>J</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF61</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG4</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>J12IIRB3</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>J</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF61</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG20</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                </ns2:FareDetail>
+                <ns2:Service>
+                  <ns2:ServiceID>SRV9</ns2:ServiceID>
+                  <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                  <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                  <ns2:ServiceAssociations>
+                    <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                    <ns2:PaxJourneyRefID>FLT2-1</ns2:PaxJourneyRefID>
+                  </ns2:ServiceAssociations>
+                </ns2:Service>
+                <ns2:Price>
+                  <ns2:TotalAmount CurCode="SGD">6124.40</ns2:TotalAmount>
+                </ns2:Price>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1079.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">241.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:NewOfferItemDifferential>
+                  <ns2:Amount CurCode="SGD">7202.20</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">950.20</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:NewOfferItemDifferential>
+                <ns2:PenaltyDifferential>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:PenaltyDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">6124.40</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">708.40</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:DifferentialAmountDue>
+              </ns2:AddOfferItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>SP2F-6968704354980085244-10</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:JourneyOverview>
+                <ns2:PriceClassRefID>FF61</ns2:PriceClassRefID>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT1-2</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT2-1</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+              </ns2:JourneyOverview>
+              <ns2:AddOfferItem>
+                <ns2:OfferItemID>SP2F-6968704354980085244-10-1</ns2:OfferItemID>
+                <ns2:MandatoryInd>true</ns2:MandatoryInd>
+                <ns2:OrderItemRefID>SQ_6LJTE9_AIR-1-2</ns2:OrderItemRefID>
+                <ns2:FareDetail>
+                  <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                  <ns2:PassengerRefs>PAX3</ns2:PassengerRefs>
+                  <ns2:Price>
+                    <ns2:TotalAmount>
+                      <ns2:SimpleCurrencyPrice Code="SGD">3062.20</ns2:SimpleCurrencyPrice>
+                    </ns2:TotalAmount>
+                    <ns2:BaseAmount Code="SGD">2708.00</ns2:BaseAmount>
+                    <ns2:Taxes>
+                      <ns2:Total Code="SGD">354.20</ns2:Total>
+                    </ns2:Taxes>
+                  </ns2:Price>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>J12IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>J</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF61</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG3</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>J12IIRB3</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>J</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF61</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG20</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                </ns2:FareDetail>
+                <ns2:Service>
+                  <ns2:ServiceID>SRV10</ns2:ServiceID>
+                  <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                  <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                  <ns2:ServiceAssociations>
+                    <ns2:PaxJourneyRefID>FLT1-2</ns2:PaxJourneyRefID>
+                    <ns2:PaxJourneyRefID>FLT2-1</ns2:PaxJourneyRefID>
+                  </ns2:ServiceAssociations>
+                </ns2:Service>
+                <ns2:Price>
+                  <ns2:TotalAmount CurCode="SGD">6124.40</ns2:TotalAmount>
+                </ns2:Price>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1079.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">241.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:NewOfferItemDifferential>
+                  <ns2:Amount CurCode="SGD">7202.20</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">950.20</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:NewOfferItemDifferential>
+                <ns2:PenaltyDifferential>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:PenaltyDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">6124.40</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">708.40</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:DifferentialAmountDue>
+              </ns2:AddOfferItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>SP2F-6968704354980085244-11</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:JourneyOverview>
+                <ns2:PriceClassRefID>FF61</ns2:PriceClassRefID>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+              </ns2:JourneyOverview>
+              <ns2:AddOfferItem>
+                <ns2:OfferItemID>SP2F-6968704354980085244-11-1</ns2:OfferItemID>
+                <ns2:MandatoryInd>true</ns2:MandatoryInd>
+                <ns2:OrderItemRefID>SQ_6LJTE9_AIR-1-2</ns2:OrderItemRefID>
+                <ns2:FareDetail>
+                  <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                  <ns2:PassengerRefs>PAX3</ns2:PassengerRefs>
+                  <ns2:Price>
+                    <ns2:TotalAmount>
+                      <ns2:SimpleCurrencyPrice Code="SGD">3062.20</ns2:SimpleCurrencyPrice>
+                    </ns2:TotalAmount>
+                    <ns2:BaseAmount Code="SGD">2708.00</ns2:BaseAmount>
+                    <ns2:Taxes>
+                      <ns2:Total Code="SGD">354.20</ns2:Total>
+                    </ns2:Taxes>
+                  </ns2:Price>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>J12IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>J</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF61</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG4</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>J12IIRB3</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>J</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF61</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG21</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                </ns2:FareDetail>
+                <ns2:Service>
+                  <ns2:ServiceID>SRV11</ns2:ServiceID>
+                  <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                  <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                  <ns2:ServiceAssociations>
+                    <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                    <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                  </ns2:ServiceAssociations>
+                </ns2:Service>
+                <ns2:Price>
+                  <ns2:TotalAmount CurCode="SGD">6124.40</ns2:TotalAmount>
+                </ns2:Price>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1079.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">241.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:NewOfferItemDifferential>
+                  <ns2:Amount CurCode="SGD">7202.20</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">950.20</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:NewOfferItemDifferential>
+                <ns2:PenaltyDifferential>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:PenaltyDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">6124.40</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">708.40</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:DifferentialAmountDue>
+              </ns2:AddOfferItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>SP2F-6968704354980085244-12</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:JourneyOverview>
+                <ns2:PriceClassRefID>FF61</ns2:PriceClassRefID>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT1-2</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+              </ns2:JourneyOverview>
+              <ns2:AddOfferItem>
+                <ns2:OfferItemID>SP2F-6968704354980085244-12-1</ns2:OfferItemID>
+                <ns2:MandatoryInd>true</ns2:MandatoryInd>
+                <ns2:OrderItemRefID>SQ_6LJTE9_AIR-1-2</ns2:OrderItemRefID>
+                <ns2:FareDetail>
+                  <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                  <ns2:PassengerRefs>PAX3</ns2:PassengerRefs>
+                  <ns2:Price>
+                    <ns2:TotalAmount>
+                      <ns2:SimpleCurrencyPrice Code="SGD">3062.20</ns2:SimpleCurrencyPrice>
+                    </ns2:TotalAmount>
+                    <ns2:BaseAmount Code="SGD">2708.00</ns2:BaseAmount>
+                    <ns2:Taxes>
+                      <ns2:Total Code="SGD">354.20</ns2:Total>
+                    </ns2:Taxes>
+                  </ns2:Price>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>J12IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>J</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF61</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG3</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>J12IIRB3</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>J</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF61</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG21</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                </ns2:FareDetail>
+                <ns2:Service>
+                  <ns2:ServiceID>SRV12</ns2:ServiceID>
+                  <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                  <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                  <ns2:ServiceAssociations>
+                    <ns2:PaxJourneyRefID>FLT1-2</ns2:PaxJourneyRefID>
+                    <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                  </ns2:ServiceAssociations>
+                </ns2:Service>
+                <ns2:Price>
+                  <ns2:TotalAmount CurCode="SGD">6124.40</ns2:TotalAmount>
+                </ns2:Price>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1079.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">241.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:NewOfferItemDifferential>
+                  <ns2:Amount CurCode="SGD">7202.20</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">950.20</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:NewOfferItemDifferential>
+                <ns2:PenaltyDifferential>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:PenaltyDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">6124.40</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">708.40</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:DifferentialAmountDue>
+              </ns2:AddOfferItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>SP2F-6968704354980085244-13</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:JourneyOverview>
+                <ns2:PriceClassRefID>FF91NDC</ns2:PriceClassRefID>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+              </ns2:JourneyOverview>
+              <ns2:AddOfferItem>
+                <ns2:OfferItemID>SP2F-6968704354980085244-13-1</ns2:OfferItemID>
+                <ns2:MandatoryInd>true</ns2:MandatoryInd>
+                <ns2:OrderItemRefID>SQ_6LJTE9_AIR-1-2</ns2:OrderItemRefID>
+                <ns2:FareDetail>
+                  <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                  <ns2:PassengerRefs>PAX3</ns2:PassengerRefs>
+                  <ns2:Price>
+                    <ns2:TotalAmount>
+                      <ns2:SimpleCurrencyPrice Code="SGD">5201.50</ns2:SimpleCurrencyPrice>
+                    </ns2:TotalAmount>
+                    <ns2:BaseAmount Code="SGD">4618.00</ns2:BaseAmount>
+                    <ns2:Taxes>
+                      <ns2:Total Code="SGD">583.50</ns2:Total>
+                    </ns2:Taxes>
+                  </ns2:Price>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>A12IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>A</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">F</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">FIRST</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF91NDC</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG4</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>A12IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>A</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">F</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">FIRST</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF91NDC</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG21</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                </ns2:FareDetail>
+                <ns2:Service>
+                  <ns2:ServiceID>SRV13</ns2:ServiceID>
+                  <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                  <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                  <ns2:ServiceAssociations>
+                    <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                    <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                  </ns2:ServiceAssociations>
+                </ns2:Service>
+                <ns2:Price>
+                  <ns2:TotalAmount CurCode="SGD">10403.00</ns2:TotalAmount>
+                </ns2:Price>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1079.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">241.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:NewOfferItemDifferential>
+                  <ns2:Amount CurCode="SGD">11482.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">1408.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:NewOfferItemDifferential>
+                <ns2:PenaltyDifferential>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:PenaltyDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">10403.00</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">1167.00</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:DifferentialAmountDue>
+              </ns2:AddOfferItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>SP2F-6968704354980085244-14</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:JourneyOverview>
+                <ns2:PriceClassRefID>FF91</ns2:PriceClassRefID>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+                <ns2:JourneyPriceClass>
+                  <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                </ns2:JourneyPriceClass>
+              </ns2:JourneyOverview>
+              <ns2:AddOfferItem>
+                <ns2:OfferItemID>SP2F-6968704354980085244-14-1</ns2:OfferItemID>
+                <ns2:MandatoryInd>true</ns2:MandatoryInd>
+                <ns2:OrderItemRefID>SQ_6LJTE9_AIR-1-2</ns2:OrderItemRefID>
+                <ns2:FareDetail>
+                  <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                  <ns2:PassengerRefs>PAX3</ns2:PassengerRefs>
+                  <ns2:Price>
+                    <ns2:TotalAmount>
+                      <ns2:SimpleCurrencyPrice Code="SGD">5540.70</ns2:SimpleCurrencyPrice>
+                    </ns2:TotalAmount>
+                    <ns2:BaseAmount Code="SGD">4921.00</ns2:BaseAmount>
+                    <ns2:Taxes>
+                      <ns2:Total Code="SGD">619.70</ns2:Total>
+                    </ns2:Taxes>
+                  </ns2:Price>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>A11IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>A</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">F</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">FIRST</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF91</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG4</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                  <ns2:FareComponent>
+                    <ns2:FareBasis>
+                      <ns2:FareBasisCode>
+                        <ns2:Code>A11IIRB1</ns2:Code>
+                      </ns2:FareBasisCode>
+                      <ns2:FareRulesRemarks>
+                        <ns2:FareRulesRemark>
+                          <ns2:Category>FT</ns2:Category>
+                          <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                        </ns2:FareRulesRemark>
+                      </ns2:FareRulesRemarks>
+                      <ns2:RBD>A</ns2:RBD>
+                      <ns2:CabinType>
+                        <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">F</ns2:CabinTypeCode>
+                        <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">FIRST</ns2:CabinTypeName>
+                      </ns2:CabinType>
+                    </ns2:FareBasis>
+                    <ns2:PriceClassRef>FF91</ns2:PriceClassRef>
+                    <ns2:SegmentRefs>SEG21</ns2:SegmentRefs>
+                  </ns2:FareComponent>
+                </ns2:FareDetail>
+                <ns2:Service>
+                  <ns2:ServiceID>SRV14</ns2:ServiceID>
+                  <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                  <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                  <ns2:ServiceAssociations>
+                    <ns2:PaxJourneyRefID>FLT1-1</ns2:PaxJourneyRefID>
+                    <ns2:PaxJourneyRefID>FLT2-2</ns2:PaxJourneyRefID>
+                  </ns2:ServiceAssociations>
+                </ns2:Service>
+                <ns2:Price>
+                  <ns2:TotalAmount CurCode="SGD">11081.40</ns2:TotalAmount>
+                </ns2:Price>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1079.80</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">241.80</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:NewOfferItemDifferential>
+                  <ns2:Amount CurCode="SGD">12159.20</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">1481.20</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:NewOfferItemDifferential>
+                <ns2:PenaltyDifferential>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:PenaltyDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">11081.40</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">1239.40</ns2:TotalTaxAmount>
+                  </ns2:TaxSummary>
+                </ns2:DifferentialAmountDue>
+              </ns2:AddOfferItem>
+            </ns2:ReshopOffer>
+          </ns2:ReshopOffers>
+        </ns2:ReshopResults>
+        <ns2:ShoppingResponse>
+          <ns2:ShoppingResponseID>SP2F-6968704354980085244</ns2:ShoppingResponseID>
+          <ns2:OwnerCode>SQ</ns2:OwnerCode>
+        </ns2:ShoppingResponse>
+      </ns2:Response>
+    </ns2:OrderReshopRS>
+  </soap:Body>
+</soap:Envelope>

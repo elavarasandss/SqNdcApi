@@ -1,0 +1,204 @@
+ Time : 18-07-2024 07:08:06
+
+https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ 
+
+Request :- 
+---------- 
+
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3" xmlns:ns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ">
+  <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <add:MessageID xmlns:add="http://www.w3.org/2005/08/addressing">218b0e33-938c-4f66-9fb1-6b6ff428716a</add:MessageID>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderReshop_18.1</wsa:Action>
+    <add:To xmlns:add="http://www.w3.org/2005/08/addressing">https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</add:To>
+    <sec:AMA_SecurityHostedUser>
+      <sec:UserID POS_Type="1" RequestorType="U" PseudoCityCode="NDCSQ08SQ" AgentDutyCode="SU">
+        <typ:RequestorID xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1">
+          <iat:CompanyName>SQ</iat:CompanyName>
+        </typ:RequestorID>
+      </sec:UserID>
+    </sec:AMA_SecurityHostedUser>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>WSSQNDC</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">40rW3vWrhvDCyZdVD+U1/J4/I14=</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">Zlg1bUhHRDc=</wsse:Nonce>
+        <wsu:Created>2024-07-18T07:07:55:181Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <OrderReshopRQ xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ">
+      <PayloadAttributes>
+        <Version>18.1</Version>
+      </PayloadAttributes>
+      <PointOfSale>
+        <Country>
+          <CountryCode>SG</CountryCode>
+        </Country>
+      </PointOfSale>
+      <Party>
+        <Recipient>
+          <ORA>
+            <AirlineDesigCode>SQ</AirlineDesigCode>
+          </ORA>
+        </Recipient>
+        <Participant>
+          <Aggregator>
+            <AggregatorID>GEN</AggregatorID>
+          </Aggregator>
+        </Participant>
+        <Sender>
+          <TravelAgency>
+            <AgencyID>12345678</AgencyID>
+            <IATA_Number>12345678</IATA_Number>
+          </TravelAgency>
+        </Sender>
+      </Party>
+      <Request>
+        <OrderItemRefID>SQ_5JNHLQ</OrderItemRefID>
+        <UpdateOrder>
+          <ReshopOrder>
+            <ServiceOrder>
+              <DeleteOrderItem>
+                <OrderItemRefID>SQ_5JNHLQ_AIR-1</OrderItemRefID>
+              </DeleteOrderItem>
+            </ServiceOrder>
+          </ReshopOrder>
+        </UpdateOrder>
+      </Request>
+    </OrderReshopRQ>
+  </soapenv:Body>
+</soapenv:Envelope>
+ Time : 18-07-2024 07:08:06
+
+
+Response :- 
+----------- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:From>
+      <wsa:Address>https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</wsa:Address>
+    </wsa:From>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderReshop_18.1</wsa:Action>
+    <wsa:MessageID>urn:uuid:4b2a64c3-e0a0-c374-fde3-725ffa6f829b</wsa:MessageID>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">218b0e33-938c-4f66-9fb1-6b6ff428716a</wsa:RelatesTo>
+    <awsse:Session TransactionStatusCode="End">
+      <awsse:SessionId>00L0T2IIOI</awsse:SessionId>
+      <awsse:SequenceNumber>1</awsse:SequenceNumber>
+      <awsse:SecurityToken>1EUTNGKOR1LQZ11Y00JNYF8S7C</awsse:SecurityToken>
+    </awsse:Session>
+  </soap:Header>
+  <soap:Body>
+    <ns2:OrderReshopRS xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ" xmlns:ns2="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRS">
+      <ns2:PayloadAttributes>
+        <ns2:Version>18.1</ns2:Version>
+      </ns2:PayloadAttributes>
+      <ns2:Response>
+        <ns2:ReshopResults>
+          <ns2:ReshopOffers>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>Void-P2</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:Desc>
+                <ns2:DescID>1</ns2:DescID>
+                <ns2:DescText>VOID</ns2:DescText>
+              </ns2:Desc>
+              <ns2:DeleteOrderItem>
+                <ns2:OrderItemRefID>SQ_5JNHLQ_AIR-1</ns2:OrderItemRefID>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">1027.00</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">158.10</ns2:TotalTaxAmount>
+                    <ns2:Tax>
+                      <ns2:Amount CurCode="SGD">4.30</ns2:Amount>
+                      <ns2:TaxCode>IN</ns2:TaxCode>
+                    </ns2:Tax>
+                    <ns2:Tax>
+                      <ns2:Amount CurCode="SGD">123.30</ns2:Amount>
+                      <ns2:TaxCode>K3</ns2:TaxCode>
+                    </ns2:Tax>
+                    <ns2:Tax>
+                      <ns2:Amount CurCode="SGD">19.10</ns2:Amount>
+                      <ns2:TaxCode>P2</ns2:TaxCode>
+                    </ns2:Tax>
+                    <ns2:Tax>
+                      <ns2:Amount CurCode="SGD">11.40</ns2:Amount>
+                      <ns2:TaxCode>YM</ns2:TaxCode>
+                    </ns2:Tax>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:DifferentialAmountDue>
+              </ns2:DeleteOrderItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>Void-P3</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:Desc>
+                <ns2:DescID>1</ns2:DescID>
+                <ns2:DescText>VOID</ns2:DescText>
+              </ns2:Desc>
+              <ns2:DeleteOrderItem>
+                <ns2:OrderItemRefID>SQ_5JNHLQ_AIR-1</ns2:OrderItemRefID>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">103.00</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">12.40</ns2:TotalTaxAmount>
+                    <ns2:Tax>
+                      <ns2:Amount CurCode="SGD">12.40</ns2:Amount>
+                      <ns2:TaxCode>K3</ns2:TaxCode>
+                    </ns2:Tax>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:DifferentialAmountDue>
+              </ns2:DeleteOrderItem>
+            </ns2:ReshopOffer>
+            <ns2:ReshopOffer>
+              <ns2:OfferID>Void-P4</ns2:OfferID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:Desc>
+                <ns2:DescID>1</ns2:DescID>
+                <ns2:DescText>VOID</ns2:DescText>
+              </ns2:Desc>
+              <ns2:DeleteOrderItem>
+                <ns2:OrderItemRefID>SQ_5JNHLQ_AIR-1</ns2:OrderItemRefID>
+                <ns2:OriginalOrderItemDifferential>
+                  <ns2:Amount CurCode="SGD">770.00</ns2:Amount>
+                  <ns2:TaxSummary>
+                    <ns2:TotalTaxAmount CurCode="SGD">127.20</ns2:TotalTaxAmount>
+                    <ns2:Tax>
+                      <ns2:Amount CurCode="SGD">4.30</ns2:Amount>
+                      <ns2:TaxCode>IN</ns2:TaxCode>
+                    </ns2:Tax>
+                    <ns2:Tax>
+                      <ns2:Amount CurCode="SGD">92.40</ns2:Amount>
+                      <ns2:TaxCode>K3</ns2:TaxCode>
+                    </ns2:Tax>
+                    <ns2:Tax>
+                      <ns2:Amount CurCode="SGD">19.10</ns2:Amount>
+                      <ns2:TaxCode>P2</ns2:TaxCode>
+                    </ns2:Tax>
+                    <ns2:Tax>
+                      <ns2:Amount CurCode="SGD">11.40</ns2:Amount>
+                      <ns2:TaxCode>YM</ns2:TaxCode>
+                    </ns2:Tax>
+                  </ns2:TaxSummary>
+                </ns2:OriginalOrderItemDifferential>
+                <ns2:DifferentialAmountDue>
+                  <ns2:Amount CurCode="SGD">0.00</ns2:Amount>
+                </ns2:DifferentialAmountDue>
+              </ns2:DeleteOrderItem>
+            </ns2:ReshopOffer>
+          </ns2:ReshopOffers>
+        </ns2:ReshopResults>
+      </ns2:Response>
+    </ns2:OrderReshopRS>
+  </soap:Body>
+</soap:Envelope>

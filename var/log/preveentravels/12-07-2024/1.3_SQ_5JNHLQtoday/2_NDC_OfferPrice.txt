@@ -1,0 +1,853 @@
+ Time : 18-07-2024 07:03:25
+
+https://nodeA1.test.webservices.amadeus.com/1ASIWNDCSQ 
+
+Request :- 
+---------- 
+
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3" xmlns:ns="http://www.iata.org/IATA/2015/00/2018.1/AirShoppingRQ">
+  <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <add:MessageID xmlns:add="http://www.w3.org/2005/08/addressing">d69838e4-28ec-4086-8a65-b3437116ff51</add:MessageID>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OfferPrice_18.1</wsa:Action>
+    <add:To xmlns:add="http://www.w3.org/2005/08/addressing">https://nodeA1.test.webservices.amadeus.com/1ASIWNDCSQ</add:To>
+    <sec:AMA_SecurityHostedUser>
+      <sec:UserID POS_Type="1" RequestorType="U" PseudoCityCode="NDCSQ08SQ" AgentDutyCode="SU">
+        <typ:RequestorID xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1">
+          <iat:CompanyName>SQ</iat:CompanyName>
+        </typ:RequestorID>
+      </sec:UserID>
+    </sec:AMA_SecurityHostedUser>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>WSSQNDC</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">Bf+3J+ycN9jf8iLIy8crqLS2dnU=</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">WlFPNlJXMzM=</wsse:Nonce>
+        <wsu:Created>2024-07-18T07:03:20:285Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <OfferPriceRQ xmlns="http://www.iata.org/IATA/2015/00/2018.1/OfferPriceRQ">
+      <PointOfSale>
+        <Country>
+          <CountryCode>SG</CountryCode>
+        </Country>
+      </PointOfSale>
+      <Party>
+        <Recipient>
+          <ORA>
+            <AirlineDesigCode>SQ</AirlineDesigCode>
+          </ORA>
+        </Recipient>
+        <Participant>
+          <Aggregator>
+            <AggregatorID>GEN</AggregatorID>
+          </Aggregator>
+        </Participant>
+        <Sender>
+          <TravelAgency>
+            <AgencyID>12345678</AgencyID>
+            <IATA_Number>12345678</IATA_Number>
+          </TravelAgency>
+        </Sender>
+      </Party>
+      <Request>
+        <DataLists>
+          <PaxList>
+            <Pax>
+              <PaxID>PAX1</PaxID>
+              <PTC>ADT</PTC>
+            </Pax>
+          </PaxList>
+        </DataLists>
+        <PricedOffer>
+          <SelectedOffer>
+            <OfferRefID>SP2F-2519866301912274894-1</OfferRefID>
+            <OwnerCode>SQ</OwnerCode>
+            <ShoppingResponseRefID>SP2F-2519866301912274894</ShoppingResponseRefID>
+            <SelectedOfferItem>
+              <OfferItemRefID>SP2F-2519866301912274894-1-1</OfferItemRefID>
+              <PaxRefID>PAX1</PaxRefID>
+            </SelectedOfferItem>
+          </SelectedOffer>
+        </PricedOffer>
+      </Request>
+    </OfferPriceRQ>
+  </soapenv:Body>
+</soapenv:Envelope>
+ Time : 18-07-2024 07:03:25
+
+
+Response :- 
+----------- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:From>
+      <wsa:Address>https://nodeA1.test.webservices.amadeus.com/1ASIWNDCSQ</wsa:Address>
+    </wsa:From>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OfferPrice_18.1</wsa:Action>
+    <wsa:MessageID>urn:uuid:c837e4d3-6778-10f4-2d63-742b9d32b26b</wsa:MessageID>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">d69838e4-28ec-4086-8a65-b3437116ff51</wsa:RelatesTo>
+    <awsse:Session TransactionStatusCode="End">
+      <awsse:SessionId>00K7PD3PBZ</awsse:SessionId>
+      <awsse:SequenceNumber>1</awsse:SequenceNumber>
+      <awsse:SecurityToken>1L71QL0ZHPJDR131SJ9HXL8AUT</awsse:SecurityToken>
+    </awsse:Session>
+  </soap:Header>
+  <soap:Body>
+    <ns2:OfferPriceRS xmlns="http://www.iata.org/IATA/2015/00/2018.1/OfferPriceRQ" xmlns:ns2="http://www.iata.org/IATA/2015/00/2018.1/OfferPriceRS">
+      <ns2:PayloadAttributes>
+        <ns2:Version>18.1</ns2:Version>
+      </ns2:PayloadAttributes>
+      <ns2:Response>
+        <ns2:DataLists>
+          <ns2:BaggageAllowanceList>
+            <ns2:BaggageAllowance>
+              <ns2:BaggageAllowanceID>FBA1</ns2:BaggageAllowanceID>
+              <ns2:TypeCode>CheckedBag</ns2:TypeCode>
+              <ns2:WeightAllowance>
+                <ns2:MaximumWeightMeasure UnitCode="Kilogram">40</ns2:MaximumWeightMeasure>
+                <ns2:ApplicablePartyText>Traveler</ns2:ApplicablePartyText>
+              </ns2:WeightAllowance>
+            </ns2:BaggageAllowance>
+            <ns2:BaggageAllowance>
+              <ns2:BaggageAllowanceID>FBA2</ns2:BaggageAllowanceID>
+              <ns2:TypeCode>CheckedBag</ns2:TypeCode>
+              <ns2:WeightAllowance>
+                <ns2:MaximumWeightMeasure UnitCode="Kilogram">10</ns2:MaximumWeightMeasure>
+                <ns2:ApplicablePartyText>Traveler</ns2:ApplicablePartyText>
+              </ns2:WeightAllowance>
+            </ns2:BaggageAllowance>
+          </ns2:BaggageAllowanceList>
+          <ns2:OriginDestList>
+            <ns2:OriginDest>
+              <ns2:OriginDestID>BOMSIN</ns2:OriginDestID>
+              <ns2:OriginCode>BOM</ns2:OriginCode>
+              <ns2:DestCode>SIN</ns2:DestCode>
+              <ns2:PaxJourneyRefID>FLT0</ns2:PaxJourneyRefID>
+            </ns2:OriginDest>
+          </ns2:OriginDestList>
+          <ns2:PaxJourneyList>
+            <ns2:PaxJourney>
+              <ns2:PaxJourneyID>FLT0</ns2:PaxJourneyID>
+              <ns2:Duration>PT5H30M</ns2:Duration>
+              <ns2:PaxSegmentRefID>SEG3</ns2:PaxSegmentRefID>
+            </ns2:PaxJourney>
+          </ns2:PaxJourneyList>
+          <ns2:PaxList>
+            <ns2:Pax>
+              <ns2:PaxID>PAX1</ns2:PaxID>
+              <ns2:PTC>ADT</ns2:PTC>
+            </ns2:Pax>
+            <ns2:Pax>
+              <ns2:PaxID>PAX2</ns2:PaxID>
+              <ns2:PTC>CHD</ns2:PTC>
+            </ns2:Pax>
+            <ns2:Pax>
+              <ns2:PaxID>PAX11</ns2:PaxID>
+              <ns2:PTC>INF</ns2:PTC>
+              <ns2:PaxRefID>PAX1</ns2:PaxRefID>
+            </ns2:Pax>
+          </ns2:PaxList>
+          <ns2:PaxSegmentList>
+            <ns2:PaxSegment>
+              <ns2:PaxSegmentID>SEG3</ns2:PaxSegmentID>
+              <ns2:Duration>PT5H30M</ns2:Duration>
+              <ns2:Dep>
+                <ns2:IATA_LocationCode>BOM</ns2:IATA_LocationCode>
+                <ns2:AircraftScheduledDateTime>2024-08-20T23:40:00</ns2:AircraftScheduledDateTime>
+                <ns2:TerminalName>2</ns2:TerminalName>
+              </ns2:Dep>
+              <ns2:Arrival>
+                <ns2:IATA_LocationCode>SIN</ns2:IATA_LocationCode>
+                <ns2:AircraftScheduledDateTime>2024-08-21T07:40:00</ns2:AircraftScheduledDateTime>
+                <ns2:TerminalName>0</ns2:TerminalName>
+              </ns2:Arrival>
+              <ns2:MarketingCarrierInfo>
+                <ns2:CarrierDesigCode>SQ</ns2:CarrierDesigCode>
+                <ns2:CarrierName>SINGAPORE AIRLINES</ns2:CarrierName>
+                <ns2:MarketingCarrierFlightNumberText>423</ns2:MarketingCarrierFlightNumberText>
+              </ns2:MarketingCarrierInfo>
+              <ns2:OperatingCarrierInfo>
+                <ns2:CarrierDesigCode>SQ</ns2:CarrierDesigCode>
+                <ns2:CarrierName>SINGAPORE AIRLINES</ns2:CarrierName>
+              </ns2:OperatingCarrierInfo>
+              <ns2:DatedOperatingLeg>
+                <ns2:DatedOperatingLegID>LEG1</ns2:DatedOperatingLegID>
+                <ns2:Dep>
+                  <ns2:IATA_LocationCode>BOM</ns2:IATA_LocationCode>
+                  <ns2:AircraftScheduledDateTime>2024-08-20T23:40:00</ns2:AircraftScheduledDateTime>
+                </ns2:Dep>
+                <ns2:Arrival>
+                  <ns2:IATA_LocationCode>SIN</ns2:IATA_LocationCode>
+                  <ns2:AircraftScheduledDateTime>2024-08-21T07:40:00</ns2:AircraftScheduledDateTime>
+                </ns2:Arrival>
+                <ns2:IATA_AircraftType>
+                  <ns2:IATA_AircraftTypeCode>388</ns2:IATA_AircraftTypeCode>
+                </ns2:IATA_AircraftType>
+              </ns2:DatedOperatingLeg>
+            </ns2:PaxSegment>
+          </ns2:PaxSegmentList>
+          <ns2:PenaltyList>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT33</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount before departure</ns2:DescText>
+              <ns2:AppCode>BDX</ns2:AppCode>
+              <ns2:CancelFeeInd>true</ns2:CancelFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT37</ns2:PenaltyID>
+              <ns2:DescText>Revalidation minimum penalty amount before departure</ns2:DescText>
+              <ns2:AppCode>BDI</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT17</ns2:PenaltyID>
+              <ns2:DescText>Revalidation maximum penalty amount after departure</ns2:DescText>
+              <ns2:AppCode>ADU</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT20</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount after departure no show</ns2:DescText>
+              <ns2:AppCode>ANX</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT31</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount after departure no show</ns2:DescText>
+              <ns2:AppCode>ANX</ns2:AppCode>
+              <ns2:CancelFeeInd>true</ns2:CancelFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT11</ns2:PenaltyID>
+              <ns2:DescText>Revalidation maximum penalty amount before departure no show</ns2:DescText>
+              <ns2:AppCode>BNU</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">404.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT21</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount for the ticket after departure no show</ns2:DescText>
+              <ns2:AppCode>ANT</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT26</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund minimum penalty amount before departure no show</ns2:DescText>
+              <ns2:AppCode>BNM</ns2:AppCode>
+              <ns2:CancelFeeInd>true</ns2:CancelFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT32</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount for the ticket after departure no show</ns2:DescText>
+              <ns2:AppCode>ANT</ns2:AppCode>
+              <ns2:CancelFeeInd>true</ns2:CancelFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT34</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount for the ticket before departure</ns2:DescText>
+              <ns2:AppCode>BDT</ns2:AppCode>
+              <ns2:CancelFeeInd>true</ns2:CancelFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT25</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund minimum penalty amount before departure</ns2:DescText>
+              <ns2:AppCode>BDM</ns2:AppCode>
+              <ns2:CancelFeeInd>true</ns2:CancelFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT7</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund minimum penalty amount before departure no show</ns2:DescText>
+              <ns2:AppCode>BNM</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT1</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund minimum penalty amount before departure</ns2:DescText>
+              <ns2:AppCode>BDM</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT18</ns2:PenaltyID>
+              <ns2:DescText>Revalidation maximum penalty amount for the ticket after departure</ns2:DescText>
+              <ns2:AppCode>ADC</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT15</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount for the ticket after departure</ns2:DescText>
+              <ns2:AppCode>ADT</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT10</ns2:PenaltyID>
+              <ns2:DescText>Revalidation minimum penalty amount before departure no show</ns2:DescText>
+              <ns2:AppCode>BNI</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">404.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT4</ns2:PenaltyID>
+              <ns2:DescText>Revalidation minimum penalty amount before departure</ns2:DescText>
+              <ns2:AppCode>BDI</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">270.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT14</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount with sale currency</ns2:DescText>
+              <ns2:AppCode>ADX</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT5</ns2:PenaltyID>
+              <ns2:DescText>Revalidation maximum penalty amount before departure</ns2:DescText>
+              <ns2:AppCode>BDU</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">270.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT28</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount with sale currency</ns2:DescText>
+              <ns2:AppCode>ADX</ns2:AppCode>
+              <ns2:CancelFeeInd>true</ns2:CancelFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT29</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount for the ticket after departure</ns2:DescText>
+              <ns2:AppCode>ADT</ns2:AppCode>
+              <ns2:CancelFeeInd>true</ns2:CancelFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT36</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount for the ticket before departure no show</ns2:DescText>
+              <ns2:AppCode>BNT</ns2:AppCode>
+              <ns2:CancelFeeInd>true</ns2:CancelFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT38</ns2:PenaltyID>
+              <ns2:DescText>Revalidation minimum penalty amount before departure no show</ns2:DescText>
+              <ns2:AppCode>BNI</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT24</ns2:PenaltyID>
+              <ns2:DescText>Revalidation maximum penalty amount for the ticket after departure no show</ns2:DescText>
+              <ns2:AppCode>ANC</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT35</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount before departure no show</ns2:DescText>
+              <ns2:AppCode>BNX</ns2:AppCode>
+              <ns2:CancelFeeInd>true</ns2:CancelFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT13</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund minimum penalty amount after departure</ns2:DescText>
+              <ns2:AppCode>ADM</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT23</ns2:PenaltyID>
+              <ns2:DescText>Revalidation maximum penalty amount after departure no show</ns2:DescText>
+              <ns2:AppCode>ANU</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT22</ns2:PenaltyID>
+              <ns2:DescText>Revalidation minimum penalty amount after departure no show</ns2:DescText>
+              <ns2:AppCode>ANI</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT12</ns2:PenaltyID>
+              <ns2:DescText>Revalidation maximum penalty amount for the ticket before departure no show</ns2:DescText>
+              <ns2:AppCode>BNC</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">404.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT9</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount for the ticket before departure no show</ns2:DescText>
+              <ns2:AppCode>BNT</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">404.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT30</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund minimum penalty amount after departure no show</ns2:DescText>
+              <ns2:AppCode>ANM</ns2:AppCode>
+              <ns2:CancelFeeInd>true</ns2:CancelFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT3</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount for the ticket before departure</ns2:DescText>
+              <ns2:AppCode>BDT</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">270.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT6</ns2:PenaltyID>
+              <ns2:DescText>Revalidation maximum penalty amount for the ticket before departure</ns2:DescText>
+              <ns2:AppCode>BDC</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">270.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT19</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund minimum penalty amount after departure no show</ns2:DescText>
+              <ns2:AppCode>ANM</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT27</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund minimum penalty amount after departure</ns2:DescText>
+              <ns2:AppCode>ADM</ns2:AppCode>
+              <ns2:CancelFeeInd>true</ns2:CancelFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT8</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount before departure no show</ns2:DescText>
+              <ns2:AppCode>BNX</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">404.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT2</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund maximum penalty amount before departure</ns2:DescText>
+              <ns2:AppCode>BDX</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">270.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>AMNT16</ns2:PenaltyID>
+              <ns2:DescText>Revalidation minimum penalty amount after departure</ns2:DescText>
+              <ns2:AppCode>ADI</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+              <ns2:PenaltyAmount CurCode="SGD">0.00</ns2:PenaltyAmount>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG3</ns2:PenaltyID>
+              <ns2:DescText>Revalidation before departure is allowed? Allowed with restrictions</ns2:DescText>
+              <ns2:AppCode>RVA-1</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG15</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund after departure allowed? Not allowed</ns2:DescText>
+              <ns2:AppCode>ADA-0</ns2:AppCode>
+              <ns2:CancelFeeInd>false</ns2:CancelFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG5</ns2:PenaltyID>
+              <ns2:DescText>Reissue penalties can be waived for passenger and family death/illness for before departure no show? Not allowed</ns2:DescText>
+              <ns2:AppCode>BNW-0</ns2:AppCode>
+              <ns2:ChangeFeeInd>false</ns2:ChangeFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG7</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund before departure when no show allowed? Allowed with restrictions</ns2:DescText>
+              <ns2:AppCode>BNA-1</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG10</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund after departure allowed? Not allowed</ns2:DescText>
+              <ns2:AppCode>ADA-0</ns2:AppCode>
+              <ns2:ChangeFeeInd>false</ns2:ChangeFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG18</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund before departure when no show allowed? Not allowed</ns2:DescText>
+              <ns2:AppCode>BNA-0</ns2:AppCode>
+              <ns2:CancelFeeInd>false</ns2:CancelFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG12</ns2:PenaltyID>
+              <ns2:DescText>Revalidation after departure when no show is allowed? Not allowed</ns2:DescText>
+              <ns2:AppCode>ANR-0</ns2:AppCode>
+              <ns2:ChangeFeeInd>false</ns2:ChangeFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG2</ns2:PenaltyID>
+              <ns2:DescText>Reissue penalties can be waived for passenger and family death/illness before departure? Not allowed</ns2:DescText>
+              <ns2:AppCode>WAI-0</ns2:AppCode>
+              <ns2:ChangeFeeInd>false</ns2:ChangeFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG11</ns2:PenaltyID>
+              <ns2:DescText>Reissue penalties can be waived for passenger and family death/illness after departure no show? Not allowed</ns2:DescText>
+              <ns2:AppCode>ANW-0</ns2:AppCode>
+              <ns2:ChangeFeeInd>false</ns2:ChangeFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG6</ns2:PenaltyID>
+              <ns2:DescText>Revalidation before departure when no show is allowed? Allowed with restrictions</ns2:DescText>
+              <ns2:AppCode>BNR-1</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG4</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund before departure allowed? Allowed with restrictions</ns2:DescText>
+              <ns2:AppCode>BDA-1</ns2:AppCode>
+              <ns2:ChangeFeeInd>true</ns2:ChangeFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG9</ns2:PenaltyID>
+              <ns2:DescText>Revalidation after departure is allowed? Not allowed</ns2:DescText>
+              <ns2:AppCode>ADR-0</ns2:AppCode>
+              <ns2:ChangeFeeInd>false</ns2:ChangeFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG14</ns2:PenaltyID>
+              <ns2:DescText>Part of rule is free form text from Cat16? Not allowed</ns2:DescText>
+              <ns2:AppCode>FFT-0</ns2:AppCode>
+              <ns2:CancelFeeInd>false</ns2:CancelFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG16</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund after departure when no show allowed? Not allowed</ns2:DescText>
+              <ns2:AppCode>ANA-0</ns2:AppCode>
+              <ns2:CancelFeeInd>false</ns2:CancelFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG8</ns2:PenaltyID>
+              <ns2:DescText>Reissue penalties can be waived for passenger and family death/illness after departure? Not allowed</ns2:DescText>
+              <ns2:AppCode>ADW-0</ns2:AppCode>
+              <ns2:ChangeFeeInd>false</ns2:ChangeFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG1</ns2:PenaltyID>
+              <ns2:DescText>Part of rule is free form text from Cat16? Not allowed</ns2:DescText>
+              <ns2:AppCode>FFT-0</ns2:AppCode>
+              <ns2:ChangeFeeInd>false</ns2:ChangeFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG13</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund after departure when no show allowed? Not allowed</ns2:DescText>
+              <ns2:AppCode>ANA-0</ns2:AppCode>
+              <ns2:ChangeFeeInd>false</ns2:ChangeFeeInd>
+            </ns2:Penalty>
+            <ns2:Penalty>
+              <ns2:PenaltyID>FLAG17</ns2:PenaltyID>
+              <ns2:DescText>Reissue/Refund before departure allowed? Not allowed</ns2:DescText>
+              <ns2:AppCode>BDA-0</ns2:AppCode>
+              <ns2:CancelFeeInd>false</ns2:CancelFeeInd>
+            </ns2:Penalty>
+          </ns2:PenaltyList>
+          <ns2:PriceClassList>
+            <ns2:PriceClass>
+              <ns2:PriceClassID>FFM1</ns2:PriceClassID>
+              <ns2:Code>FF8</ns2:Code>
+              <ns2:Name>Business Lite</ns2:Name>
+              <ns2:Desc>
+                <ns2:DescID>AWARD_ACCRUAL</ns2:DescID>
+                <ns2:DescText>3045</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>AWARD_ACCRUAL_FULL</ns2:DescID>
+                <ns2:DescText>SINGAPORE AIRLINES OPERATED FLIGHTS KrisFlyer: 125% of actual flown distance. Partner frequent flyer programmes: Accrual levels may differ on Singapore Airlines operated flights. For ticket(s) partially paid for using KrisFlyer miles, the miles earned are proportionate to the amount paid using credit/debit card. These miles can only be credited to KrisFlyer membership accounts. FLIGHTS OPERATED BY OTHER AIRLINES KrisFlyer mileage accrual levels on flights operated by KrisFlyer partner airlines may differ. Codeshare flights operated by non-KrisFlyer partner airlines are not accruable to KrisFlyer. For details, visit http://www.singaporeair.com/en_UK/sg/ppsclub-krisflyer/earn-miles/earn-when-you-fly/</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>AWARD_UPGRADE</ns2:DescID>
+                <ns2:DescText>Not Allowed</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>AWARD_UPGRADE_FULL</ns2:DescID>
+                <ns2:DescText>KrisFlyer Upgrade Awards on Singapore Airlines: Not allowed. Star Alliance Upgrade Awards on Singapore Airlines: Not allowed.</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CANCEL_BEFOREDEPARTURE</ns2:DescID>
+                <ns2:DescText>Not Allowed</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CANCEL_BEFOREDEPARTURE_FULL</ns2:DescID>
+                <ns2:DescText>For non-refundable fares, fuel and insurance surcharges are non-refundable.</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CANCEL_NOSHOWFIRST</ns2:DescID>
+                <ns2:DescText>USD 300</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CANCEL_NOSHOWFIRST_FULL</ns2:DescID>
+                <ns2:DescText>With payment of USD 300 and any fare difference, subject to currency conversion and your bank's exchange rate.</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CHANGE_BEFOREDEPARTURE</ns2:DescID>
+                <ns2:DescText>USD 200</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CHANGE_BEFOREDEPARTURE_FULL</ns2:DescID>
+                <ns2:DescText>With payment of USD 200 and any fare difference, subject to currency conversion and your bank's exchange rate.</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CHANGE_NOSHOWFIRST</ns2:DescID>
+                <ns2:DescText>USD 300</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>CHANGE_NOSHOWFIRST_FULL</ns2:DescID>
+                <ns2:DescText>With payment of USD 300 and any fare difference, subject to currency conversion and your bank's exchange rate.</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>DISCLAIMER_FULL</ns2:DescID>
+                <ns2:DescText>If payment was made with a mix of cash and KrisFlyer miles, you will only earn miles on the part of the fare that was paid with a credit / debit card. Full fare rules and KrisFlyer terms and conditions apply.</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>MIXEDFARETYPE_FULL</ns2:DescID>
+                <ns2:DescText>Cancellation and no-show fees will follow the more restrictive fare type. If you change more than one flight in the same transaction, only the higher change fee will be applied.</ns2:DescText>
+              </ns2:Desc>
+              <ns2:Desc>
+                <ns2:DescID>TRAVELITINERARYSEQUENCE_FULL</ns2:DescID>
+                <ns2:DescText>Fares are valid only if all flight coupons / sectors in the ticket are used in sequence. If you start your journey at any stopover or stopping place, Singapore Airlines will recompute the fares based on actual flight sequence flown and you will need to pay the fare difference, if any.</ns2:DescText>
+              </ns2:Desc>
+            </ns2:PriceClass>
+          </ns2:PriceClassList>
+        </ns2:DataLists>
+        <ns2:PricedOffer>
+          <ns2:Offer>
+            <ns2:OfferID>SP2F-2519866301912274894-1</ns2:OfferID>
+            <ns2:OwnerCode>SQ</ns2:OwnerCode>
+            <ns2:OfferExpirationDateTime>2024-07-18T07:33:23Z</ns2:OfferExpirationDateTime>
+            <ns2:PaymentTimeLimitDateTime>2024-07-25T15:00:00Z</ns2:PaymentTimeLimitDateTime>
+            <ns2:BaggageAllowance>
+              <ns2:PaxJourneyRefID>FLT0</ns2:PaxJourneyRefID>
+              <ns2:PaxRefID>PAX1</ns2:PaxRefID>
+              <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+              <ns2:BaggageAllowanceRefID>FBA1</ns2:BaggageAllowanceRefID>
+            </ns2:BaggageAllowance>
+            <ns2:BaggageAllowance>
+              <ns2:PaxJourneyRefID>FLT0</ns2:PaxJourneyRefID>
+              <ns2:PaxRefID>PAX11</ns2:PaxRefID>
+              <ns2:BaggageAllowanceRefID>FBA2</ns2:BaggageAllowanceRefID>
+            </ns2:BaggageAllowance>
+            <ns2:JourneyOverview>
+              <ns2:PriceClassRefID>FFM1</ns2:PriceClassRefID>
+              <ns2:JourneyPriceClass>
+                <ns2:PriceClassRefID>FFM1</ns2:PriceClassRefID>
+                <ns2:PaxJourneyRefID>FLT0</ns2:PaxJourneyRefID>
+              </ns2:JourneyPriceClass>
+            </ns2:JourneyOverview>
+            <ns2:OfferItem>
+              <ns2:OfferItemID>SP2F-2519866301912274894-1-1</ns2:OfferItemID>
+              <ns2:MandatoryInd>true</ns2:MandatoryInd>
+              <ns2:FareDetail>
+                <ns2:PassengerRefs>PAX1</ns2:PassengerRefs>
+                <ns2:Price>
+                  <ns2:TotalAmount>
+                    <ns2:DetailCurrencyPrice>
+                      <ns2:Total Code="SGD">1185.10</ns2:Total>
+                    </ns2:DetailCurrencyPrice>
+                  </ns2:TotalAmount>
+                  <ns2:BaseAmount Code="SGD">1027.00</ns2:BaseAmount>
+                  <ns2:Taxes>
+                    <ns2:Total Code="SGD">158.10</ns2:Total>
+                    <ns2:Breakdown>
+                      <ns2:Tax>
+                        <ns2:Amount Code="SGD">4.30</ns2:Amount>
+                        <ns2:Nation>DO</ns2:Nation>
+                        <ns2:TaxCode>IN</ns2:TaxCode>
+                      </ns2:Tax>
+                      <ns2:Tax>
+                        <ns2:Amount Code="SGD">123.30</ns2:Amount>
+                        <ns2:Nation>CB</ns2:Nation>
+                        <ns2:TaxCode>K3</ns2:TaxCode>
+                      </ns2:Tax>
+                      <ns2:Tax>
+                        <ns2:Amount Code="SGD">19.10</ns2:Amount>
+                        <ns2:Nation>AF</ns2:Nation>
+                        <ns2:TaxCode>P2</ns2:TaxCode>
+                      </ns2:Tax>
+                      <ns2:Tax>
+                        <ns2:Amount Code="SGD">11.40</ns2:Amount>
+                        <ns2:Nation>DE</ns2:Nation>
+                        <ns2:TaxCode>YM</ns2:TaxCode>
+                      </ns2:Tax>
+                    </ns2:Breakdown>
+                  </ns2:Taxes>
+                </ns2:Price>
+                <ns2:FareComponent>
+                  <ns2:FareBasis>
+                    <ns2:FareBasisCode>
+                      <ns2:Code>D16IIOB1PO</ns2:Code>
+                    </ns2:FareBasisCode>
+                    <ns2:FareRulesRemarks>
+                      <ns2:FareRulesRemark>
+                        <ns2:Category>FT</ns2:Category>
+                        <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                      </ns2:FareRulesRemark>
+                    </ns2:FareRulesRemarks>
+                    <ns2:RBD>D</ns2:RBD>
+                    <ns2:CabinType>
+                      <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                      <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                    </ns2:CabinType>
+                  </ns2:FareBasis>
+                  <ns2:FareRules>
+                    <ns2:Penalty refs="AMNT1 AMNT2 AMNT3 AMNT4 AMNT5 AMNT6 AMNT7 AMNT8 AMNT9 AMNT10 AMNT11 AMNT12 AMNT13 AMNT14 AMNT15 AMNT16 AMNT17 AMNT18 AMNT19 AMNT20 AMNT21 AMNT22 AMNT23 AMNT24 FLAG1 FLAG2 FLAG3 FLAG4 FLAG5 FLAG6 FLAG7 FLAG8 FLAG9 FLAG10 FLAG11 FLAG12 FLAG13 AMNT25 AMNT26 AMNT27 AMNT28 AMNT29 AMNT30 AMNT31 AMNT32 AMNT33 AMNT34 AMNT35 AMNT36 FLAG14 FLAG15 FLAG16 FLAG17 FLAG18"/>
+                  </ns2:FareRules>
+                  <ns2:PriceClassRef>FFM1</ns2:PriceClassRef>
+                  <ns2:SegmentRefs>SEG3</ns2:SegmentRefs>
+                </ns2:FareComponent>
+              </ns2:FareDetail>
+              <ns2:FareDetail>
+                <ns2:PassengerRefs>PAX2</ns2:PassengerRefs>
+                <ns2:Price>
+                  <ns2:TotalAmount>
+                    <ns2:DetailCurrencyPrice>
+                      <ns2:Total Code="SGD">897.20</ns2:Total>
+                    </ns2:DetailCurrencyPrice>
+                  </ns2:TotalAmount>
+                  <ns2:BaseAmount Code="SGD">770.00</ns2:BaseAmount>
+                  <ns2:Taxes>
+                    <ns2:Total Code="SGD">127.20</ns2:Total>
+                    <ns2:Breakdown>
+                      <ns2:Tax>
+                        <ns2:Amount Code="SGD">4.30</ns2:Amount>
+                        <ns2:Nation>DO</ns2:Nation>
+                        <ns2:TaxCode>IN</ns2:TaxCode>
+                      </ns2:Tax>
+                      <ns2:Tax>
+                        <ns2:Amount Code="SGD">92.40</ns2:Amount>
+                        <ns2:Nation>CB</ns2:Nation>
+                        <ns2:TaxCode>K3</ns2:TaxCode>
+                      </ns2:Tax>
+                      <ns2:Tax>
+                        <ns2:Amount Code="SGD">19.10</ns2:Amount>
+                        <ns2:Nation>AF</ns2:Nation>
+                        <ns2:TaxCode>P2</ns2:TaxCode>
+                      </ns2:Tax>
+                      <ns2:Tax>
+                        <ns2:Amount Code="SGD">11.40</ns2:Amount>
+                        <ns2:Nation>DE</ns2:Nation>
+                        <ns2:TaxCode>YM</ns2:TaxCode>
+                      </ns2:Tax>
+                    </ns2:Breakdown>
+                  </ns2:Taxes>
+                </ns2:Price>
+                <ns2:FareComponent>
+                  <ns2:FareBasis>
+                    <ns2:FareBasisCode>
+                      <ns2:Code>D16IIOB1PO</ns2:Code>
+                    </ns2:FareBasisCode>
+                    <ns2:FareRulesRemarks>
+                      <ns2:FareRulesRemark>
+                        <ns2:Category>FT</ns2:Category>
+                        <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                      </ns2:FareRulesRemark>
+                    </ns2:FareRulesRemarks>
+                    <ns2:RBD>D</ns2:RBD>
+                    <ns2:CabinType>
+                      <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                      <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                    </ns2:CabinType>
+                  </ns2:FareBasis>
+                  <ns2:FareRules>
+                    <ns2:Penalty refs="AMNT1 AMNT2 AMNT3 AMNT4 AMNT5 AMNT6 AMNT7 AMNT8 AMNT9 AMNT10 AMNT11 AMNT12 AMNT13 AMNT14 AMNT15 AMNT16 AMNT17 AMNT18 AMNT19 AMNT20 AMNT21 AMNT22 AMNT23 AMNT24 FLAG1 FLAG2 FLAG3 FLAG4 FLAG5 FLAG6 FLAG7 FLAG8 FLAG9 FLAG10 FLAG11 FLAG12 FLAG13 AMNT25 AMNT26 AMNT27 AMNT28 AMNT29 AMNT30 AMNT31 AMNT32 AMNT33 AMNT34 AMNT35 AMNT36 FLAG14 FLAG15 FLAG16 FLAG17 FLAG18"/>
+                  </ns2:FareRules>
+                  <ns2:PriceClassRef>FFM1</ns2:PriceClassRef>
+                  <ns2:SegmentRefs>SEG3</ns2:SegmentRefs>
+                </ns2:FareComponent>
+              </ns2:FareDetail>
+              <ns2:FareDetail>
+                <ns2:PassengerRefs>PAX11</ns2:PassengerRefs>
+                <ns2:Price>
+                  <ns2:TotalAmount>
+                    <ns2:DetailCurrencyPrice>
+                      <ns2:Total Code="SGD">115.40</ns2:Total>
+                    </ns2:DetailCurrencyPrice>
+                  </ns2:TotalAmount>
+                  <ns2:BaseAmount Code="SGD">103.00</ns2:BaseAmount>
+                  <ns2:Taxes>
+                    <ns2:Total Code="SGD">12.40</ns2:Total>
+                    <ns2:Breakdown>
+                      <ns2:Tax>
+                        <ns2:Amount Code="SGD">12.40</ns2:Amount>
+                        <ns2:Nation>CB</ns2:Nation>
+                        <ns2:TaxCode>K3</ns2:TaxCode>
+                      </ns2:Tax>
+                    </ns2:Breakdown>
+                  </ns2:Taxes>
+                </ns2:Price>
+                <ns2:FareComponent>
+                  <ns2:FareBasis>
+                    <ns2:FareBasisCode>
+                      <ns2:Code>D16IIOB1PO</ns2:Code>
+                    </ns2:FareBasisCode>
+                    <ns2:FareRulesRemarks>
+                      <ns2:FareRulesRemark>
+                        <ns2:Category>FT</ns2:Category>
+                        <ns2:Text>NEGOTIATED FARE</ns2:Text>
+                      </ns2:FareRulesRemark>
+                    </ns2:FareRulesRemarks>
+                    <ns2:RBD>D</ns2:RBD>
+                    <ns2:CabinType>
+                      <ns2:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">C</ns2:CabinTypeCode>
+                      <ns2:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns2:CabinTypeName>
+                    </ns2:CabinType>
+                  </ns2:FareBasis>
+                  <ns2:FareRules>
+                    <ns2:Penalty refs="AMNT1 AMNT2 AMNT3 AMNT5 AMNT6 AMNT7 AMNT8 AMNT9 AMNT11 AMNT12 AMNT13 AMNT14 AMNT15 AMNT16 AMNT17 AMNT18 AMNT19 AMNT20 AMNT21 AMNT22 AMNT23 AMNT24 AMNT37 AMNT38 FLAG1 FLAG2 FLAG3 FLAG4 FLAG5 FLAG6 FLAG7 FLAG8 FLAG9 FLAG10 FLAG11 FLAG12 FLAG13 AMNT25 AMNT26 AMNT27 AMNT28 AMNT29 AMNT30 AMNT31 AMNT32 AMNT33 AMNT34 AMNT35 AMNT36 FLAG14 FLAG15 FLAG16 FLAG17 FLAG18"/>
+                  </ns2:FareRules>
+                  <ns2:PriceClassRef>FFM1</ns2:PriceClassRef>
+                  <ns2:SegmentRefs>SEG3</ns2:SegmentRefs>
+                </ns2:FareComponent>
+              </ns2:FareDetail>
+              <ns2:Service>
+                <ns2:ServiceID>1</ns2:ServiceID>
+                <ns2:PaxRefID>PAX1</ns2:PaxRefID>
+                <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                <ns2:PaxRefID>PAX11</ns2:PaxRefID>
+                <ns2:ServiceAssociations>
+                  <ns2:PaxJourneyRefID>FLT0</ns2:PaxJourneyRefID>
+                </ns2:ServiceAssociations>
+              </ns2:Service>
+              <ns2:Price>
+                <ns2:TotalAmount CurCode="SGD">2197.70</ns2:TotalAmount>
+                <ns2:BaseAmount CurCode="SGD">1900.00</ns2:BaseAmount>
+                <ns2:TaxSummary>
+                  <ns2:TotalTaxAmount CurCode="SGD">297.70</ns2:TotalTaxAmount>
+                </ns2:TaxSummary>
+              </ns2:Price>
+            </ns2:OfferItem>
+          </ns2:Offer>
+        </ns2:PricedOffer>
+        <ns2:ShoppingResponse>
+          <ns2:ShoppingResponseID>SP2F-2519866301912274894</ns2:ShoppingResponseID>
+        </ns2:ShoppingResponse>
+      </ns2:Response>
+    </ns2:OfferPriceRS>
+  </soap:Body>
+</soap:Envelope>

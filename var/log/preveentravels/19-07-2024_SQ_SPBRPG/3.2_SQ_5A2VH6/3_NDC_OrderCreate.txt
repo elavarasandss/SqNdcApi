@@ -1,0 +1,968 @@
+ Time : 04-07-2024 09:52:45
+
+https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ 
+
+Request :- 
+---------- 
+
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3" xmlns:ns="http://www.iata.org/IATA/2015/00/2018.1/OrderCreateRQ">
+  <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <add:MessageID xmlns:add="http://www.w3.org/2005/08/addressing">e39e3174-cd3c-49d9-ab5a-b2fd7188048c</add:MessageID>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderCreate_18.1</wsa:Action>
+    <add:To xmlns:add="http://www.w3.org/2005/08/addressing">https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</add:To>
+    <sec:AMA_SecurityHostedUser>
+      <sec:UserID POS_Type="1" RequestorType="U" PseudoCityCode="NDCSQ08SQ" AgentDutyCode="SU">
+        <typ:RequestorID xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1">
+          <iat:CompanyName>SQ</iat:CompanyName>
+        </typ:RequestorID>
+      </sec:UserID>
+    </sec:AMA_SecurityHostedUser>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>WSSQNDC</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">j9bbLcE/+Wf0xBhhStBBf6qAetw=</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">T0Z5WnZXSGI=</wsse:Nonce>
+        <wsu:Created>2024-07-04T09:52:38:522Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <OrderCreateRQ xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderCreateRQ">
+      <PointOfSale>
+        <Country>
+          <CountryCode>SG</CountryCode>
+        </Country>
+      </PointOfSale>
+      <Party>
+        <Recipient>
+          <ORA>
+            <AirlineDesigCode>SQ</AirlineDesigCode>
+          </ORA>
+        </Recipient>
+        <Participant>
+          <Aggregator>
+            <AggregatorID>GEN</AggregatorID>
+          </Aggregator>
+        </Participant>
+        <Sender>
+          <TravelAgency>
+            <AgencyID>12345678</AgencyID>
+            <IATA_Number>12345678</IATA_Number>
+          </TravelAgency>
+        </Sender>
+      </Party>
+      <Request>
+        <CreateOrder>
+          <SelectedOffer>
+            <OfferID>SP1F-13103745653282417659-37</OfferID>
+            <OwnerCode>SQ</OwnerCode>
+            <ShoppingResponseRefID>SP1F-13103745653282417659</ShoppingResponseRefID>
+            <SelectedOfferItem>
+              <OfferItemID>SP1F-13103745653282417659-37-1</OfferItemID>
+              <PaxRefID>PAX1</PaxRefID>
+            </SelectedOfferItem>
+          </SelectedOffer>
+        </CreateOrder>
+        <DataLists>
+          <ContactInfoList>
+            <ContactInfo>
+              <IndividualRefID>PAX1</IndividualRefID>
+              <Phone>
+                <LabelText>Mobile</LabelText>
+                <CountryDialingCode>+91</CountryDialingCode>
+                <PhoneNumber>8344057968</PhoneNumber>
+              </Phone>
+              <EmailAddress>
+                <EmailAddressText>rubesh@gmail.com</EmailAddressText>
+              </EmailAddress>
+            </ContactInfo>
+          </ContactInfoList>
+          <PaxList>
+            <Pax>
+              <PaxID>PAX1</PaxID>
+              <PTC>ADT</PTC>
+              <Individual>
+                <IndividualID>PAX1</IndividualID>
+                <Birthdate>1996-02-21</Birthdate>
+                <GenderCode>M</GenderCode>
+                <TitleName>Mr</TitleName>
+                <GivenName>Rubesh</GivenName>
+                <Surname>Berry</Surname>
+              </Individual>
+            </Pax>
+          </PaxList>
+        </DataLists>
+        <OrderCreateParameters>
+          <Alerts>
+            <Alert>
+              <SecurePaymentAlert>
+                <URLs>
+                  <TermURL>http://localhost/ndcSqPayment/response.php?id=1002</TermURL>
+                </URLs>
+                <Details>
+                  <TxnDatas>
+                    <TxnDate>1002</TxnDate>
+                  </TxnDatas>
+                </Details>
+              </SecurePaymentAlert>
+            </Alert>
+          </Alerts>
+        </OrderCreateParameters>
+      </Request>
+    </OrderCreateRQ>
+  </soapenv:Body>
+</soapenv:Envelope>
+ Time : 04-07-2024 09:52:45
+
+
+Response :- 
+----------- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:From>
+      <wsa:Address>https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</wsa:Address>
+    </wsa:From>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderCreate_18.1</wsa:Action>
+    <wsa:MessageID>urn:uuid:5e89d1e7-8a56-5134-2dbf-1a4051065564</wsa:MessageID>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">e39e3174-cd3c-49d9-ab5a-b2fd7188048c</wsa:RelatesTo>
+    <awsse:Session TransactionStatusCode="End">
+      <awsse:SessionId>00B84B5Y27</awsse:SessionId>
+      <awsse:SequenceNumber>1</awsse:SequenceNumber>
+      <awsse:SecurityToken>32R4Y4AMCDGZO3EMVSHSHBWGMJ</awsse:SecurityToken>
+    </awsse:Session>
+  </soap:Header>
+  <soap:Body>
+    <ns3:OrderViewRS xmlns="http://www.iata.org/IATA/2015/00/BP/2018.1/SecurePayment_v1.0" xmlns:ns2="http://www.iata.org/IATA/2015/00/2018.1/OrderCreateRQ" xmlns:ns3="http://www.iata.org/IATA/2015/00/2018.1/OrderViewRS">
+      <ns3:Response>
+        <ns3:DataLists>
+          <ns3:BaggageAllowanceList>
+            <ns3:BaggageAllowance>
+              <ns3:BaggageAllowanceID>FBA1</ns3:BaggageAllowanceID>
+              <ns3:TypeCode>Checked</ns3:TypeCode>
+              <ns3:WeightAllowance>
+                <ns3:MaximumWeightMeasure UnitCode="Kilogram">40</ns3:MaximumWeightMeasure>
+                <ns3:ApplicablePartyText>Traveler</ns3:ApplicablePartyText>
+              </ns3:WeightAllowance>
+            </ns3:BaggageAllowance>
+          </ns3:BaggageAllowanceList>
+          <ns3:ContactInfoList>
+            <ns3:ContactInfo>
+              <ns3:ContactInfoID>CTCPAX1_1</ns3:ContactInfoID>
+              <ns3:ContactTypeText>STANDARD</ns3:ContactTypeText>
+              <ns3:IndividualRef>PAX1</ns3:IndividualRef>
+              <ns3:Phone>
+                <ns3:LabelText>MOBILE</ns3:LabelText>
+                <ns3:CountryDialingCode>+91</ns3:CountryDialingCode>
+                <ns3:PhoneNumber>8344057968</ns3:PhoneNumber>
+              </ns3:Phone>
+              <ns3:EmailAddress>
+                <ns3:EmailAddressText>RUBESH@GMAIL.COM</ns3:EmailAddressText>
+              </ns3:EmailAddress>
+            </ns3:ContactInfo>
+          </ns3:ContactInfoList>
+          <ns3:InstructionsList>
+            <ns3:Instruction ListKey="OSI_28">
+              <ns3:FreeFormTextInstruction>
+                <ns3:Remark>BOOKING SITE SG</ns3:Remark>
+              </ns3:FreeFormTextInstruction>
+            </ns3:Instruction>
+          </ns3:InstructionsList>
+          <ns3:PaxJourneyList>
+            <ns3:PaxJourney>
+              <ns3:PaxJourneyID>FLT1</ns3:PaxJourneyID>
+              <ns3:Duration>PT1H45M</ns3:Duration>
+              <ns3:PaxSegmentRefID>SEG1</ns3:PaxSegmentRefID>
+            </ns3:PaxJourney>
+            <ns3:PaxJourney>
+              <ns3:PaxJourneyID>FLT2</ns3:PaxJourneyID>
+              <ns3:Duration>PT1H45M</ns3:Duration>
+              <ns3:PaxSegmentRefID>SEG2</ns3:PaxSegmentRefID>
+            </ns3:PaxJourney>
+          </ns3:PaxJourneyList>
+          <ns3:PaxList>
+            <ns3:Pax>
+              <ns3:PaxID>PAX1</ns3:PaxID>
+              <ns3:PTC>ADT</ns3:PTC>
+              <ns3:Individual>
+                <ns3:IndividualID>PAX1</ns3:IndividualID>
+                <ns3:Birthdate>1996-02-21</ns3:Birthdate>
+                <ns3:TitleName>MR</ns3:TitleName>
+                <ns3:GivenName>RUBESH</ns3:GivenName>
+                <ns3:Surname>BERRY</ns3:Surname>
+              </ns3:Individual>
+            </ns3:Pax>
+          </ns3:PaxList>
+          <ns3:PaxSegmentList>
+            <ns3:PaxSegment>
+              <ns3:PaxSegmentID>SEG1</ns3:PaxSegmentID>
+              <ns3:Dep>
+                <ns3:IATA_LocationCode>SIN</ns3:IATA_LocationCode>
+                <ns3:TerminalName>2</ns3:TerminalName>
+                <ns3:AircraftScheduledDateTime>2024-08-20T06:20:00</ns3:AircraftScheduledDateTime>
+              </ns3:Dep>
+              <ns3:Arrival>
+                <ns3:IATA_LocationCode>CGK</ns3:IATA_LocationCode>
+                <ns3:TerminalName>3</ns3:TerminalName>
+                <ns3:AircraftScheduledDateTime>2024-08-20T07:05:00</ns3:AircraftScheduledDateTime>
+              </ns3:Arrival>
+              <ns3:MarketingCarrierInfo>
+                <ns3:CarrierDesigCode>SQ</ns3:CarrierDesigCode>
+                <ns3:CarrierName>SINGAPORE AIRLINES</ns3:CarrierName>
+                <ns3:MarketingCarrierFlightNumberText>950</ns3:MarketingCarrierFlightNumberText>
+                <ns3:RBD_Code>U</ns3:RBD_Code>
+              </ns3:MarketingCarrierInfo>
+              <ns3:OperatingCarrierInfo>
+                <ns3:CarrierDesigCode>SQ</ns3:CarrierDesigCode>
+                <ns3:CarrierName>SINGAPORE AIRLINES</ns3:CarrierName>
+                <ns3:Disclosure>
+                  <ns3:DisclosureID>DIS1</ns3:DisclosureID>
+                  <ns3:Desc>
+                    <ns3:DescID>DES1</ns3:DescID>
+                    <ns3:DescText>SINGAPORE AIRLINES</ns3:DescText>
+                  </ns3:Desc>
+                </ns3:Disclosure>
+              </ns3:OperatingCarrierInfo>
+              <ns3:DatedOperatingLeg>
+                <ns3:DatedOperatingLegID>LEG1</ns3:DatedOperatingLegID>
+                <ns3:Dep>
+                  <ns3:IATA_LocationCode>SIN</ns3:IATA_LocationCode>
+                  <ns3:AircraftScheduledDateTime>2024-08-20T06:20:00</ns3:AircraftScheduledDateTime>
+                </ns3:Dep>
+                <ns3:Arrival>
+                  <ns3:IATA_LocationCode>CGK</ns3:IATA_LocationCode>
+                  <ns3:AircraftScheduledDateTime>2024-08-20T07:05:00</ns3:AircraftScheduledDateTime>
+                </ns3:Arrival>
+                <ns3:IATA_AircraftType>
+                  <ns3:IATA_AircraftTypeCode>77W</ns3:IATA_AircraftTypeCode>
+                </ns3:IATA_AircraftType>
+              </ns3:DatedOperatingLeg>
+            </ns3:PaxSegment>
+            <ns3:PaxSegment>
+              <ns3:PaxSegmentID>SEG2</ns3:PaxSegmentID>
+              <ns3:Dep>
+                <ns3:IATA_LocationCode>CGK</ns3:IATA_LocationCode>
+                <ns3:TerminalName>3</ns3:TerminalName>
+                <ns3:AircraftScheduledDateTime>2024-08-25T05:25:00</ns3:AircraftScheduledDateTime>
+              </ns3:Dep>
+              <ns3:Arrival>
+                <ns3:IATA_LocationCode>SIN</ns3:IATA_LocationCode>
+                <ns3:TerminalName>0</ns3:TerminalName>
+                <ns3:AircraftScheduledDateTime>2024-08-25T08:10:00</ns3:AircraftScheduledDateTime>
+              </ns3:Arrival>
+              <ns3:MarketingCarrierInfo>
+                <ns3:CarrierDesigCode>SQ</ns3:CarrierDesigCode>
+                <ns3:CarrierName>SINGAPORE AIRLINES</ns3:CarrierName>
+                <ns3:MarketingCarrierFlightNumberText>951</ns3:MarketingCarrierFlightNumberText>
+                <ns3:RBD_Code>U</ns3:RBD_Code>
+              </ns3:MarketingCarrierInfo>
+              <ns3:OperatingCarrierInfo>
+                <ns3:CarrierDesigCode>SQ</ns3:CarrierDesigCode>
+                <ns3:CarrierName>SINGAPORE AIRLINES</ns3:CarrierName>
+                <ns3:Disclosure>
+                  <ns3:DisclosureID>DIS2</ns3:DisclosureID>
+                  <ns3:Desc>
+                    <ns3:DescID>DES2</ns3:DescID>
+                    <ns3:DescText>SINGAPORE AIRLINES</ns3:DescText>
+                  </ns3:Desc>
+                </ns3:Disclosure>
+              </ns3:OperatingCarrierInfo>
+              <ns3:DatedOperatingLeg>
+                <ns3:DatedOperatingLegID>LEG2</ns3:DatedOperatingLegID>
+                <ns3:Dep>
+                  <ns3:IATA_LocationCode>CGK</ns3:IATA_LocationCode>
+                  <ns3:AircraftScheduledDateTime>2024-08-25T05:25:00</ns3:AircraftScheduledDateTime>
+                </ns3:Dep>
+                <ns3:Arrival>
+                  <ns3:IATA_LocationCode>SIN</ns3:IATA_LocationCode>
+                  <ns3:AircraftScheduledDateTime>2024-08-25T08:10:00</ns3:AircraftScheduledDateTime>
+                </ns3:Arrival>
+                <ns3:IATA_AircraftType>
+                  <ns3:IATA_AircraftTypeCode>359</ns3:IATA_AircraftTypeCode>
+                </ns3:IATA_AircraftType>
+              </ns3:DatedOperatingLeg>
+            </ns3:PaxSegment>
+          </ns3:PaxSegmentList>
+          <ns3:PriceClassList>
+            <ns3:PriceClass>
+              <ns3:PriceClassID>FF71</ns3:PriceClassID>
+              <ns3:Name>SIN - BUSINESS STANDARD</ns3:Name>
+            </ns3:PriceClass>
+          </ns3:PriceClassList>
+          <ns3:ServiceDefinitionList>
+            <ns3:ServiceDefinition>
+              <ns3:ServiceDefinitionID>BAGALLOW_1</ns3:ServiceDefinitionID>
+              <ns3:Name>Bag allowances</ns3:Name>
+              <ns3:Description>
+                <ns3:DescID>Bag allowances</ns3:DescID>
+              </ns3:Description>
+              <ns3:ServiceDefinitionAssociation>
+                <ns3:BaggageAllowanceRefID>FBA1</ns3:BaggageAllowanceRefID>
+              </ns3:ServiceDefinitionAssociation>
+            </ns3:ServiceDefinition>
+          </ns3:ServiceDefinitionList>
+        </ns3:DataLists>
+        <ns3:Order>
+          <ns3:OrderID>SQ_5A2VH6</ns3:OrderID>
+          <ns3:OwnerCode>SQ</ns3:OwnerCode>
+          <ns3:PaymentTimeLimitDateTime>2024-08-06T15:00:00.000Z</ns3:PaymentTimeLimitDateTime>
+          <ns3:BookingRef>
+            <ns3:BookingID>5A2VH6</ns3:BookingID>
+            <ns3:BookingEntity>
+              <ns3:Carrier>
+                <ns3:AirlineDesigCode>SQ</ns3:AirlineDesigCode>
+              </ns3:Carrier>
+            </ns3:BookingEntity>
+          </ns3:BookingRef>
+          <ns3:OrderItem>
+            <ns3:OrderItemID>SQ_5A2VH6_AIR-1-2</ns3:OrderItemID>
+            <ns3:OwnerCode>SQ</ns3:OwnerCode>
+            <ns3:StatusCode>NOT ENTITLED</ns3:StatusCode>
+            <ns3:PriceGuaranteeTimeLimitDateTime>2024-07-07T16:00:00Z</ns3:PriceGuaranteeTimeLimitDateTime>
+            <ns3:FareDetail>
+              <ns3:PassengerRefs>PAX1</ns3:PassengerRefs>
+              <ns3:Price>
+                <ns3:TotalAmount>
+                  <ns3:DetailCurrencyPrice>
+                    <ns3:Total Code="SGD">1687.30</ns3:Total>
+                  </ns3:DetailCurrencyPrice>
+                </ns3:TotalAmount>
+                <ns3:BaseAmount Code="SGD">1600.00</ns3:BaseAmount>
+                <ns3:Taxes>
+                  <ns3:Total Code="SGD">87.30</ns3:Total>
+                  <ns3:Breakdown>
+                    <ns3:Tax>
+                      <ns3:Amount Code="SGD">10.80</ns3:Amount>
+                      <ns3:Nation>DE</ns3:Nation>
+                      <ns3:TaxCode>L7</ns3:TaxCode>
+                    </ns3:Tax>
+                    <ns3:Tax>
+                      <ns3:Amount Code="SGD">8.00</ns3:Amount>
+                      <ns3:Nation>AE</ns3:Nation>
+                      <ns3:TaxCode>OP</ns3:TaxCode>
+                    </ns3:Tax>
+                    <ns3:Tax>
+                      <ns3:Amount Code="SGD">46.40</ns3:Amount>
+                      <ns3:Nation>AD</ns3:Nation>
+                      <ns3:TaxCode>SG</ns3:TaxCode>
+                    </ns3:Tax>
+                    <ns3:Tax>
+                      <ns3:Amount Code="SGD">22.10</ns3:Amount>
+                      <ns3:Nation>CB</ns3:Nation>
+                      <ns3:TaxCode>D5</ns3:TaxCode>
+                    </ns3:Tax>
+                  </ns3:Breakdown>
+                </ns3:Taxes>
+              </ns3:Price>
+              <ns3:FareComponent>
+                <ns3:FareBasis>
+                  <ns3:FareBasisCode>
+                    <ns3:Code>U14SGR</ns3:Code>
+                  </ns3:FareBasisCode>
+                  <ns3:CabinType>
+                    <ns3:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">2</ns3:CabinTypeCode>
+                    <ns3:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns3:CabinTypeName>
+                  </ns3:CabinType>
+                </ns3:FareBasis>
+                <ns3:FareRules>
+                  <ns3:Penalty CancelFeeInd="true" ChangeFeeInd="true">
+                    <ns3:Details>
+                      <ns3:Detail>
+                        <ns3:Type>Cancel</ns3:Type>
+                        <ns3:Amounts>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount after departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">600.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket after departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount with sale currency</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">600.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">200.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">200.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">200.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">600.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">600.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">600.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                        </ns3:Amounts>
+                      </ns3:Detail>
+                      <ns3:Detail>
+                        <ns3:Type>Change</ns3:Type>
+                        <ns3:Amounts>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADC</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount for the ticket after departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADI</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation minimum penalty amount after departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount after departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket after departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADU</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount after departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount with sale currency</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANC</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount for the ticket after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANI</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation minimum penalty amount after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANU</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDC</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount for the ticket before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDI</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation minimum penalty amount before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDU</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNC</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount for the ticket before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNI</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation minimum penalty amount before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNU</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                        </ns3:Amounts>
+                      </ns3:Detail>
+                    </ns3:Details>
+                  </ns3:Penalty>
+                </ns3:FareRules>
+                <ns3:PriceClassRef>FF71</ns3:PriceClassRef>
+                <ns3:SegmentRefs>SEG1</ns3:SegmentRefs>
+              </ns3:FareComponent>
+              <ns3:FareComponent>
+                <ns3:FareBasis>
+                  <ns3:FareBasisCode>
+                    <ns3:Code>U14SGR</ns3:Code>
+                  </ns3:FareBasisCode>
+                  <ns3:CabinType>
+                    <ns3:CabinTypeCode xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">2</ns3:CabinTypeCode>
+                    <ns3:CabinTypeName xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">BUSINESS</ns3:CabinTypeName>
+                  </ns3:CabinType>
+                </ns3:FareBasis>
+                <ns3:FareRules>
+                  <ns3:Penalty CancelFeeInd="true" ChangeFeeInd="true">
+                    <ns3:Details>
+                      <ns3:Detail>
+                        <ns3:Type>Cancel</ns3:Type>
+                        <ns3:Amounts>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">200.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount after departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">600.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket after departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">600.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount with sale currency</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">600.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">600.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">600.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">200.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">200.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">200.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">600.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">600.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">600.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                        </ns3:Amounts>
+                      </ns3:Detail>
+                      <ns3:Detail>
+                        <ns3:Type>Change</ns3:Type>
+                        <ns3:Amounts>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADC</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount for the ticket after departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADI</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation minimum penalty amount after departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount after departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket after departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADU</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount after departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ADX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount with sale currency</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANC</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount for the ticket after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANI</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation minimum penalty amount after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANU</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>ANX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount after departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDC</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount for the ticket before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDI</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation minimum penalty amount before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDU</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">130.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BDX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount before departure</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNC</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount for the ticket before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNI</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation minimum penalty amount before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">0.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNM</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund minimum penalty amount before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNT</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount for the ticket before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNU</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Revalidation maximum penalty amount before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                          <ns3:Amount>
+                            <ns3:CurrencyAmountValue Code="SGD">400.00</ns3:CurrencyAmountValue>
+                            <ns3:AmountApplication>BNX</ns3:AmountApplication>
+                            <ns3:ApplicableFeeRemarks>
+                              <ns3:Remark>Reissue/Refund maximum penalty amount before departure no show</ns3:Remark>
+                            </ns3:ApplicableFeeRemarks>
+                          </ns3:Amount>
+                        </ns3:Amounts>
+                      </ns3:Detail>
+                    </ns3:Details>
+                  </ns3:Penalty>
+                </ns3:FareRules>
+                <ns3:PriceClassRef>FF71</ns3:PriceClassRef>
+                <ns3:SegmentRefs>SEG2</ns3:SegmentRefs>
+              </ns3:FareComponent>
+              <ns3:Remarks>
+                <ns3:Remark>FC-SIN SQ JKT593.23SQ SIN593.23NUC1186.46END ROE1.348543</ns3:Remark>
+                <ns3:Remark>FE-PAX *M*CHNG FEE APPLY /REFUND FEE APPLY /NO SHOW FEE APPLY|12345678||</ns3:Remark>
+              </ns3:Remarks>
+            </ns3:FareDetail>
+            <ns3:Price>
+              <ns3:TotalAmount CurCode="SGD">1687.30</ns3:TotalAmount>
+              <ns3:BaseAmount CurCode="SGD">1600.00</ns3:BaseAmount>
+              <ns3:TaxSummary>
+                <ns3:TotalTaxAmount CurCode="SGD">87.30</ns3:TotalTaxAmount>
+              </ns3:TaxSummary>
+            </ns3:Price>
+            <ns3:Service>
+              <ns3:ServiceID>SEG1_PAX1</ns3:ServiceID>
+              <ns3:StatusCode>HK</ns3:StatusCode>
+              <ns3:PaxRefID>PAX1</ns3:PaxRefID>
+              <ns3:ServiceAssociations>
+                <ns3:ServiceDefinitionRef>
+                  <ns3:ServiceDefinitionRefID>BAGALLOW_1</ns3:ServiceDefinitionRefID>
+                  <ns3:PaxSegmentRefID>SEG1</ns3:PaxSegmentRefID>
+                </ns3:ServiceDefinitionRef>
+              </ns3:ServiceAssociations>
+            </ns3:Service>
+            <ns3:Service>
+              <ns3:ServiceID>SEG2_PAX1</ns3:ServiceID>
+              <ns3:StatusCode>HK</ns3:StatusCode>
+              <ns3:PaxRefID>PAX1</ns3:PaxRefID>
+              <ns3:ServiceAssociations>
+                <ns3:ServiceDefinitionRef>
+                  <ns3:ServiceDefinitionRefID>BAGALLOW_1</ns3:ServiceDefinitionRefID>
+                  <ns3:PaxSegmentRefID>SEG2</ns3:PaxSegmentRefID>
+                </ns3:ServiceDefinitionRef>
+              </ns3:ServiceAssociations>
+            </ns3:Service>
+          </ns3:OrderItem>
+          <ns3:TotalPrice>
+            <ns3:TotalAmount CurCode="SGD">1687.30</ns3:TotalAmount>
+            <ns3:BaseAmount CurCode="SGD">1600.00</ns3:BaseAmount>
+            <ns3:TaxSummary>
+              <ns3:TotalTaxAmount CurCode="SGD">87.30</ns3:TotalTaxAmount>
+            </ns3:TaxSummary>
+          </ns3:TotalPrice>
+        </ns3:Order>
+      </ns3:Response>
+    </ns3:OrderViewRS>
+  </soap:Body>
+</soap:Envelope>

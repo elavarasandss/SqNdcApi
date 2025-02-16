@@ -1,0 +1,210 @@
+ Time : 18-07-2024 07:10:19
+
+https://nodeA1.test.webservices.amadeus.com/1ASIWNDCSQ 
+
+Request :- 
+---------- 
+
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3" xmlns:ns="http://www.iata.org/IATA/2015/00/2018.1/OrderCancelRQ">
+  <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <add:MessageID xmlns:add="http://www.w3.org/2005/08/addressing">d57701fe-51c6-4acc-9c0d-a8725c40efc4</add:MessageID>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderCancel_18.1</wsa:Action>
+    <add:To xmlns:add="http://www.w3.org/2005/08/addressing">https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</add:To>
+    <sec:AMA_SecurityHostedUser>
+      <sec:UserID POS_Type="1" RequestorType="U" PseudoCityCode="NDCSQ08SQ" AgentDutyCode="SU">
+        <typ:RequestorID xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1">
+          <iat:CompanyName>SQ</iat:CompanyName>
+        </typ:RequestorID>
+      </sec:UserID>
+    </sec:AMA_SecurityHostedUser>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>WSSQNDC</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">KLxfMmKjzxJb+PCU/zCcn/5U1gQ=</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">aGpRQUdWWFY=</wsse:Nonce>
+        <wsu:Created>2024-07-18T07:10:13:883Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <OrderCancelRQ xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderCancelRQ">
+      <PayloadAttributes>
+        <Version>18.1</Version>
+      </PayloadAttributes>
+      <PointOfSale>
+        <Country>
+          <CountryCode>SG</CountryCode>
+        </Country>
+      </PointOfSale>
+      <Party>
+        <Recipient>
+          <ORA>
+            <AirlineDesigCode>SQ</AirlineDesigCode>
+          </ORA>
+        </Recipient>
+        <Participant>
+          <Aggregator>
+            <AggregatorID>GEN</AggregatorID>
+          </Aggregator>
+        </Participant>
+        <Sender>
+          <TravelAgency>
+            <AgencyID>12345678</AgencyID>
+            <IATA_Number>12345678</IATA_Number>
+          </TravelAgency>
+        </Sender>
+      </Party>
+      <Request>
+        <Order>
+          <OrderID>SQ_5JNHLQ</OrderID>
+          <OwnerCode>SQ</OwnerCode>
+        </Order>
+        <ExpectedRefundAmount>
+          <TotalAmount CurCode="SGD">158.10</TotalAmount>
+        </ExpectedRefundAmount>
+      </Request>
+    </OrderCancelRQ>
+  </soapenv:Body>
+</soapenv:Envelope>
+ Time : 18-07-2024 07:10:19
+
+
+Response :- 
+----------- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:From>
+      <wsa:Address>https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</wsa:Address>
+    </wsa:From>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderCancel_18.1</wsa:Action>
+    <wsa:MessageID>urn:uuid:6673c537-0eee-cf44-7500-3460fcfb833c</wsa:MessageID>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">d57701fe-51c6-4acc-9c0d-a8725c40efc4</wsa:RelatesTo>
+    <awsse:Session TransactionStatusCode="End">
+      <awsse:SessionId>00LF41KX3X</awsse:SessionId>
+      <awsse:SequenceNumber>1</awsse:SequenceNumber>
+      <awsse:SecurityToken>2JIALH2CW890F2X2JT3RC88IB7</awsse:SecurityToken>
+    </awsse:Session>
+  </soap:Header>
+  <soap:Body>
+    <ns2:OrderCancelRS xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderCancelRQ" xmlns:ns2="http://www.iata.org/IATA/2015/00/2018.1/OrderCancelRS">
+      <ns2:PayloadAttributes>
+        <ns2:Version>18.1</ns2:Version>
+      </ns2:PayloadAttributes>
+      <ns2:Error>
+        <ns2:Code>911</ns2:Code>
+        <ns2:DescText>INVALID REFUND AMOUNT</ns2:DescText>
+        <ns2:LanguageCode>EN</ns2:LanguageCode>
+        <ns2:TypeCode>E</ns2:TypeCode>
+      </ns2:Error>
+    </ns2:OrderCancelRS>
+  </soap:Body>
+</soap:Envelope>
+ Time : 18-07-2024 07:10:25
+
+https://nodeA1.test.webservices.amadeus.com/1ASIWNDCSQ 
+
+Request :- 
+---------- 
+
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3" xmlns:ns="http://www.iata.org/IATA/2015/00/2018.1/OrderCancelRQ">
+  <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <add:MessageID xmlns:add="http://www.w3.org/2005/08/addressing">7c189ee9-681d-443c-a48f-84ded0343897</add:MessageID>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderCancel_18.1</wsa:Action>
+    <add:To xmlns:add="http://www.w3.org/2005/08/addressing">https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</add:To>
+    <sec:AMA_SecurityHostedUser>
+      <sec:UserID POS_Type="1" RequestorType="U" PseudoCityCode="NDCSQ08SQ" AgentDutyCode="SU">
+        <typ:RequestorID xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1">
+          <iat:CompanyName>SQ</iat:CompanyName>
+        </typ:RequestorID>
+      </sec:UserID>
+    </sec:AMA_SecurityHostedUser>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>WSSQNDC</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">pwxK1cL7SjpsDyYHxPuSmuvXP8s=</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">NG9KTTRTUzc=</wsse:Nonce>
+        <wsu:Created>2024-07-18T07:10:19:530Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <OrderCancelRQ xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderCancelRQ">
+      <PayloadAttributes>
+        <Version>18.1</Version>
+      </PayloadAttributes>
+      <PointOfSale>
+        <Country>
+          <CountryCode>SG</CountryCode>
+        </Country>
+      </PointOfSale>
+      <Party>
+        <Recipient>
+          <ORA>
+            <AirlineDesigCode>SQ</AirlineDesigCode>
+          </ORA>
+        </Recipient>
+        <Participant>
+          <Aggregator>
+            <AggregatorID>GEN</AggregatorID>
+          </Aggregator>
+        </Participant>
+        <Sender>
+          <TravelAgency>
+            <AgencyID>12345678</AgencyID>
+            <IATA_Number>12345678</IATA_Number>
+          </TravelAgency>
+        </Sender>
+      </Party>
+      <Request>
+        <Order>
+          <OrderID>SQ_5JNHLQ</OrderID>
+          <OwnerCode>SQ</OwnerCode>
+        </Order>
+        <ExpectedRefundAmount>
+          <TotalAmount CurCode="SGD">158.10</TotalAmount>
+        </ExpectedRefundAmount>
+      </Request>
+    </OrderCancelRQ>
+  </soapenv:Body>
+</soapenv:Envelope>
+ Time : 18-07-2024 07:10:25
+
+
+Response :- 
+----------- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:From>
+      <wsa:Address>https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</wsa:Address>
+    </wsa:From>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderCancel_18.1</wsa:Action>
+    <wsa:MessageID>urn:uuid:5c48d398-7228-3dc4-0d85-82f738032c18</wsa:MessageID>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">7c189ee9-681d-443c-a48f-84ded0343897</wsa:RelatesTo>
+    <awsse:Session TransactionStatusCode="End">
+      <awsse:SessionId>00LFLSUXLU</awsse:SessionId>
+      <awsse:SequenceNumber>1</awsse:SequenceNumber>
+      <awsse:SecurityToken>1TZ4JBQ4I5LYQ8SELGYOQ4VPB</awsse:SecurityToken>
+    </awsse:Session>
+  </soap:Header>
+  <soap:Body>
+    <ns2:OrderCancelRS xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderCancelRQ" xmlns:ns2="http://www.iata.org/IATA/2015/00/2018.1/OrderCancelRS">
+      <ns2:PayloadAttributes>
+        <ns2:Version>18.1</ns2:Version>
+      </ns2:PayloadAttributes>
+      <ns2:Error>
+        <ns2:Code>911</ns2:Code>
+        <ns2:DescText>INVALID REFUND AMOUNT</ns2:DescText>
+        <ns2:LanguageCode>EN</ns2:LanguageCode>
+        <ns2:TypeCode>E</ns2:TypeCode>
+      </ns2:Error>
+    </ns2:OrderCancelRS>
+  </soap:Body>
+</soap:Envelope>

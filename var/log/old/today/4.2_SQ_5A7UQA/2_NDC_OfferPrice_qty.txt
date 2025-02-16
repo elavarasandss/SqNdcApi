@@ -1,0 +1,316 @@
+ Time : 04-07-2024 16:29:39
+
+https://nodeA1.test.webservices.amadeus.com/1ASIWNDCSQ 
+
+Request :- 
+---------- 
+
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3" xmlns:ns="http://www.iata.org/IATA/2015/00/2018.1/AirShoppingRQ">
+  <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <add:MessageID xmlns:add="http://www.w3.org/2005/08/addressing">b2d9bbb8-6915-4c13-9250-918a13c26f32</add:MessageID>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OfferPrice_18.1</wsa:Action>
+    <add:To xmlns:add="http://www.w3.org/2005/08/addressing">https://nodeA1.test.webservices.amadeus.com/1ASIWNDCSQ</add:To>
+    <sec:AMA_SecurityHostedUser>
+      <sec:UserID POS_Type="1" RequestorType="U" PseudoCityCode="NDCSQ08SQ" AgentDutyCode="SU">
+        <typ:RequestorID xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1">
+          <iat:CompanyName>SQ</iat:CompanyName>
+        </typ:RequestorID>
+      </sec:UserID>
+    </sec:AMA_SecurityHostedUser>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>WSSQNDC</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">dW8Yr6gRfPYr5OYhXhvutY8IZVM=</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">SmZacGNObEg=</wsse:Nonce>
+        <wsu:Created>2024-07-04T16:29:36:322Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <OfferPriceRQ xmlns="http://www.iata.org/IATA/2015/00/2018.1/OfferPriceRQ">
+      <PointOfSale>
+        <Country>
+          <CountryCode>SG</CountryCode>
+        </Country>
+      </PointOfSale>
+      <Party>
+        <Recipient>
+          <ORA>
+            <AirlineDesigCode>SQ</AirlineDesigCode>
+          </ORA>
+        </Recipient>
+        <Participant>
+          <Aggregator>
+            <AggregatorID>GEN</AggregatorID>
+          </Aggregator>
+        </Participant>
+        <Sender>
+          <TravelAgency>
+            <AgencyID>12345678</AgencyID>
+            <IATA_Number>12345678</IATA_Number>
+          </TravelAgency>
+        </Sender>
+      </Party>
+      <Request>
+        <DataLists>
+          <PaxList>
+            <Pax>
+              <PaxID>PAX1</PaxID>
+              <PTC>ADT</PTC>
+            </Pax>
+          </PaxList>
+        </DataLists>
+        <PricedOffer>
+          <SelectedOffer>
+            <OfferRefID>SP2P-6025756651551515426-1</OfferRefID>
+            <OwnerCode>SQ</OwnerCode>
+            <ShoppingResponseRefID>SP2P-6025756651551515426</ShoppingResponseRefID>
+            <SelectedOfferItem>
+              <OfferItemRefID>SP2P-6025756651551515426-1-1</OfferItemRefID>
+              <PaxRefID>PAX2</PaxRefID>
+              <SelectedALaCarteOfferItem>
+                <Qty>10</Qty>
+              </SelectedALaCarteOfferItem>
+            </SelectedOfferItem>
+            <SelectedOfferItem>
+              <OfferItemRefID>SP2P-6025756651551515426-1-50</OfferItemRefID>
+              <PaxRefID>PAX3</PaxRefID>
+              <SelectedALaCarteOfferItem>
+                <Qty>10</Qty>
+              </SelectedALaCarteOfferItem>
+            </SelectedOfferItem>
+          </SelectedOffer>
+        </PricedOffer>
+      </Request>
+    </OfferPriceRQ>
+  </soapenv:Body>
+</soapenv:Envelope>
+ Time : 04-07-2024 16:29:39
+
+
+Response :- 
+----------- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:From>
+      <wsa:Address>https://nodeA1.test.webservices.amadeus.com/1ASIWNDCSQ</wsa:Address>
+    </wsa:From>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OfferPrice_18.1</wsa:Action>
+    <wsa:MessageID>urn:uuid:dd130e30-bfea-73a4-2d18-88c8def95a55</wsa:MessageID>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">b2d9bbb8-6915-4c13-9250-918a13c26f32</wsa:RelatesTo>
+    <awsse:Session TransactionStatusCode="End">
+      <awsse:SessionId>001MC564ZC</awsse:SessionId>
+      <awsse:SequenceNumber>1</awsse:SequenceNumber>
+      <awsse:SecurityToken>M92BHGA09SW10JPZSVUTSWS8</awsse:SecurityToken>
+    </awsse:Session>
+  </soap:Header>
+  <soap:Body>
+    <ns2:OfferPriceRS xmlns="http://www.iata.org/IATA/2015/00/2018.1/OfferPriceRQ" xmlns:ns2="http://www.iata.org/IATA/2015/00/2018.1/OfferPriceRS">
+      <ns2:PayloadAttributes>
+        <ns2:Version>18.1</ns2:Version>
+      </ns2:PayloadAttributes>
+      <ns2:Response>
+        <ns2:DataLists>
+          <ns2:OriginDestList/>
+          <ns2:PaxJourneyList/>
+          <ns2:PaxList>
+            <ns2:Pax>
+              <ns2:PaxID>PAX2</ns2:PaxID>
+              <ns2:PTC>ADT</ns2:PTC>
+            </ns2:Pax>
+            <ns2:Pax>
+              <ns2:PaxID>PAX3</ns2:PaxID>
+              <ns2:PTC>ADT</ns2:PTC>
+            </ns2:Pax>
+          </ns2:PaxList>
+          <ns2:PaxSegmentList>
+            <ns2:PaxSegment>
+              <ns2:PaxSegmentID>SEG1</ns2:PaxSegmentID>
+              <ns2:Duration>PT5H50M</ns2:Duration>
+              <ns2:Dep>
+                <ns2:IATA_LocationCode>AMD</ns2:IATA_LocationCode>
+                <ns2:AircraftScheduledDateTime>2024-08-20T22:50:00</ns2:AircraftScheduledDateTime>
+              </ns2:Dep>
+              <ns2:Arrival>
+                <ns2:IATA_LocationCode>SIN</ns2:IATA_LocationCode>
+                <ns2:AircraftScheduledDateTime>2024-08-21T07:10:00</ns2:AircraftScheduledDateTime>
+              </ns2:Arrival>
+              <ns2:MarketingCarrierInfo>
+                <ns2:CarrierDesigCode>SQ</ns2:CarrierDesigCode>
+                <ns2:CarrierName>SINGAPORE AIRLINES</ns2:CarrierName>
+                <ns2:MarketingCarrierFlightNumberText>505</ns2:MarketingCarrierFlightNumberText>
+              </ns2:MarketingCarrierInfo>
+              <ns2:OperatingCarrierInfo>
+                <ns2:CarrierDesigCode>SQ</ns2:CarrierDesigCode>
+                <ns2:CarrierName>SINGAPORE AIRLINES</ns2:CarrierName>
+              </ns2:OperatingCarrierInfo>
+              <ns2:DatedOperatingLeg>
+                <ns2:DatedOperatingLegID>LEG1</ns2:DatedOperatingLegID>
+                <ns2:Dep>
+                  <ns2:IATA_LocationCode>AMD</ns2:IATA_LocationCode>
+                  <ns2:AircraftScheduledDateTime>2024-08-20T22:50:00</ns2:AircraftScheduledDateTime>
+                </ns2:Dep>
+                <ns2:Arrival>
+                  <ns2:IATA_LocationCode>SIN</ns2:IATA_LocationCode>
+                  <ns2:AircraftScheduledDateTime>2024-08-21T07:10:00</ns2:AircraftScheduledDateTime>
+                </ns2:Arrival>
+                <ns2:IATA_AircraftType>
+                  <ns2:IATA_AircraftTypeCode>359</ns2:IATA_AircraftTypeCode>
+                </ns2:IATA_AircraftType>
+              </ns2:DatedOperatingLeg>
+            </ns2:PaxSegment>
+            <ns2:PaxSegment>
+              <ns2:PaxSegmentID>SEG2</ns2:PaxSegmentID>
+              <ns2:Duration>PT5H30M</ns2:Duration>
+              <ns2:Dep>
+                <ns2:IATA_LocationCode>SIN</ns2:IATA_LocationCode>
+                <ns2:AircraftScheduledDateTime>2024-08-25T18:35:00</ns2:AircraftScheduledDateTime>
+              </ns2:Dep>
+              <ns2:Arrival>
+                <ns2:IATA_LocationCode>AMD</ns2:IATA_LocationCode>
+                <ns2:AircraftScheduledDateTime>2024-08-25T21:35:00</ns2:AircraftScheduledDateTime>
+              </ns2:Arrival>
+              <ns2:MarketingCarrierInfo>
+                <ns2:CarrierDesigCode>SQ</ns2:CarrierDesigCode>
+                <ns2:CarrierName>SINGAPORE AIRLINES</ns2:CarrierName>
+                <ns2:MarketingCarrierFlightNumberText>504</ns2:MarketingCarrierFlightNumberText>
+              </ns2:MarketingCarrierInfo>
+              <ns2:OperatingCarrierInfo>
+                <ns2:CarrierDesigCode>SQ</ns2:CarrierDesigCode>
+                <ns2:CarrierName>SINGAPORE AIRLINES</ns2:CarrierName>
+              </ns2:OperatingCarrierInfo>
+              <ns2:DatedOperatingLeg>
+                <ns2:DatedOperatingLegID>LEG2</ns2:DatedOperatingLegID>
+                <ns2:Dep>
+                  <ns2:IATA_LocationCode>SIN</ns2:IATA_LocationCode>
+                  <ns2:AircraftScheduledDateTime>2024-08-25T18:35:00</ns2:AircraftScheduledDateTime>
+                </ns2:Dep>
+                <ns2:Arrival>
+                  <ns2:IATA_LocationCode>AMD</ns2:IATA_LocationCode>
+                  <ns2:AircraftScheduledDateTime>2024-08-25T21:35:00</ns2:AircraftScheduledDateTime>
+                </ns2:Arrival>
+                <ns2:IATA_AircraftType>
+                  <ns2:IATA_AircraftTypeCode>359</ns2:IATA_AircraftTypeCode>
+                </ns2:IATA_AircraftType>
+              </ns2:DatedOperatingLeg>
+            </ns2:PaxSegment>
+          </ns2:PaxSegmentList>
+          <ns2:PriceClassList/>
+          <ns2:ServiceDefinitionList>
+            <ns2:ServiceDefinition>
+              <ns2:ServiceDefinitionID>SRV0</ns2:ServiceDefinitionID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:Name>ONE KILOGRAM BAGGAGE</ns2:Name>
+              <ns2:ServiceCode>XBAG</ns2:ServiceCode>
+              <ns2:ReasonForIssuanceCode>C</ns2:ReasonForIssuanceCode>
+              <ns2:ReasonForIssuanceSubCode>0AA</ns2:ReasonForIssuanceSubCode>
+              <ns2:Description>
+                <ns2:DescID>1</ns2:DescID>
+                <ns2:DescText>F</ns2:DescText>
+                <ns2:MarkupStyleText>Service_Type</ns2:MarkupStyleText>
+              </ns2:Description>
+              <ns2:Description>
+                <ns2:DescID>2</ns2:DescID>
+                <ns2:DescText>01</ns2:DescText>
+                <ns2:MarkupStyleText>BKM</ns2:MarkupStyleText>
+              </ns2:Description>
+              <ns2:Description>
+                <ns2:DescID>3</ns2:DescID>
+                <ns2:DescText>BG</ns2:DescText>
+                <ns2:MarkupStyleText>Group</ns2:MarkupStyleText>
+              </ns2:Description>
+            </ns2:ServiceDefinition>
+            <ns2:ServiceDefinition>
+              <ns2:ServiceDefinitionID>SRV59</ns2:ServiceDefinitionID>
+              <ns2:OwnerCode>SQ</ns2:OwnerCode>
+              <ns2:Name>ONE KILOGRAM BAGGAGE</ns2:Name>
+              <ns2:ServiceCode>XBAG</ns2:ServiceCode>
+              <ns2:ReasonForIssuanceCode>C</ns2:ReasonForIssuanceCode>
+              <ns2:ReasonForIssuanceSubCode>0AA</ns2:ReasonForIssuanceSubCode>
+              <ns2:Description>
+                <ns2:DescID>1</ns2:DescID>
+                <ns2:DescText>F</ns2:DescText>
+                <ns2:MarkupStyleText>Service_Type</ns2:MarkupStyleText>
+              </ns2:Description>
+              <ns2:Description>
+                <ns2:DescID>2</ns2:DescID>
+                <ns2:DescText>01</ns2:DescText>
+                <ns2:MarkupStyleText>BKM</ns2:MarkupStyleText>
+              </ns2:Description>
+              <ns2:Description>
+                <ns2:DescID>3</ns2:DescID>
+                <ns2:DescText>BG</ns2:DescText>
+                <ns2:MarkupStyleText>Group</ns2:MarkupStyleText>
+              </ns2:Description>
+            </ns2:ServiceDefinition>
+          </ns2:ServiceDefinitionList>
+        </ns2:DataLists>
+        <ns2:PricedOffer>
+          <ns2:Offer>
+            <ns2:OfferID>SP2P-6025756651551515426-1</ns2:OfferID>
+            <ns2:OwnerCode>SQ</ns2:OwnerCode>
+            <ns2:OfferExpirationDateTime>2024-07-04T16:59:39Z</ns2:OfferExpirationDateTime>
+            <ns2:OfferItem>
+              <ns2:OfferItemID>SP2P-6025756651551515426-1-1</ns2:OfferItemID>
+              <ns2:MandatoryInd>false</ns2:MandatoryInd>
+              <ns2:Service>
+                <ns2:ServiceID>1</ns2:ServiceID>
+                <ns2:PaxRefID>PAX2</ns2:PaxRefID>
+                <ns2:ServiceAssociations>
+                  <ns2:ServiceDefinitionRef>
+                    <ns2:ServiceDefinitionRefID>SRV0</ns2:ServiceDefinitionRefID>
+                    <ns2:PaxSegmentRefID>SEG1</ns2:PaxSegmentRefID>
+                    <ns2:PaxSegmentRefID>SEG2</ns2:PaxSegmentRefID>
+                  </ns2:ServiceDefinitionRef>
+                </ns2:ServiceAssociations>
+              </ns2:Service>
+              <ns2:Price>
+                <ns2:TotalAmount CurCode="SGD">320.80</ns2:TotalAmount>
+                <ns2:BaseAmount CurCode="SGD">305.40</ns2:BaseAmount>
+                <ns2:Discount>
+                  <ns2:PreDiscountedAmount CurCode="SGD">427.80</ns2:PreDiscountedAmount>
+                  <ns2:DescText>SQDGENBSDTEB</ns2:DescText>
+                </ns2:Discount>
+                <ns2:TaxSummary>
+                  <ns2:TotalTaxAmount CurCode="SGD">15.40</ns2:TotalTaxAmount>
+                </ns2:TaxSummary>
+              </ns2:Price>
+            </ns2:OfferItem>
+            <ns2:OfferItem>
+              <ns2:OfferItemID>SP2P-6025756651551515426-1-50</ns2:OfferItemID>
+              <ns2:MandatoryInd>false</ns2:MandatoryInd>
+              <ns2:Service>
+                <ns2:ServiceID>1</ns2:ServiceID>
+                <ns2:PaxRefID>PAX3</ns2:PaxRefID>
+                <ns2:ServiceAssociations>
+                  <ns2:ServiceDefinitionRef>
+                    <ns2:ServiceDefinitionRefID>SRV59</ns2:ServiceDefinitionRefID>
+                    <ns2:PaxSegmentRefID>SEG1</ns2:PaxSegmentRefID>
+                  </ns2:ServiceDefinitionRef>
+                </ns2:ServiceAssociations>
+              </ns2:Service>
+              <ns2:Price>
+                <ns2:TotalAmount CurCode="SGD">160.40</ns2:TotalAmount>
+                <ns2:BaseAmount CurCode="SGD">152.70</ns2:BaseAmount>
+                <ns2:Discount>
+                  <ns2:PreDiscountedAmount CurCode="SGD">213.90</ns2:PreDiscountedAmount>
+                  <ns2:DescText>SQDGENBSDTEB</ns2:DescText>
+                </ns2:Discount>
+                <ns2:TaxSummary>
+                  <ns2:TotalTaxAmount CurCode="SGD">7.70</ns2:TotalTaxAmount>
+                </ns2:TaxSummary>
+              </ns2:Price>
+            </ns2:OfferItem>
+          </ns2:Offer>
+        </ns2:PricedOffer>
+        <ns2:ShoppingResponse>
+          <ns2:ShoppingResponseID>SP2P-6025756651551515426</ns2:ShoppingResponseID>
+        </ns2:ShoppingResponse>
+      </ns2:Response>
+    </ns2:OfferPriceRS>
+  </soap:Body>
+</soap:Envelope>

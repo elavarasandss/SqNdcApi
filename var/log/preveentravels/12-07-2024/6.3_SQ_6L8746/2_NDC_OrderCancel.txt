@@ -1,0 +1,151 @@
+ Time : 13-07-2024 14:50:53
+
+https://nodeA1.test.webservices.amadeus.com/1ASIWNDCSQ 
+
+Request :- 
+---------- 
+
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3" xmlns:ns="http://www.iata.org/IATA/2015/00/2018.1/OrderCancelRQ">
+  <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <add:MessageID xmlns:add="http://www.w3.org/2005/08/addressing">3fea5db9-3ba2-405e-aed7-300c7e078adc</add:MessageID>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderCancel_18.1</wsa:Action>
+    <add:To xmlns:add="http://www.w3.org/2005/08/addressing">https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</add:To>
+    <sec:AMA_SecurityHostedUser>
+      <sec:UserID POS_Type="1" RequestorType="U" PseudoCityCode="NDCSQ08SQ" AgentDutyCode="SU">
+        <typ:RequestorID xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1">
+          <iat:CompanyName>SQ</iat:CompanyName>
+        </typ:RequestorID>
+      </sec:UserID>
+    </sec:AMA_SecurityHostedUser>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>WSSQNDC</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">JeLR+geTFzye6nCnuReteLO7HsY=</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">N29ITHpLbEQ=</wsse:Nonce>
+        <wsu:Created>2024-07-13T14:50:43:538Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <OrderCancelRQ xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderCancelRQ">
+      <PayloadAttributes>
+        <Version>18.1</Version>
+      </PayloadAttributes>
+      <PointOfSale>
+        <Country>
+          <CountryCode>SG</CountryCode>
+        </Country>
+      </PointOfSale>
+      <Party>
+        <Recipient>
+          <ORA>
+            <AirlineDesigCode>SQ</AirlineDesigCode>
+          </ORA>
+        </Recipient>
+        <Participant>
+          <Aggregator>
+            <AggregatorID>GEN</AggregatorID>
+          </Aggregator>
+        </Participant>
+        <Sender>
+          <TravelAgency>
+            <AgencyID>12345678</AgencyID>
+            <IATA_Number>12345678</IATA_Number>
+          </TravelAgency>
+        </Sender>
+      </Party>
+      <Request>
+        <Order>
+          <OrderID>SQ_6L8746</OrderID>
+          <OwnerCode>SQ</OwnerCode>
+        </Order>
+        <ExpectedRefundAmount>
+          <TotalAmount CurCode="SGD">100.90</TotalAmount>
+        </ExpectedRefundAmount>
+      </Request>
+    </OrderCancelRQ>
+  </soapenv:Body>
+</soapenv:Envelope>
+ Time : 13-07-2024 14:50:54
+
+
+Response :- 
+----------- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:From>
+      <wsa:Address>https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</wsa:Address>
+    </wsa:From>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderCancel_18.1</wsa:Action>
+    <wsa:MessageID>urn:uuid:f8533b8d-c0c2-e244-81ab-4371dce332cc</wsa:MessageID>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">3fea5db9-3ba2-405e-aed7-300c7e078adc</wsa:RelatesTo>
+    <awsse:Session TransactionStatusCode="End">
+      <awsse:SessionId>00QY5ALR0S</awsse:SessionId>
+      <awsse:SequenceNumber>1</awsse:SequenceNumber>
+      <awsse:SecurityToken>28AENTMBAAV2D3Q56VYC9FNDGJ</awsse:SecurityToken>
+    </awsse:Session>
+  </soap:Header>
+  <soap:Body>
+    <ns2:OrderCancelRS xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderCancelRQ" xmlns:ns2="http://www.iata.org/IATA/2015/00/2018.1/OrderCancelRS">
+      <ns2:PayloadAttributes>
+        <ns2:Version>18.1</ns2:Version>
+      </ns2:PayloadAttributes>
+      <ns2:Response>
+        <ns2:OrderRefID>SQ_6L8746</ns2:OrderRefID>
+        <ns2:ChangeFees>
+          <ns2:PenaltyAmount CurCode="SGD">922.00</ns2:PenaltyAmount>
+        </ns2:ChangeFees>
+        <ns2:TicketDocInfo>
+          <ns2:AgentIDs>
+            <ns2:AgentID>
+              <ns2:Type>B</ns2:Type>
+              <ns2:ID>9999WS/AS</ns2:ID>
+            </ns2:AgentID>
+          </ns2:AgentIDs>
+          <ns2:Payments>
+            <ns2:Payment>
+              <ns2:Method>
+                <ns2:CashMethod>
+                  <ns2:Amount Code="SGD">100.90</ns2:Amount>
+                </ns2:CashMethod>
+              </ns2:Method>
+            </ns2:Payment>
+          </ns2:Payments>
+          <ns2:TicketDocument>
+            <ns2:TicketDocNbr>6182452724825</ns2:TicketDocNbr>
+            <ns2:Type>T</ns2:Type>
+            <ns2:NumberofBooklets>1</ns2:NumberofBooklets>
+            <ns2:DateOfIssue>2024-07-12</ns2:DateOfIssue>
+            <ns2:CouponInfo>
+              <ns2:CouponNumber>1</ns2:CouponNumber>
+              <ns2:FareBasisCode>
+                <ns2:Code>DT6SGR18/DP</ns2:Code>
+              </ns2:FareBasisCode>
+              <ns2:Status>RF</ns2:Status>
+              <ns2:SettlementAuthCode>618Q9Q7EMKJ89</ns2:SettlementAuthCode>
+              <ns2:AddlBaggageInfo>
+                <ns2:CheckedFree MaxBagWght="40K"/>
+              </ns2:AddlBaggageInfo>
+            </ns2:CouponInfo>
+            <ns2:CouponInfo>
+              <ns2:CouponNumber>2</ns2:CouponNumber>
+              <ns2:FareBasisCode>
+                <ns2:Code>U14SGR/DP</ns2:Code>
+              </ns2:FareBasisCode>
+              <ns2:Status>RF</ns2:Status>
+              <ns2:SettlementAuthCode>618Q9Q7EMKJ89</ns2:SettlementAuthCode>
+              <ns2:AddlBaggageInfo>
+                <ns2:CheckedFree MaxBagWght="40K"/>
+              </ns2:AddlBaggageInfo>
+            </ns2:CouponInfo>
+            <ns2:ReportingType>Airline</ns2:ReportingType>
+          </ns2:TicketDocument>
+        </ns2:TicketDocInfo>
+      </ns2:Response>
+    </ns2:OrderCancelRS>
+  </soap:Body>
+</soap:Envelope>

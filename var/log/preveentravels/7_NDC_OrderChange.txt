@@ -1,0 +1,162 @@
+ Time : 24-07-2024 19:09:16
+
+https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ 
+
+Request :- 
+---------- 
+
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3" xmlns:ns="http://www.iata.org/IATA/2015/00/2018.1/OrderChangeRQ">
+  <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <add:MessageID xmlns:add="http://www.w3.org/2005/08/addressing">af940605-889b-450e-b9b9-1629af44a846</add:MessageID>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderChange_18.1</wsa:Action>
+    <add:To xmlns:add="http://www.w3.org/2005/08/addressing">https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</add:To>
+    <sec:AMA_SecurityHostedUser>
+      <sec:UserID POS_Type="1" RequestorType="U" PseudoCityCode="NDCSQ08SQ" AgentDutyCode="SU">
+        <typ:RequestorID xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1">
+          <iat:CompanyName>SQ</iat:CompanyName>
+        </typ:RequestorID>
+      </sec:UserID>
+    </sec:AMA_SecurityHostedUser>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>WSSQNDC</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">QqH3GgP9tLdz1TprXglkRSxyTGU=</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">U3dKdUN5VmE=</wsse:Nonce>
+        <wsu:Created>2024-07-24T19:09:13:470Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <OrderChangeRQ xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderChangeRQ">
+      <PayloadAttributes>
+        <Version>18.1</Version>
+      </PayloadAttributes>
+      <PointOfSale>
+        <Country>
+          <CountryCode>SG</CountryCode>
+        </Country>
+      </PointOfSale>
+      <Party>
+        <Recipient>
+          <ORA>
+            <AirlineDesigCode>SQ</AirlineDesigCode>
+          </ORA>
+        </Recipient>
+        <Participant>
+          <Aggregator>
+            <AggregatorID>GEN</AggregatorID>
+          </Aggregator>
+        </Participant>
+        <Sender>
+          <TravelAgency>
+            <AgencyID>12345678</AgencyID>
+            <IATA_Number>12345678</IATA_Number>
+          </TravelAgency>
+        </Sender>
+      </Party>
+      <Request>
+        <ActionContextCode>UPDATE_PRICE</ActionContextCode>
+        <BookingRef>
+          <BookingID>6LJTE9</BookingID>
+          <BookingEntity>SQ</BookingEntity>
+        </BookingRef>
+        <ChangeOrder>
+          <UpdateOrderItem>
+            <AcceptOffer>
+              <SelectedOffer>
+                <OfferID>SP1F-6263577381492385378-1</OfferID>
+                <OwnerCode>SQ</OwnerCode>
+                <ShoppingResponseRefID>0</ShoppingResponseRefID>
+                <SelectedOfferItem>
+                  <OfferItemRefID>SP1F-6263577381492385378-1-1</OfferItemRefID>
+                </SelectedOfferItem>
+              </SelectedOffer>
+            </AcceptOffer>
+          </UpdateOrderItem>
+          <DataLists>
+            <Pax>
+              <PaxID>PAX1</PaxID>
+              <PTC>ADT</PTC>
+              <Individual>
+                <IndividualID>PAX1</IndividualID>
+                <Birthdate>1996-02-21</Birthdate>
+                <GenderCode>M</GenderCode>
+                <TitleName>Mr</TitleName>
+                <GivenName>Rubesh</GivenName>
+                <Surname>Berry</Surname>
+              </Individual>
+            </Pax>
+            <Pax>
+              <PaxID>PAX2</PaxID>
+              <PTC>ADT</PTC>
+              <Individual>
+                <IndividualID>PAX2</IndividualID>
+                <Birthdate>1996-02-21</Birthdate>
+                <GenderCode>M</GenderCode>
+                <TitleName>Mr</TitleName>
+                <GivenName>Seeni</GivenName>
+                <Surname>vasa</Surname>
+              </Individual>
+            </Pax>
+          </DataLists>
+        </ChangeOrder>
+        <Order>
+          <OrderID>SQ_6LJTE9</OrderID>
+          <OwnerCode>SQ</OwnerCode>
+        </Order>
+        <PaymentInfo>
+          <Amount CurCode="SGD">3028.60</Amount>
+          <TypeCode>CA</TypeCode>
+          <PaymentMethod>
+            <Cash>
+              <CashInd>true</CashInd>
+            </Cash>
+          </PaymentMethod>
+        </PaymentInfo>
+      </Request>
+      <Order>
+        <OrderID>SQ_6LJTE9</OrderID>
+        <OwnerCode/>
+      </Order>
+    </OrderChangeRQ>
+  </soapenv:Body>
+</soapenv:Envelope>
+ Time : 24-07-2024 19:09:16
+
+
+Response :- 
+----------- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:From>
+      <wsa:Address>https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</wsa:Address>
+    </wsa:From>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderChange_18.1</wsa:Action>
+    <wsa:MessageID>urn:uuid:021cde89-b24d-ebf4-a54c-9ab38cc693a1</wsa:MessageID>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">af940605-889b-450e-b9b9-1629af44a846</wsa:RelatesTo>
+    <awsse:Session TransactionStatusCode="End">
+      <awsse:SessionId>00JU50YFJ5</awsse:SessionId>
+      <awsse:SequenceNumber>1</awsse:SequenceNumber>
+      <awsse:SecurityToken>1LJ64AJXCFW00WYLXVCL965TR</awsse:SecurityToken>
+    </awsse:Session>
+  </soap:Header>
+  <soap:Body>
+    <ns3:OrderViewRS xmlns="http://www.iata.org/IATA/2015/00/BP/2018.1/SecurePayment_v1.0" xmlns:ns2="http://www.iata.org/IATA/2015/00/2018.1/OrderChangeRQ" xmlns:ns3="http://www.iata.org/IATA/2015/00/2018.1/OrderViewRS">
+      <ns3:PayloadAttributes>
+        <ns3:Version>18.1</ns3:Version>
+      </ns3:PayloadAttributes>
+      <ns3:Errors>
+        <ns3:Error>
+          <ns3:Code>490</ns3:Code>
+          <ns3:DescText>UNABLE TO RETRIEVE OFFER</ns3:DescText>
+          <ns3:LanguageCode>EN</ns3:LanguageCode>
+          <ns3:TypeCode>E</ns3:TypeCode>
+        </ns3:Error>
+      </ns3:Errors>
+    </ns3:OrderViewRS>
+  </soap:Body>
+</soap:Envelope>

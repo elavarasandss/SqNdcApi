@@ -1,0 +1,405 @@
+ Time : 24-07-2024 18:04:30
+
+https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ 
+
+Request :- 
+---------- 
+
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3" xmlns:ns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ">
+  <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <add:MessageID xmlns:add="http://www.w3.org/2005/08/addressing">18dd9ce6-e5b7-45f5-814b-abd9b0307f26</add:MessageID>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderReshop_18.1</wsa:Action>
+    <add:To xmlns:add="http://www.w3.org/2005/08/addressing">https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</add:To>
+    <sec:AMA_SecurityHostedUser>
+      <sec:UserID POS_Type="1" RequestorType="U" PseudoCityCode="NDCSQ08SQ" AgentDutyCode="SU">
+        <typ:RequestorID xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1">
+          <iat:CompanyName>SQ</iat:CompanyName>
+        </typ:RequestorID>
+      </sec:UserID>
+    </sec:AMA_SecurityHostedUser>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>WSSQNDC</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">2uRHp59LCG4f4gzK0Mn4P3Q4niU=</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">bjVhMGh3OVQ=</wsse:Nonce>
+        <wsu:Created>2024-07-24T18:04:22:405Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <OrderReshopRQ xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ">
+      <PayloadAttributes>
+        <Version>18.1</Version>
+      </PayloadAttributes>
+      <PointOfSale>
+        <Country>
+          <CountryCode>SG</CountryCode>
+        </Country>
+      </PointOfSale>
+      <Party>
+        <Recipient>
+          <ORA>
+            <AirlineDesigCode>SQ</AirlineDesigCode>
+          </ORA>
+        </Recipient>
+        <Participant>
+          <Aggregator>
+            <AggregatorID>GEN</AggregatorID>
+          </Aggregator>
+        </Participant>
+        <Sender>
+          <TravelAgency>
+            <AgencyID>12345678</AgencyID>
+            <IATA_Number>12345678</IATA_Number>
+          </TravelAgency>
+        </Sender>
+      </Party>
+      <Request>
+        <OrderItemRefID>SQ_6LCFE5</OrderItemRefID>
+        <UpdateOrder>
+          <ReshopOrder>
+            <ServiceOrder>
+              <AddOfferItems>
+                <ShoppingCriteria>
+                  <CabinTypeCriteria>
+                    <CabinTypeName>BUS</CabinTypeName>
+                  </CabinTypeCriteria>
+                </ShoppingCriteria>
+                <FlightRequest>
+                  <OriginDestRequest>
+                    <DestArrivalRequest>
+                      <IATA_LocationCode>SIN</IATA_LocationCode>
+                    </DestArrivalRequest>
+                    <OriginDepRequest>
+                      <IATA_LocationCode>BOM</IATA_LocationCode>
+                      <Date>2024-07-20</Date>
+                    </OriginDepRequest>
+                  </OriginDestRequest>
+                  <OriginDestRequest>
+                    <DestArrivalRequest>
+                      <IATA_LocationCode>BOM</IATA_LocationCode>
+                    </DestArrivalRequest>
+                    <OriginDepRequest>
+                      <IATA_LocationCode>SIN</IATA_LocationCode>
+                      <Date>2024-07-25</Date>
+                    </OriginDepRequest>
+                  </OriginDestRequest>
+                </FlightRequest>
+              </AddOfferItems>
+              <DeleteOrderItem>
+                <OrderItemRefID>SQ_6LCFE5_AIR-1-2</OrderItemRefID>
+              </DeleteOrderItem>
+            </ServiceOrder>
+          </ReshopOrder>
+        </UpdateOrder>
+      </Request>
+    </OrderReshopRQ>
+  </soapenv:Body>
+</soapenv:Envelope>
+ Time : 24-07-2024 18:04:30
+
+
+Response :- 
+----------- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:From>
+      <wsa:Address>https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</wsa:Address>
+    </wsa:From>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderReshop_18.1</wsa:Action>
+    <wsa:MessageID>urn:uuid:e3338dae-c719-df14-f982-294240be7fcc</wsa:MessageID>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">18dd9ce6-e5b7-45f5-814b-abd9b0307f26</wsa:RelatesTo>
+    <awsse:Session TransactionStatusCode="End">
+      <awsse:SessionId>00OX555FQM</awsse:SessionId>
+      <awsse:SequenceNumber>1</awsse:SequenceNumber>
+      <awsse:SecurityToken>7P7RAPPXY5SX42BDQB3LBIVM</awsse:SecurityToken>
+    </awsse:Session>
+  </soap:Header>
+  <soap:Body>
+    <ns2:OrderReshopRS xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ" xmlns:ns2="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRS">
+      <ns2:PayloadAttributes>
+        <ns2:Version>18.1</ns2:Version>
+      </ns2:PayloadAttributes>
+      <ns2:Errors>
+        <ns2:Code>368</ns2:Code>
+        <ns2:DescText>ORDER NOT ELIGIBLE FOR REBOOKING</ns2:DescText>
+        <ns2:LanguageCode>GB</ns2:LanguageCode>
+        <ns2:TypeCode>E</ns2:TypeCode>
+      </ns2:Errors>
+    </ns2:OrderReshopRS>
+  </soap:Body>
+</soap:Envelope>
+ Time : 24-07-2024 18:18:39
+
+https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ 
+
+Request :- 
+---------- 
+
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3" xmlns:ns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ">
+  <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <add:MessageID xmlns:add="http://www.w3.org/2005/08/addressing">c545ec55-f1ca-4c6d-829c-d53921439299</add:MessageID>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderReshop_18.1</wsa:Action>
+    <add:To xmlns:add="http://www.w3.org/2005/08/addressing">https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</add:To>
+    <sec:AMA_SecurityHostedUser>
+      <sec:UserID POS_Type="1" RequestorType="U" PseudoCityCode="NDCSQ08SQ" AgentDutyCode="SU">
+        <typ:RequestorID xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1">
+          <iat:CompanyName>SQ</iat:CompanyName>
+        </typ:RequestorID>
+      </sec:UserID>
+    </sec:AMA_SecurityHostedUser>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>WSSQNDC</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">QnaMqDZEwBcTyknMGNd2EBmVO/4=</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">eFdoc3FTa1c=</wsse:Nonce>
+        <wsu:Created>2024-07-24T18:18:29:808Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <OrderReshopRQ xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ">
+      <PayloadAttributes>
+        <Version>18.1</Version>
+      </PayloadAttributes>
+      <PointOfSale>
+        <Country>
+          <CountryCode>SG</CountryCode>
+        </Country>
+      </PointOfSale>
+      <Party>
+        <Recipient>
+          <ORA>
+            <AirlineDesigCode>SQ</AirlineDesigCode>
+          </ORA>
+        </Recipient>
+        <Participant>
+          <Aggregator>
+            <AggregatorID>GEN</AggregatorID>
+          </Aggregator>
+        </Participant>
+        <Sender>
+          <TravelAgency>
+            <AgencyID>12345678</AgencyID>
+            <IATA_Number>12345678</IATA_Number>
+          </TravelAgency>
+        </Sender>
+      </Party>
+      <Request>
+        <OrderItemRefID>SQ_5NTQJL</OrderItemRefID>
+        <UpdateOrder>
+          <ReshopOrder>
+            <ServiceOrder>
+              <AddOfferItems>
+                <ShoppingCriteria>
+                  <CabinTypeCriteria>
+                    <CabinTypeName>BUS</CabinTypeName>
+                  </CabinTypeCriteria>
+                </ShoppingCriteria>
+                <FlightRequest>
+                  <OriginDestRequest>
+                    <DestArrivalRequest>
+                      <IATA_LocationCode>SIN</IATA_LocationCode>
+                    </DestArrivalRequest>
+                    <OriginDepRequest>
+                      <IATA_LocationCode>BOM</IATA_LocationCode>
+                      <Date>2024-07-20</Date>
+                    </OriginDepRequest>
+                  </OriginDestRequest>
+                  <OriginDestRequest>
+                    <DestArrivalRequest>
+                      <IATA_LocationCode>BOM</IATA_LocationCode>
+                    </DestArrivalRequest>
+                    <OriginDepRequest>
+                      <IATA_LocationCode>SIN</IATA_LocationCode>
+                      <Date>2024-07-25</Date>
+                    </OriginDepRequest>
+                  </OriginDestRequest>
+                </FlightRequest>
+              </AddOfferItems>
+              <DeleteOrderItem>
+                <OrderItemRefID>SQ_5NTQJL_AIR-1-2-3-4</OrderItemRefID>
+              </DeleteOrderItem>
+            </ServiceOrder>
+          </ReshopOrder>
+        </UpdateOrder>
+      </Request>
+    </OrderReshopRQ>
+  </soapenv:Body>
+</soapenv:Envelope>
+ Time : 24-07-2024 18:18:39
+
+
+Response :- 
+----------- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:From>
+      <wsa:Address>https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</wsa:Address>
+    </wsa:From>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderReshop_18.1</wsa:Action>
+    <wsa:MessageID>urn:uuid:c5e01623-5a33-08e4-e579-25e9226d5038</wsa:MessageID>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">c545ec55-f1ca-4c6d-829c-d53921439299</wsa:RelatesTo>
+    <awsse:Session TransactionStatusCode="End">
+      <awsse:SessionId>00OY4NPHDP</awsse:SessionId>
+      <awsse:SequenceNumber>1</awsse:SequenceNumber>
+      <awsse:SecurityToken>2I2W6JX9PZ2HXEF8HWD9QS6KD</awsse:SecurityToken>
+    </awsse:Session>
+  </soap:Header>
+  <soap:Body>
+    <ns2:OrderReshopRS xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ" xmlns:ns2="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRS">
+      <ns2:PayloadAttributes>
+        <ns2:Version>18.1</ns2:Version>
+      </ns2:PayloadAttributes>
+      <ns2:Errors>
+        <ns2:Code>911</ns2:Code>
+        <ns2:DescText>UNABLE TO PROCESS SHOPPING: Past date/time not allowed</ns2:DescText>
+        <ns2:LanguageCode>GB</ns2:LanguageCode>
+        <ns2:TypeCode>E</ns2:TypeCode>
+      </ns2:Errors>
+    </ns2:OrderReshopRS>
+  </soap:Body>
+</soap:Envelope>
+ Time : 24-07-2024 18:20:20
+
+https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ 
+
+Request :- 
+---------- 
+
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3" xmlns:ns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ">
+  <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <add:MessageID xmlns:add="http://www.w3.org/2005/08/addressing">322f2c3f-69e8-48c3-a3fe-c3789d4da597</add:MessageID>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderReshop_18.1</wsa:Action>
+    <add:To xmlns:add="http://www.w3.org/2005/08/addressing">https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</add:To>
+    <sec:AMA_SecurityHostedUser>
+      <sec:UserID POS_Type="1" RequestorType="U" PseudoCityCode="NDCSQ08SQ" AgentDutyCode="SU">
+        <typ:RequestorID xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1">
+          <iat:CompanyName>SQ</iat:CompanyName>
+        </typ:RequestorID>
+      </sec:UserID>
+    </sec:AMA_SecurityHostedUser>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>WSSQNDC</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">R0ebQ6yLzIil2dXTeCMz2L1KvZs=</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">OERCMkdOYzg=</wsse:Nonce>
+        <wsu:Created>2024-07-24T18:19:53:594Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <OrderReshopRQ xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ">
+      <PayloadAttributes>
+        <Version>18.1</Version>
+      </PayloadAttributes>
+      <PointOfSale>
+        <Country>
+          <CountryCode>SG</CountryCode>
+        </Country>
+      </PointOfSale>
+      <Party>
+        <Recipient>
+          <ORA>
+            <AirlineDesigCode>SQ</AirlineDesigCode>
+          </ORA>
+        </Recipient>
+        <Participant>
+          <Aggregator>
+            <AggregatorID>GEN</AggregatorID>
+          </Aggregator>
+        </Participant>
+        <Sender>
+          <TravelAgency>
+            <AgencyID>12345678</AgencyID>
+            <IATA_Number>12345678</IATA_Number>
+          </TravelAgency>
+        </Sender>
+      </Party>
+      <Request>
+        <OrderItemRefID>SQ_5NTQJL</OrderItemRefID>
+        <UpdateOrder>
+          <ReshopOrder>
+            <ServiceOrder>
+              <AddOfferItems>
+                <ShoppingCriteria>
+                  <CabinTypeCriteria>
+                    <CabinTypeName>BUS</CabinTypeName>
+                  </CabinTypeCriteria>
+                </ShoppingCriteria>
+                <FlightRequest>
+                  <OriginDestRequest>
+                    <DestArrivalRequest>
+                      <IATA_LocationCode>SIN</IATA_LocationCode>
+                    </DestArrivalRequest>
+                    <OriginDepRequest>
+                      <IATA_LocationCode>BOM</IATA_LocationCode>
+                      <Date>2024-08-20</Date>
+                    </OriginDepRequest>
+                  </OriginDestRequest>
+                  <OriginDestRequest>
+                    <DestArrivalRequest>
+                      <IATA_LocationCode>BOM</IATA_LocationCode>
+                    </DestArrivalRequest>
+                    <OriginDepRequest>
+                      <IATA_LocationCode>SIN</IATA_LocationCode>
+                      <Date>2024-08-25</Date>
+                    </OriginDepRequest>
+                  </OriginDestRequest>
+                </FlightRequest>
+              </AddOfferItems>
+              <DeleteOrderItem>
+                <OrderItemRefID>SQ_5NTQJL_AIR-1-2-3-4</OrderItemRefID>
+              </DeleteOrderItem>
+            </ServiceOrder>
+          </ReshopOrder>
+        </UpdateOrder>
+      </Request>
+    </OrderReshopRQ>
+  </soapenv:Body>
+</soapenv:Envelope>
+ Time : 24-07-2024 18:20:20
+
+
+Response :- 
+----------- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+    <wsa:From>
+      <wsa:Address>https://nodea1.test.webservices.amadeus.com/1ASIWNDCSQ</wsa:Address>
+    </wsa:From>
+    <wsa:Action>http://webservices.amadeus.com/NDC_OrderReshop_18.1</wsa:Action>
+    <wsa:MessageID>urn:uuid:5f01f0e8-a8b5-1984-9130-d836407fd6c2</wsa:MessageID>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">322f2c3f-69e8-48c3-a3fe-c3789d4da597</wsa:RelatesTo>
+    <awsse:Session TransactionStatusCode="End">
+      <awsse:SessionId>00OYMEZHXT</awsse:SessionId>
+      <awsse:SequenceNumber>1</awsse:SequenceNumber>
+      <awsse:SecurityToken>1ETIY3EAD602M3EXYC38N3ZRGD</awsse:SecurityToken>
+    </awsse:Session>
+  </soap:Header>
+  <soap:Body>
+    <ns2:OrderReshopRS xmlns="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRQ" xmlns:ns2="http://www.iata.org/IATA/2015/00/2018.1/OrderReshopRS">
+      <ns2:PayloadAttributes>
+        <ns2:Version>18.1</ns2:Version>
+      </ns2:PayloadAttributes>
+      <ns2:Errors>
+        <ns2:Code>911</ns2:Code>
+        <ns2:DescText>UNABLE TO PROCESS SHOPPING: NO FARE FOUND FOR REQUESTED FARE FAMILY</ns2:DescText>
+        <ns2:LanguageCode>GB</ns2:LanguageCode>
+        <ns2:TypeCode>E</ns2:TypeCode>
+      </ns2:Errors>
+    </ns2:OrderReshopRS>
+  </soap:Body>
+</soap:Envelope>
